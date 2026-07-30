@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joan Amengual - Cloud Engineer</title>
+    <meta name="description" content="Portfolio profesional de Joan Amengual, especialista en ingeniería cloud y soluciones escalables en AWS, Azure y GCP">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="particles-container" id="particles"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text fade-in">
+                <div class="hero-badge">
+                    <i class="fas fa-cloud"></i>
+                    <span>Cloud Engineer</span>
+                </div>
+                <h1 class="hero-title">
+                    Transformando ideas en <span class="gradient-text">soluciones cloud</span> escalables
+                </h1>
+                <p class="hero-description">
+                    Especialista en ingeniería cloud y soluciones empresariales. 
+                    Ayudo a empresas a migrar, optimizar y escalar sus infraestructuras en la nube.
+                </p>
+                
+                <!-- Personal Presentation within Hero -->
+                <div class="hero-presentation">
+                    <div class="profile-image-container">
+                        <img src="imagenes/joan_amengual.jpg" alt="Joan Amengual" class="profile-image">
+                        <div class="profile-border"></div>
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-name">Joan Amengual</h2>
+                        <p class="profile-title">Cloud Engineer</p>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" onclick="scrollToSection('projects')">
+                        <i class="fas fa-rocket"></i>
+                        Ver Proyectos
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="scrollToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        Contactar
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual fade-in-delay">
+                <div class="floating-card">
+                    <div class="card-header">
+                        <div class="card-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="code-snippet">
+                            <div class="code-line"><span class="keyword">class</span> <span class="class-name">CloudEngineer</span> {</div>
+                            <div class="code-line">  <span class="keyword">constructor</span>() {</div>
+                            <div class="code-line">    <span class="keyword">this</span>.<span class="property">name</span> = <span class="string">'Joan Amengual'</span>;</div>
+                            <div class="code-line">    <span class="keyword">this</span>.<span class="property">expertise</span> = [</div>
+                            <div class="code-line">      <span class="string">'AWS'</span>, <span class="string">'Docker'</span>, <span class="string">'Kubernetes'</span>, <span class="string">'Terraform'</span></div>
+                            <div class="code-line">    ];</div>
+                            <div class="code-line">    <span class="keyword">this</span>.<span class="property">passion</span> = <span class="string">'Cloud Solutions'</span>;</div>
+                            <div class="code-line">  }</div>
+                            <div class="code-line">}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item" data-tech="AWS">
+                        <i class="fab fa-aws"></i>
+                </div>
+                    <div class="tech-item" data-tech="Docker">
+                        <i class="fab fa-docker"></i>
+            </div>
+                    <div class="tech-item" data-tech="Kubernetes">
+                        <i class="fas fa-cube"></i>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="scrollToSection('projects')">
+            <div class="scroll-text">Desliza para explorar</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Proyectos</span>
+                </div>
+                <h2 class="section-title">Soluciones que transforman negocios</h2>
+                <p class="section-subtitle">Proyectos destacados que demuestran mi experiencia en cloud y DevOps</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    Todos
+                </button>
+                <button class="filter-btn" data-filter="Básico">
+                    <i class="fas fa-star"></i>
+                    Básico
+                </button>
+                <button class="filter-btn" data-filter="Avanzado">
+                    <i class="fas fa-rocket"></i>
+                    Avanzado
+                </button>
+                <button class="filter-btn" data-filter="Profesional">
+                    <i class="fas fa-crown"></i>
+                    Profesional
+                </button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contacto</span>
+                </div>
+                <h2 class="section-title">¿Listo para transformar tu infraestructura?</h2>
+                <p class="section-subtitle">Hablemos sobre cómo puedo ayudar a tu empresa a escalar en la nube</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>joan@blockstellart.com</p>
+                            <a href="mailto:joan@blockstellart.com" class="contact-link">Enviar Email</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>Conecta profesionalmente</p>
+                            <a href="https://www.linkedin.com/in/joanamengual7/" target="_blank" class="contact-link">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+            <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                <img id="modalImage" src="" alt="" class="modal-image">
+                </div>
+                <div class="modal-info">
+                    <p id="modalDescription"></p>
+                    <div class="modal-technologies" id="modalTechnologies"></div>
+                    <div class="modal-buttons">
+                        <a id="modalGithub" href="#" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i>
+                            Ver Código
+                        </a>
+                        <a id="modalDemo" href="#" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-external-link-alt"></i>
+                            Ver Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <p>Transformando ideas en soluciones cloud escalables</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><a href="#hero">Inicio</a></li>
+                            <li><a href="#projects">Proyectos</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="mailto:joan@blockstellart.com">Email</a></li>
+                            <li><a href="https://www.linkedin.com/in/joanamengual7/" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Joan Amengual | Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="projects-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
