@@ -1015,6 +1015,13 @@
 
     </style>
 
+
+<style>
+    nav a.nav-home.active {
+        color: var(--gold);
+    }
+</style>
+
 </head>
 
 
@@ -1031,7 +1038,7 @@
 
             <a
                 href="#"
-                class="nav-brand"
+                class="nav-brand nav-home"
             >
                 Diego Sommier
             </a>
@@ -2191,6 +2198,42 @@
 
     </script>
 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const home = document.querySelector(".nav-home");
+    const links = [...document.querySelectorAll("nav a[href^='#']")];
+    const sections = links
+        .filter(link => !link.classList.contains("nav-home"))
+        .map(link => {
+            const id = link.getAttribute("href").slice(1);
+            return { link, section: document.getElementById(id) };
+        })
+        .filter(item => item.section);
+
+    function updateActiveNav() {
+        const top = window.scrollY < 120;
+        links.forEach(link => link.classList.remove("active"));
+
+        if (top) {
+            home?.classList.add("active");
+            return;
+        }
+
+        let current = sections[0];
+        for (const item of sections) {
+            if (item.section.getBoundingClientRect().top <= 180) {
+                current = item;
+            }
+        }
+        current?.link.classList.add("active");
+    }
+
+    window.addEventListener("scroll", updateActiveNav, { passive: true });
+    updateActiveNav();
+});
+</script>
 
 </body>
 
