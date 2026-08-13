@@ -27,4 +27,4 @@ The website is hosted using **GitHub Pages**.
 
 ## 🎨 Credits
 
-Portrait artwork by [@roquec](https://github.com/roquec).
+Portrait artwork by [@roquec](https://roquec.com).
