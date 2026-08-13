@@ -240,6 +240,14 @@
             background: var(--gold);
         }
 
+        .hero-name {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 40px;
+        }
+
         h1 {
             margin: 0;
 
@@ -254,6 +262,26 @@
             font-weight: 500;
 
             color: var(--text);
+        }
+
+        .hero-portrait {
+            flex: 0 0 auto;
+
+            width: 150px;
+            height: 150px;
+
+            border: 1px solid var(--border-strong);
+
+            overflow: hidden;
+        }
+
+        .hero-portrait img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
         }
 
         .hero-role {
@@ -395,31 +423,11 @@
         .about-grid {
             display: grid;
 
-            grid-template-columns: 190px 1fr;
+            grid-template-columns: minmax(0, 1fr) 280px;
 
-            gap: 55px;
+            gap: 75px;
 
             align-items: start;
-        }
-
-        .about-portrait {
-            display: flex;
-
-            justify-content: center;
-            align-items: flex-start;
-
-            padding-top: 4px;
-        }
-
-        .about-portrait img {
-            display: block;
-
-            width: 190px;
-            height: 190px;
-
-            object-fit: contain;
-
-            border: 1px solid var(--border-strong);
         }
 
         .about-text p {
@@ -434,6 +442,12 @@
             margin-bottom: 0;
         }
 
+        .about-aside {
+            padding-left: 28px;
+
+            border-left: 1px solid var(--border-strong);
+        }
+
         .aside-title {
             color: var(--gold);
 
@@ -445,7 +459,7 @@
 
             letter-spacing: 0.11em;
 
-            margin: 40px 0 18px;
+            margin: 0 0 18px;
         }
 
         .aside-list {
@@ -813,14 +827,14 @@
         @media (max-width: 900px) {
 
             .about-grid {
-                grid-template-columns: 160px 1fr;
+                grid-template-columns: minmax(0, 1fr) 230px;
 
-                gap: 35px;
+                gap: 45px;
             }
 
-            .about-portrait img {
-                width: 160px;
-                height: 160px;
+            .hero-portrait {
+                width: 125px;
+                height: 125px;
             }
 
             .experience-list {
@@ -853,21 +867,31 @@
                 font-size: 0.74rem;
             }
 
+            .hero-name {
+                align-items: flex-start;
+
+                gap: 25px;
+            }
+
+            .hero-portrait {
+                width: 105px;
+                height: 105px;
+            }
+
             .about-grid {
                 grid-template-columns: 1fr;
 
-                gap: 30px;
+                gap: 40px;
             }
 
-            .about-portrait {
-                justify-content: flex-start;
+            .about-aside {
+                padding-left: 0;
 
-                margin-bottom: 5px;
-            }
+                padding-top: 30px;
 
-            .about-portrait img {
-                width: 160px;
-                height: 160px;
+                border-left: none;
+
+                border-top: 1px solid var(--border-strong);
             }
 
             .experience-list {
@@ -901,6 +925,15 @@
 
             .hero {
                 padding-top: 120px;
+            }
+
+            .hero-name {
+                gap: 18px;
+            }
+
+            .hero-portrait {
+                width: 82px;
+                height: 82px;
             }
 
             .hero-role {
@@ -1047,9 +1080,23 @@
                 </div>
 
 
-                <h1>
-                    Diego Sommier
-                </h1>
+                <div class="hero-name">
+
+                    <h1>
+                        Diego Sommier
+                    </h1>
+
+
+                    <div class="hero-portrait">
+
+                        <img
+                            src="profile.jpeg"
+                            alt="Diego Sommier"
+                        >
+
+                    </div>
+
+                </div>
 
 
                 <div class="hero-role">
@@ -1196,101 +1243,88 @@
                 <div class="about-grid">
 
 
-                    <div class="about-portrait">
+                    <div class="about-text">
 
-                        <img
-                            src="profile.jpeg"
-                            alt="Diego Sommier"
+                        <p
+                            data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure."
+                            data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft."
                         >
+                            I'm an IT professional with more than 9 years
+                            of experience in systems administration and
+                            enterprise infrastructure. My background spans
+                            Windows and Linux environments, virtualization,
+                            endpoint management and hybrid Microsoft
+                            infrastructure.
+                        </p>
+
+
+                        <p
+                            data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
+                            data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
+                        >
+                            Throughout my career I've worked across
+                            different enterprise environments, supporting
+                            infrastructure and large-scale IT operations
+                            for organisations in banking, insurance,
+                            retail and logistics.
+                        </p>
+
+
+                        <p
+                            data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects."
+                            data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales."
+                        >
+                            I'm now building on that foundation to transition
+                            into Cloud Administration, expanding my knowledge
+                            across Azure, AWS, automation and DevOps through
+                            hands-on learning and personal projects.
+                        </p>
 
                     </div>
 
 
-                    <div>
+                    <aside class="about-aside">
 
-                        <div class="about-text">
-
-                            <p
-                                data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure."
-                                data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft."
-                            >
-                                I'm an IT professional with more than 9 years
-                                of experience in systems administration and
-                                enterprise infrastructure. My background spans
-                                Windows and Linux environments, virtualization,
-                                endpoint management and hybrid Microsoft
-                                infrastructure.
-                            </p>
-
-
-                            <p
-                                data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
-                                data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
-                            >
-                                Throughout my career I've worked across
-                                different enterprise environments, supporting
-                                infrastructure and large-scale IT operations
-                                for organisations in banking, insurance,
-                                retail and logistics.
-                            </p>
-
-
-                            <p
-                                data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects."
-                                data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales."
-                            >
-                                I'm now building on that foundation to transition
-                                into Cloud Administration, expanding my knowledge
-                                across Azure, AWS, automation and DevOps through
-                                hands-on learning and personal projects.
-                            </p>
-
+                        <div
+                            class="aside-title"
+                            data-en="Currently exploring"
+                            data-es="Explorando actualmente"
+                        >
+                            Currently exploring
                         </div>
 
+                        <ul class="aside-list">
 
-                        <aside>
-
-                            <div
-                                class="aside-title"
-                                data-en="Currently exploring"
-                                data-es="Explorando actualmente"
+                            <li
+                                data-en="Cloud Administration"
+                                data-es="Administración Cloud"
                             >
-                                Currently exploring
-                            </div>
+                                Cloud Administration
+                            </li>
 
-                            <ul class="aside-list">
+                            <li>
+                                Azure & AWS
+                            </li>
 
-                                <li
-                                    data-en="Cloud Administration"
-                                    data-es="Administración Cloud"
-                                >
-                                    Cloud Administration
-                                </li>
+                            <li
+                                data-en="Automation"
+                                data-es="Automatización"
+                            >
+                                Automation
+                            </li>
 
-                                <li>
-                                    Azure & AWS
-                                </li>
+                            <li>
+                                DevOps
+                            </li>
 
-                                <li
-                                    data-en="Automation"
-                                    data-es="Automatización"
-                                >
-                                    Automation
-                                </li>
+                            <li>
+                                Infrastructure as Code
+                            </li>
 
-                                <li>
-                                    DevOps
-                                </li>
+                        </ul>
 
-                                <li>
-                                    Infrastructure as Code
-                                </li>
+                    </aside>
 
-                            </ul>
-
-                        </aside>
-
-                    </div>
 
                 </div>
 
