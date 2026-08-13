@@ -1,50 +1,2229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud Administration, automation and DevOps.">
-<title>Diego Sommier | Cloud Administrator · DevOps</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-:root{--background:#111;--surface:#161616;--text:#e6d8b8;--text-soft:#c9c1b2;--muted:#969696;--dim:#666;--gold:#c7a76c;--gold-soft:#9b8356;--border:#302a20;--border-hover:#66563a}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--background);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.7}a{color:inherit}::selection{background:var(--gold);color:var(--background)}
-.container{width:min(calc(100% - 48px),1100px);margin:0 auto}section{padding:110px 0;border-top:1px solid var(--border)}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,17,17,.92);border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between}.nav-brand{color:var(--text);text-decoration:none;font-weight:600;letter-spacing:.02em}.nav-right{display:flex;align-items:center;gap:30px}.nav-links{display:flex;gap:28px}.nav-links a{color:var(--muted);text-decoration:none;font-size:.84rem;transition:color .25s}.nav-links a:hover{color:var(--gold)}
-.language-switcher{display:flex;align-items:center;gap:7px;font-size:.75rem;letter-spacing:.05em}.language-button{border:0;padding:0;background:transparent;color:var(--dim);font:inherit;font-size:.75rem;letter-spacing:.05em;cursor:pointer;transition:color .25s}.language-button:hover{color:var(--text-soft)}.language-button.active{color:var(--gold)}.language-separator{color:var(--border-hover)}
-.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 100px}.hero-content{max-width:850px}.hero-kicker{color:var(--gold);font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;margin-bottom:18px}h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.4rem,7vw,5.8rem);line-height:1.05;letter-spacing:-.045em;font-weight:400}.hero-role{margin-top:25px;color:var(--text-soft);font-size:clamp(1.2rem,3vw,1.6rem);letter-spacing:.01em}.hero-description{max-width:730px;margin:25px 0 0;color:var(--text-soft);font-size:1.08rem}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}.button{display:inline-flex;align-items:center;gap:9px;padding:10px 17px;border:1px solid var(--gold);border-radius:5px;color:var(--gold);text-decoration:none;font-size:.87rem;transition:all .25s}.button:hover{background:var(--gold);color:var(--background)}.button.secondary{border-color:var(--border-hover);color:var(--text-soft)}.button.secondary:hover{border-color:var(--gold);background:var(--gold);color:var(--background)}.button.disabled{opacity:.45;cursor:default}.button.disabled:hover{border-color:var(--border-hover);background:transparent;color:var(--text-soft)}.hero-note{margin-top:42px;color:var(--dim);font-size:.9rem;font-style:italic}
-.section-header{margin-bottom:55px}.section-label{margin-bottom:15px;color:var(--gold);font-size:.72rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase}.section-header h2{margin:0;color:var(--text);font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,2.8rem);line-height:1.2;font-weight:400;letter-spacing:-.025em}.section-header p{max-width:680px;margin:12px 0 0;color:var(--muted)}
-.about-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:80px}.about-text p{margin:0 0 25px;color:var(--text-soft);font-size:1.03rem}.about-text p:last-child{margin-bottom:0}.aside-title{color:var(--gold);font-size:.75rem;text-transform:uppercase;letter-spacing:.11em;margin-bottom:18px}.aside-list{list-style:none;padding:0;margin:0}.aside-list li{padding:10px 0;border-bottom:1px solid var(--border);color:var(--muted);font-size:.9rem}.aside-list li:first-child{border-top:1px solid var(--border)}
-.journey-intro{max-width:760px;margin:0 0 50px;color:var(--text-soft);font-size:1.04rem}.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}.experience-item{min-height:180px;padding:28px;background:var(--background);transition:background .25s}.experience-item:hover{background:var(--surface)}.experience-company{color:var(--text);font-size:1rem;font-weight:600;margin-bottom:10px}.experience-description{color:var(--muted);font-size:.85rem;line-height:1.6}.experience-tech{margin-top:17px;color:var(--gold-soft);font-size:.72rem}
-.path{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border)}.path-item{padding:30px 25px;border-right:1px solid var(--border)}.path-item:last-child{border-right:none}.path-step{margin-bottom:15px;color:var(--gold-soft);font-size:.7rem;letter-spacing:.08em}.path-item h3{margin:0 0 9px;color:var(--text);font-size:1rem;font-weight:600}.path-item p{margin:0;color:var(--muted);font-size:.82rem}
-.project{max-width:850px;padding:38px;border:1px dashed var(--border-hover);background:rgba(255,255,255,.015)}.project-icon{color:var(--gold);font-size:1.5rem;margin-bottom:17px}.project h3{margin:0 0 12px;color:var(--text);font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;font-weight:400}.project p{margin:0;max-width:700px;color:var(--muted)}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tag{padding:3px 9px;border:1px solid var(--border);border-radius:20px;color:var(--gold-soft);font-size:.7rem}
-.certifications{display:grid;grid-template-columns:repeat(2,minmax(0,360px));gap:22px}.certification{padding:32px;border:1px solid var(--border);background:var(--background);text-decoration:none;transition:border-color .25s,transform .25s}.certification:hover{border-color:var(--border-hover);transform:translateY(-4px)}.certification-badge{display:block;width:165px;height:165px;object-fit:contain;margin:0 auto 27px}.certification-title{color:var(--muted);font-size:.82rem}.certification-name{margin-top:3px;color:var(--text);font-size:1.08rem;font-weight:600}.certification-link{margin-top:17px;color:var(--gold);font-size:.8rem}
-.quote{padding:100px 0;text-align:center}.quote p{margin:0;color:#777;font-family:Georgia,"Times New Roman",serif;font-size:1rem;font-style:italic}
-.floating-actions{position:fixed;top:50%;right:28px;transform:translate(70px,-50%);display:flex;flex-direction:column;gap:9px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:90}.floating-actions.visible{opacity:1;pointer-events:auto;transform:translate(0,-50%)}.floating-button{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:50%;background:var(--background);color:var(--muted);text-decoration:none;transition:all .2s}.floating-button:hover{color:var(--gold);border-color:var(--gold)}
-footer{padding:30px 0 45px;border-top:1px solid var(--border);color:var(--dim);text-align:center;font-size:.8rem}footer a{color:var(--gold);text-decoration:none;margin:0 7px;font-size:1rem;transition:opacity .25s}footer a:hover{opacity:.6}
-@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:45px}.experience-grid{grid-template-columns:repeat(2,1fr)}.path{grid-template-columns:repeat(2,1fr)}.path-item:nth-child(2){border-right:none}.path-item:nth-child(-n+2){border-bottom:1px solid var(--border)}}
-@media(max-width:700px){.container{width:min(calc(100% - 32px),1100px)}.nav-right{gap:15px}.nav-links{gap:14px}.nav-links a{font-size:.75rem}.experience-grid{grid-template-columns:1fr}.certifications{grid-template-columns:1fr}section{padding:80px 0}}
-@media(max-width:520px){.nav-brand{font-size:.85rem}.nav-links{display:none}.nav-right{gap:12px}.hero{padding-top:120px}.hero-actions{flex-direction:column;align-items:stretch}.button{justify-content:center}.path{grid-template-columns:1fr}.path-item{border-right:none;border-bottom:1px solid var(--border)}.path-item:last-child{border-bottom:none}.floating-actions{top:auto;bottom:15px;right:14px;transform:translateY(70px);flex-direction:row}.floating-actions.visible{transform:translateY(0)}}
-</style>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud Administration, automation and DevOps."
+    >
+
+    <title>
+        Diego Sommier | Systems Administrator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+
+        /* ==================================================
+           VARIABLES
+        ================================================== */
+
+        :root {
+
+            --background: #111111;
+            --surface: #161616;
+
+            --text: #e6d8b8;
+            --text-soft: #c9c1b2;
+            --muted: #969696;
+            --dim: #666666;
+
+            --gold: #c7a76c;
+            --gold-soft: #9b8356;
+
+            --border: #302a20;
+            --border-hover: #66563a;
+
+        }
+
+
+        /* ==================================================
+           RESET
+        ================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            margin: 0;
+
+            background: var(--background);
+
+            color: var(--text);
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            line-height: 1.7;
+
+        }
+
+        a {
+            color: inherit;
+        }
+
+        ::selection {
+
+            background: var(--gold);
+
+            color: var(--background);
+
+        }
+
+
+        /* ==================================================
+           LAYOUT
+        ================================================== */
+
+        .container {
+
+            width:
+                min(
+                    calc(100% - 48px),
+                    1100px
+                );
+
+            margin: 0 auto;
+
+        }
+
+        section {
+
+            padding: 110px 0;
+
+            border-top:
+                1px solid
+                var(--border);
+
+        }
+
+
+        /* ==================================================
+           NAVIGATION
+        ================================================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+            right: 0;
+
+            z-index: 100;
+
+            background:
+                rgba(
+                    17,
+                    17,
+                    17,
+                    0.92
+                );
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+        .nav-inner {
+
+            min-height: 68px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+        .nav-brand {
+
+            color: var(--gold);
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            letter-spacing: 0.03em;
+
+        }
+
+        .nav-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 28px;
+
+        }
+
+        .nav-links a {
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 0.84rem;
+
+            transition: color 0.25s ease;
+
+        }
+
+        .nav-links a:hover {
+
+            color: var(--gold);
+
+        }
+
+
+        /* ==================================================
+           LANGUAGE SWITCHER
+        ================================================== */
+
+        .language-switcher {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            font-size: 0.75rem;
+
+            letter-spacing: 0.05em;
+
+        }
+
+        .language-button {
+
+            border: none;
+
+            padding: 0;
+
+            background: transparent;
+
+            color: var(--dim);
+
+            font-family: inherit;
+
+            font-size: 0.75rem;
+
+            letter-spacing: 0.05em;
+
+            cursor: pointer;
+
+            transition: color 0.25s ease;
+
+        }
+
+        .language-button:hover {
+
+            color: var(--text-soft);
+
+        }
+
+        .language-button.active {
+
+            color: var(--gold);
+
+        }
+
+        .language-separator {
+
+            color: var(--border-hover);
+
+        }
+
+
+        /* ==================================================
+           HERO
+        ================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            padding:
+                140px 0
+                100px;
+
+        }
+
+        .hero-content {
+
+            max-width: 900px;
+
+        }
+
+        .hero-kicker {
+
+            color: var(--gold);
+
+            font-size: 0.78rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.14em;
+
+            margin-bottom: 18px;
+
+        }
+
+        h1 {
+
+            margin: 0;
+
+            font-size:
+                clamp(
+                    3.2rem,
+                    7vw,
+                    5.8rem
+                );
+
+            line-height: 1;
+
+            letter-spacing: -0.055em;
+
+            font-weight: 600;
+
+        }
+
+        .hero-role {
+
+            margin-top: 24px;
+
+            color: var(--text-soft);
+
+            font-size:
+                clamp(
+                    1.25rem,
+                    3vw,
+                    1.65rem
+                );
+
+            line-height: 1.35;
+
+        }
+
+        .hero-role .direction {
+
+            color: var(--gold-soft);
+
+        }
+
+        .hero-description {
+
+            max-width: 730px;
+
+            margin: 28px 0 0;
+
+            color: var(--text-soft);
+
+            font-size: 1.08rem;
+
+        }
+
+        .hero-actions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 34px;
+
+        }
+
+        .button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 10px 17px;
+
+            border:
+                1px solid
+                var(--gold);
+
+            border-radius: 5px;
+
+            color: var(--gold);
+
+            text-decoration: none;
+
+            font-size: 0.87rem;
+
+            transition: all 0.25s ease;
+
+        }
+
+        .button:hover {
+
+            background: var(--gold);
+
+            color: var(--background);
+
+        }
+
+        .button.secondary {
+
+            border-color: var(--border-hover);
+
+            color: var(--text-soft);
+
+        }
+
+        .button.secondary:hover {
+
+            border-color: var(--gold);
+
+            background: var(--gold);
+
+            color: var(--background);
+
+        }
+
+
+        /* ==================================================
+           SECTION HEADER
+        ================================================== */
+
+        .section-header {
+
+            margin-bottom: 55px;
+
+        }
+
+        .section-label {
+
+            margin-bottom: 14px;
+
+            color: var(--gold);
+
+            font-size: 0.72rem;
+
+            font-weight: 600;
+
+            letter-spacing: 0.13em;
+
+            text-transform: uppercase;
+
+        }
+
+        .section-header h2 {
+
+            margin: 0;
+
+            color: var(--text);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    2rem,
+                    4vw,
+                    2.8rem
+                );
+
+            line-height: 1.2;
+
+            font-weight: normal;
+
+            letter-spacing: -0.025em;
+
+        }
+
+
+        /* ==================================================
+           ABOUT
+        ================================================== */
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.4fr
+                0.8fr;
+
+            gap: 80px;
+
+        }
+
+        .about-text p {
+
+            margin:
+                0 0 25px;
+
+            color: var(--text-soft);
+
+            font-size: 1.03rem;
+
+        }
+
+        .about-text p:last-child {
+
+            margin-bottom: 0;
+
+        }
+
+        .aside-title {
+
+            color: var(--gold);
+
+            font-size: 0.75rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.11em;
+
+            margin-bottom: 18px;
+
+        }
+
+        .aside-list {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+        .aside-list li {
+
+            padding: 10px 0;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+            color: var(--muted);
+
+            font-size: 0.9rem;
+
+        }
+
+        .aside-list li:first-child {
+
+            border-top:
+                1px solid
+                var(--border);
+
+        }
+
+
+        /* ==================================================
+           JOURNEY
+        ================================================== */
+
+        .journey-intro {
+
+            max-width: 760px;
+
+            margin:
+                0 0 45px;
+
+            color: var(--text-soft);
+
+            font-size: 1.04rem;
+
+        }
+
+        .experience-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            column-gap: 45px;
+
+            row-gap: 0;
+
+            border-top:
+                1px solid
+                var(--border);
+
+        }
+
+        .experience-item {
+
+            padding:
+                25px 0;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+        }
+
+        .experience-company {
+
+            color: var(--text);
+
+            font-size: 0.98rem;
+
+            font-weight: 600;
+
+            margin-bottom: 7px;
+
+        }
+
+        .experience-tech {
+
+            color: var(--gold-soft);
+
+            font-size: 0.72rem;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* ==================================================
+           PROJECTS
+        ================================================== */
+
+        .project {
+
+            max-width: 850px;
+
+            padding: 38px;
+
+            border:
+                1px dashed
+                var(--border-hover);
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.015
+                );
+
+        }
+
+        .project-code {
+
+            display: inline-block;
+
+            margin-bottom: 18px;
+
+            color: var(--gold);
+
+            font-family:
+                "Courier New",
+                monospace;
+
+            font-size: 1.25rem;
+
+            letter-spacing: 0.03em;
+
+        }
+
+        .project h3 {
+
+            margin:
+                0 0 12px;
+
+            color: var(--text);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.45rem;
+
+            font-weight: normal;
+
+        }
+
+        .project p {
+
+            margin: 0;
+
+            max-width: 700px;
+
+            color: var(--muted);
+
+        }
+
+        .tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 22px;
+
+        }
+
+        .tag {
+
+            padding:
+                3px 9px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 20px;
+
+            color: var(--gold-soft);
+
+            font-size: 0.7rem;
+
+        }
+
+
+        /* ==================================================
+           CERTIFICATIONS
+        ================================================== */
+
+        .certifications {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(
+                        0,
+                        360px
+                    )
+                );
+
+            gap: 22px;
+
+        }
+
+        .certification {
+
+            padding: 32px;
+
+            border:
+                1px solid
+                var(--border);
+
+            background:
+                var(--background);
+
+            text-decoration: none;
+
+            transition:
+                border-color 0.25s ease,
+                transform 0.25s ease;
+
+        }
+
+        .certification:hover {
+
+            border-color:
+                var(--border-hover);
+
+            transform:
+                translateY(-4px);
+
+        }
+
+        .certification-badge {
+
+            display: block;
+
+            width: 165px;
+
+            height: 165px;
+
+            object-fit: contain;
+
+            margin:
+                0 auto 27px;
+
+        }
+
+        .certification-title {
+
+            color: var(--muted);
+
+            font-size: 0.82rem;
+
+        }
+
+        .certification-name {
+
+            margin-top: 3px;
+
+            color: var(--text);
+
+            font-size: 1.08rem;
+
+            font-weight: 600;
+
+        }
+
+        .certification-link {
+
+            margin-top: 17px;
+
+            color: var(--gold);
+
+            font-size: 0.8rem;
+
+        }
+
+
+        /* ==================================================
+           CLOSING
+        ================================================== */
+
+        .quote {
+
+            padding:
+                100px 0;
+
+            text-align: center;
+
+        }
+
+        .quote p {
+
+            margin: 0;
+
+            color: #777;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1rem;
+
+            font-style: italic;
+
+        }
+
+
+        /* ==================================================
+           FLOATING ACTIONS
+        ================================================== */
+
+        .floating-actions {
+
+            position: fixed;
+
+            top: 50%;
+
+            right: 28px;
+
+            transform:
+                translate(
+                    70px,
+                    -50%
+                );
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 9px;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease;
+
+            z-index: 90;
+
+        }
+
+        .floating-actions.visible {
+
+            opacity: 1;
+
+            pointer-events: auto;
+
+            transform:
+                translate(
+                    0,
+                    -50%
+                );
+
+        }
+
+        .floating-button {
+
+            width: 38px;
+
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 50%;
+
+            background:
+                var(--background);
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            transition: all 0.2s ease;
+
+        }
+
+        .floating-button:hover {
+
+            color: var(--gold);
+
+            border-color:
+                var(--gold);
+
+        }
+
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
+
+        footer {
+
+            padding:
+                30px 0
+                45px;
+
+            border-top:
+                1px solid
+                var(--border);
+
+            color: var(--dim);
+
+            text-align: center;
+
+            font-size: 0.8rem;
+
+        }
+
+        footer a {
+
+            color: var(--gold);
+
+            text-decoration: none;
+
+            margin: 0 7px;
+
+            font-size: 1rem;
+
+            transition: opacity 0.25s ease;
+
+        }
+
+        footer a:hover {
+
+            opacity: 0.6;
+
+        }
+
+
+        /* ==================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 900px) {
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+
+            }
+
+            .experience-list {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+                column-gap: 35px;
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .container {
+
+                width:
+                    min(
+                        calc(100% - 32px),
+                        1100px
+                    );
+
+            }
+
+            .nav-right {
+
+                gap: 15px;
+
+            }
+
+            .nav-links {
+
+                gap: 14px;
+
+            }
+
+            .nav-links a {
+
+                font-size: 0.75rem;
+
+            }
+
+            .experience-list {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .certifications {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            section {
+
+                padding: 80px 0;
+
+            }
+
+        }
+
+
+        @media (max-width: 520px) {
+
+            .nav-brand {
+
+                font-size: 0.85rem;
+
+            }
+
+            .nav-links {
+
+                display: none;
+
+            }
+
+            .nav-right {
+
+                gap: 12px;
+
+            }
+
+            .hero {
+
+                padding-top: 120px;
+
+            }
+
+            .hero-role {
+
+                font-size: 1.2rem;
+
+            }
+
+            .hero-actions {
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+            }
+
+            .button {
+
+                justify-content: center;
+
+            }
+
+            .floating-actions {
+
+                top: auto;
+
+                bottom: 15px;
+
+                right: 14px;
+
+                transform:
+                    translateY(70px);
+
+                flex-direction: row;
+
+            }
+
+            .floating-actions.visible {
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-<nav><div class="container nav-inner"><a href="#" class="nav-brand">Diego Sommier</a><div class="nav-right"><div class="nav-links"><a href="#about"><span data-en="About" data-es="Sobre mí">About</span></a><a href="#journey"><span data-en="Journey" data-es="Trayectoria">Journey</span></a><a href="#path"><span data-en="The Path" data-es="El camino">The Path</span></a><a href="#projects"><span data-en="Projects" data-es="Proyectos">Projects</span></a><a href="#certifications"><span data-en="Certifications" data-es="Certificaciones">Certifications</span></a></div><div class="language-switcher"><button class="language-button active" data-lang="en" type="button">EN</button><span class="language-separator">·</span><button class="language-button" data-lang="es" type="button">ES</button></div></div></div></nav>
-<header class="hero"><div class="container"><div class="hero-content"><div class="hero-kicker">IT · Infrastructure · Cloud</div><h1>Diego Sommier</h1><div class="hero-role" data-en="Cloud Administrator · DevOps" data-es="Administrador Cloud · DevOps">Cloud Administrator · DevOps</div><p class="hero-description" data-en="Building on 9+ years of systems and infrastructure experience while forging my path into Cloud Administration, automation and modern infrastructure." data-es="Construyendo sobre más de 9 años de experiencia en sistemas e infraestructura mientras forjo mi camino hacia la Administración Cloud, la automatización y las infraestructuras modernas.">Building on 9+ years of systems and infrastructure experience while forging my path into Cloud Administration, automation and modern infrastructure.</p><div class="hero-actions"><a href="mailto:diegosommier@gmail.com" class="button"><i class="fa-solid fa-envelope"></i><span data-en="Email Me" data-es="Contactar">Email Me</span></a><a href="https://www.linkedin.com/in/diegosommier/" target="_blank" rel="noopener noreferrer" class="button secondary"><i class="fa-brands fa-linkedin"></i>LinkedIn</a><a href="https://github.com/diegosommier" target="_blank" rel="noopener noreferrer" class="button secondary"><i class="fa-brands fa-github"></i>GitHub</a><a id="cvButton" href="cv-en.pdf" target="_blank" rel="noopener noreferrer" class="button secondary"><i class="fa-solid fa-download"></i><span data-en="Download CV" data-es="Descargar CV">Download CV</span></a></div><div class="hero-note" data-en="Welcome, traveler. The journey has just begun." data-es="Bienvenido, viajero. El camino acaba de comenzar.">Welcome, traveler. The journey has just begun.</div></div></div></header>
-<main>
-<section id="about"><div class="container"><div class="section-header"><div class="section-label" data-en="01 · About" data-es="01 · Sobre mí">01 · About</div><h2 data-en="About me" data-es="Sobre mí">About me</h2><p data-en="From systems administration to the cloud." data-es="De la administración de sistemas a la nube.">From systems administration to the cloud.</p></div><div class="about-grid"><div class="about-text"><p data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure." data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft.">I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure.</p><p data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics." data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística.">Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics.</p><p data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects." data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales.">I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects.</p></div><aside><div class="aside-title" data-en="Currently exploring" data-es="Explorando actualmente">Currently exploring</div><ul class="aside-list"><li data-en="Cloud Administration" data-es="Administración Cloud">Cloud Administration</li><li>Azure & AWS</li><li data-en="Automation" data-es="Automatización">Automation</li><li>DevOps practices</li><li>Infrastructure as Code</li></ul></aside></div></div></section>
-<section id="journey"><div class="container"><div class="section-header"><div class="section-label" data-en="02 · Journey" data-es="02 · Trayectoria">02 · Journey</div><h2 data-en="Professional journey" data-es="Trayectoria profesional">Professional journey</h2><p data-en="Enterprise environments, infrastructure and real-world systems." data-es="Entornos empresariales, infraestructura y sistemas reales.">Enterprise environments, infrastructure and real-world systems.</p></div><p class="journey-intro" data-en="My career has taken me through different enterprise environments and industries, giving me experience with large-scale infrastructure, systems administration, endpoint management and hybrid Microsoft technologies. Some of the organisations and environments I've worked with include:" data-es="Mi trayectoria me ha llevado por distintos entornos empresariales y sectores, proporcionándome experiencia con infraestructuras a gran escala, administración de sistemas, gestión de endpoints y tecnologías Microsoft híbridas. Algunas de las organizaciones y entornos en los que he trabajado incluyen:">My career has taken me through different enterprise environments and industries, giving me experience with large-scale infrastructure, systems administration, endpoint management and hybrid Microsoft technologies. Some of the organisations and environments I've worked with include:</p><div class="experience-grid"><article class="experience-item"><div class="experience-company">Santander Digital Services</div><div class="experience-description" data-en="Large-scale Windows endpoint management and migration environments." data-es="Entornos de gestión y migración de endpoints Windows a gran escala.">Large-scale Windows endpoint management and migration environments.</div><div class="experience-tech">SCCM · Intune · Windows 11</div></article><article class="experience-item"><div class="experience-company">CBNK</div><div class="experience-description" data-en="Hybrid Microsoft infrastructure supporting enterprise users." data-es="Infraestructura híbrida de Microsoft dando soporte a usuarios empresariales.">Hybrid Microsoft infrastructure supporting enterprise users.</div><div class="experience-tech">Entra ID · Microsoft 365 · Exchange Online</div></article><article class="experience-item"><div class="experience-company">Zurich</div><div class="experience-description" data-en="Enterprise server administration and virtualised infrastructure." data-es="Administración de servidores empresariales e infraestructura virtualizada.">Enterprise server administration and virtualised infrastructure.</div><div class="experience-tech">Windows · Linux · VMware</div></article><article class="experience-item"><div class="experience-company">Decathlon</div><div class="experience-description" data-en="Infrastructure projects and automation within a large international environment." data-es="Proyectos de infraestructura y automatización dentro de un entorno internacional.">Infrastructure projects and automation within a large international environment.</div><div class="experience-tech">Infrastructure · Automation</div></article><article class="experience-item"><div class="experience-company">MRW</div><div class="experience-description" data-en="Systems administration and enterprise server environments." data-es="Administración de sistemas y entornos de servidores empresariales.">Systems administration and enterprise server environments.</div><div class="experience-tech">Windows · Linux · Infrastructure</div></article><article class="experience-item"><div class="experience-company">Campofrío</div><div class="experience-description" data-en="Windows and Linux server administration environments." data-es="Entornos de administración de servidores Windows y Linux.">Windows and Linux server administration environments.</div><div class="experience-tech">Windows · Linux · VMware</div></article></div></div></section>
-<section id="path"><div class="container"><div class="section-header"><div class="section-label" data-en="03 · The Path" data-es="03 · El camino">03 · The Path</div><h2 data-en="Where I'm heading" data-es="Hacia dónde voy">Where I'm heading</h2><p data-en="The direction I'm building towards." data-es="La dirección hacia la que estoy construyendo mi trayectoria.">The direction I'm building towards.</p></div><div class="path"><article class="path-item"><div class="path-step" data-en="FOUNDATION" data-es="BASE">FOUNDATION</div><h3 data-en="Infrastructure" data-es="Infraestructura">Infrastructure</h3><p data-en="Systems administration, Windows, Linux, networking and virtualisation." data-es="Administración de sistemas, Windows, Linux, redes y virtualización.">Systems administration, Windows, Linux, networking and virtualisation.</p></article><article class="path-item"><div class="path-step" data-en="CURRENT FOCUS" data-es="FOCO ACTUAL">CURRENT FOCUS</div><h3 data-en="Cloud Administration" data-es="Administración Cloud">Cloud Administration</h3><p data-en="Azure and AWS, identity, cloud infrastructure and administration." data-es="Azure y AWS, identidad, infraestructura cloud y administración.">Azure and AWS, identity, cloud infrastructure and administration.</p></article><article class="path-item"><div class="path-step" data-en="EXPANDING" data-es="AMPLIANDO">EXPANDING</div><h3 data-en="Automation & DevOps" data-es="Automatización y DevOps">Automation & DevOps</h3><p data-en="Automation, CI/CD, Infrastructure as Code and reproducible environments." data-es="Automatización, CI/CD, Infrastructure as Code y entornos reproducibles.">Automation, CI/CD, Infrastructure as Code and reproducible environments.</p></article><article class="path-item"><div class="path-step" data-en="LONG TERM" data-es="LARGO PLAZO">LONG TERM</div><h3 data-en="Modern Cloud Infrastructure" data-es="Infraestructura Cloud moderna">Modern Cloud Infrastructure</h3><p data-en="Designing and operating scalable, secure and automated cloud environments." data-es="Diseñar y operar entornos cloud escalables, seguros y automatizados.">Designing and operating scalable, secure and automated cloud environments.</p></article></div></div></section>
-<section id="projects"><div class="container"><div class="section-header"><div class="section-label" data-en="04 · Projects" data-es="04 · Proyectos">04 · Projects</div><h2 data-en="Projects in progress" data-es="Proyectos en desarrollo">Projects in progress</h2><p data-en="Turning learning into practical Cloud projects." data-es="Convirtiendo el aprendizaje en proyectos Cloud prácticos.">Turning learning into practical Cloud projects.</p></div><article class="project"><h3 data-en="Cloud & DevOps Projects" data-es="Proyectos Cloud y DevOps">Cloud & DevOps Projects</h3><p data-en="I'm currently building my first practical Cloud projects while progressing through my AWS and DevOps training. This section will grow with infrastructure labs, automation experiments and reproducible environments." data-es="Actualmente estoy construyendo mis primeros proyectos prácticos de Cloud mientras avanzo en mi formación de AWS y DevOps. Esta sección crecerá con laboratorios de infraestructura, experimentos de automatización y entornos reproducibles.">I'm currently building my first practical Cloud projects while progressing through my AWS and DevOps training. This section will grow with infrastructure labs, automation experiments and reproducible environments.</p><div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">DevOps</span><span class="tag" data-en="Automation" data-es="Automatización">Automation</span><span class="tag">Infrastructure as Code</span></div></article></div></section>
-<section id="certifications"><div class="container"><div class="section-header"><div class="section-label" data-en="05 · Certifications" data-es="05 · Certificaciones">05 · Certifications</div><h2 data-en="Certifications" data-es="Certificaciones">Certifications</h2><p data-en="Formal recognition of the foundations built along the way." data-es="Reconocimiento formal de los conocimientos construidos durante el camino.">Formal recognition of the foundations built along the way.</p></div><div class="certifications"><a href="https://learn.microsoft.com/es-es/users/sommy/credentials/1d127efc53a85682" target="_blank" rel="noopener noreferrer" class="certification"><img class="certification-badge" src="https://images.credly.com/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png" alt="Microsoft Certified Azure Fundamentals"><div class="certification-title">Microsoft Certified</div><div class="certification-name">Azure Fundamentals</div><div class="certification-link" data-en="View credential ↗" data-es="Ver credencial ↗">View credential ↗</div></a><div class="certification"><img class="certification-badge" src="https://images.credly.com/images/2feaf613-be86-4d79-9cf8-c7aef82031c7/twitter_thumb_201604_MTA-Networking_Fundamentals-600x600.png" alt="Microsoft Technology Associate Networking Fundamentals"><div class="certification-title">Microsoft Technology Associate</div><div class="certification-name">Networking Fundamentals</div></div></div></div></section>
-<section class="quote"><div class="container"><p>"Not all those who wander are lost."</p></div></section>
-</main>
-<div class="floating-actions" id="floatingActions"><a href="mailto:diegosommier@gmail.com" class="floating-button" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a><a href="https://www.linkedin.com/in/diegosommier/" target="_blank" rel="noopener noreferrer" class="floating-button" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a><a href="https://github.com/diegosommier" target="_blank" rel="noopener noreferrer" class="floating-button" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a id="floatingCv" href="cv-en.pdf" target="_blank" rel="noopener noreferrer" class="floating-button" title="CV" aria-label="CV"><i class="fa-solid fa-download"></i></a></div>
-<footer><div class="container"><span data-en="Crafted by Diego Sommier ·" data-es="Creado por Diego Sommier ·">Crafted by Diego Sommier ·</span><a href="mailto:diegosommier@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a><a href="https://www.linkedin.com/in/diegosommier/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a><a href="https://github.com/diegosommier" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.instagram.com/diegosommier/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://x.com/diegosommier" target="_blank" rel="noopener noreferrer" title="X" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></div></footer>
-<script>
-const languageButtons=document.querySelectorAll('.language-button');const translatableElements=document.querySelectorAll('[data-en][data-es]');const cvButton=document.getElementById('cvButton');const floatingCv=document.getElementById('floatingCv');
-function setLanguage(language){document.documentElement.lang=language;translatableElements.forEach(el=>{const t=el.dataset[language];if(t)el.textContent=t});languageButtons.forEach(b=>b.classList.toggle('active',b.dataset.lang===language));document.title=language==='es'?'Diego Sommier | Administrador Cloud · DevOps':'Diego Sommier | Cloud Administrator · DevOps';const description=document.querySelector('meta[name="description"]');description.content=language==='es'?'Diego Sommier — Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura, desarrollando su trayectoria hacia Cloud Administration, automatización y DevOps.':'Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud Administration, automation and DevOps.';const cv=language==='es'?'cv-es.pdf':'cv-en.pdf';cvButton.href=cv;floatingCv.href=cv;cvButton.title=language==='es'?'Descargar CV en español':'Download English CV';floatingCv.title=cvButton.title;localStorage.setItem('preferredLanguage',language)}
-languageButtons.forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));const savedLanguage=localStorage.getItem('preferredLanguage');setLanguage(savedLanguage==='es'||savedLanguage==='en'?savedLanguage:'en');
-const floatingActions=document.getElementById('floatingActions');function updateFloatingActions(){if(window.scrollY>450)floatingActions.classList.add('visible');else floatingActions.classList.remove('visible')}window.addEventListener('scroll',updateFloatingActions,{passive:true});updateFloatingActions();
-</script>
+
+
+    <!-- ==================================================
+         NAVIGATION
+    ================================================== -->
+
+    <nav>
+
+        <div class="container nav-inner">
+
+            <a
+                href="#"
+                class="nav-brand"
+            >
+                Diego Sommier
+            </a>
+
+
+            <div class="nav-right">
+
+                <div class="nav-links">
+
+                    <a href="#about">
+                        <span
+                            data-en="About"
+                            data-es="Sobre mí"
+                        >
+                            About
+                        </span>
+                    </a>
+
+                    <a href="#journey">
+                        <span
+                            data-en="Journey"
+                            data-es="Trayectoria"
+                        >
+                            Journey
+                        </span>
+                    </a>
+
+                    <a href="#projects">
+                        <span
+                            data-en="Projects"
+                            data-es="Proyectos"
+                        >
+                            Projects
+                        </span>
+                    </a>
+
+                    <a href="#certifications">
+                        <span
+                            data-en="Certifications"
+                            data-es="Certificaciones"
+                        >
+                            Certifications
+                        </span>
+                    </a>
+
+                </div>
+
+
+                <div class="language-switcher">
+
+                    <button
+                        class="language-button active"
+                        data-lang="en"
+                        type="button"
+                    >
+                        EN
+                    </button>
+
+                    <span class="language-separator">
+                        ·
+                    </span>
+
+                    <button
+                        class="language-button"
+                        data-lang="es"
+                        type="button"
+                    >
+                        ES
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==================================================
+         HERO
+    ================================================== -->
+
+    <header class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-kicker">
+                    IT · Infrastructure
+                </div>
+
+                <h1>
+                    Diego Sommier
+                </h1>
+
+
+                <!--
+                    The professional identity and direction
+                    intentionally live on the same line.
+                -->
+
+                <div
+                    class="hero-role"
+                >
+
+                    <span
+                        data-en="Systems Administrator"
+                        data-es="Administrador de Sistemas"
+                    >
+                        Systems Administrator
+                    </span>
+
+                    <span>
+                        ·
+                    </span>
+
+                    <span
+                        class="direction"
+                        data-en="Building towards Cloud & DevOps"
+                        data-es="Rumbo a Cloud & DevOps"
+                    >
+                        Building towards Cloud & DevOps
+                    </span>
+
+                </div>
+
+
+                <p
+                    class="hero-description"
+                    data-en="IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure."
+                    data-es="Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura empresarial, ampliando ahora esa base hacia Cloud, automatización e infraestructuras modernas."
+                >
+                    IT professional with more than 9 years of experience
+                    in systems administration and enterprise infrastructure,
+                    now expanding that foundation into Cloud, automation
+                    and modern infrastructure.
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        href="mailto:diegosommier@gmail.com"
+                        class="button"
+                    >
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span
+                            data-en="Email Me"
+                            data-es="Contactar"
+                        >
+                            Email Me
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/diegosommier/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button secondary"
+                    >
+
+                        <i class="fa-brands fa-linkedin"></i>
+
+                        LinkedIn
+
+                    </a>
+
+
+                    <a
+                        href="https://github.com/diegosommier"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button secondary"
+                    >
+
+                        <i class="fa-brands fa-github"></i>
+
+                        GitHub
+
+                    </a>
+
+
+                    <a
+                        id="cvDownload"
+                        href="cv-diego-sommier-en.pdf"
+                        download
+                        class="button secondary"
+                    >
+
+                        <i class="fa-solid fa-download"></i>
+
+                        <span
+                            data-en="Download CV"
+                            data-es="Descargar CV"
+                        >
+                            Download CV
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==================================================
+             ABOUT
+        ================================================== -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div
+                        class="section-label"
+                        data-en="01 · About"
+                        data-es="01 · Sobre mí"
+                    >
+                        01 · About
+                    </div>
+
+                    <h2
+                        data-en="Systems, infrastructure and more"
+                        data-es="Sistemas, infraestructura y más"
+                    >
+                        Systems, infrastructure and more
+                    </h2>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <p
+                            data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure."
+                            data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft."
+                        >
+                            I'm an IT professional with more than 9 years
+                            of experience in systems administration and
+                            enterprise infrastructure. My background spans
+                            Windows and Linux environments, virtualization,
+                            endpoint management and hybrid Microsoft
+                            infrastructure.
+                        </p>
+
+
+                        <p
+                            data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
+                            data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
+                        >
+                            Throughout my career I've worked across
+                            different enterprise environments, supporting
+                            infrastructure and large-scale IT operations
+                            for organisations in banking, insurance,
+                            retail and logistics.
+                        </p>
+
+
+                        <p
+                            data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects."
+                            data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales."
+                        >
+                            I'm now building on that foundation to transition
+                            into Cloud Administration, expanding my knowledge
+                            across Azure, AWS, automation and DevOps through
+                            hands-on learning and personal projects.
+                        </p>
+
+                    </div>
+
+
+                    <aside>
+
+                        <div
+                            class="aside-title"
+                            data-en="Currently exploring"
+                            data-es="Explorando actualmente"
+                        >
+                            Currently exploring
+                        </div>
+
+                        <ul class="aside-list">
+
+                            <li
+                                data-en="Cloud Administration"
+                                data-es="Administración Cloud"
+                            >
+                                Cloud Administration
+                            </li>
+
+                            <li>
+                                Azure & AWS
+                            </li>
+
+                            <li
+                                data-en="Automation"
+                                data-es="Automatización"
+                            >
+                                Automation
+                            </li>
+
+                            <li>
+                                DevOps
+                            </li>
+
+                            <li>
+                                Infrastructure as Code
+                            </li>
+
+                        </ul>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             JOURNEY
+        ================================================== -->
+
+        <section id="journey">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div
+                        class="section-label"
+                        data-en="02 · Journey"
+                        data-es="02 · Trayectoria"
+                    >
+                        02 · Journey
+                    </div>
+
+                    <h2
+                        data-en="Where the experience was built"
+                        data-es="Donde se construyó la experiencia"
+                    >
+                        Where the experience was built
+                    </h2>
+
+                </div>
+
+
+                <p
+                    class="journey-intro"
+                    data-en="My career has taken me through different enterprise environments and industries. The organisations below represent some of the environments where I've worked and the technologies I've used along the way."
+                    data-es="Mi trayectoria me ha llevado por distintos entornos empresariales y sectores. Las organizaciones que aparecen a continuación representan algunos de los entornos en los que he trabajado y las tecnologías utilizadas a lo largo del camino."
+                >
+                    My career has taken me through different enterprise
+                    environments and industries. The organisations below
+                    represent some of the environments where I've worked
+                    and the technologies I've used along the way.
+                </p>
+
+
+                <div class="experience-list">
+
+
+                    <article class="experience-item">
+
+                        <div class="experience-company">
+                            Santander Digital Services
+                        </div>
+
+                        <div class="experience-tech">
+                            SCCM · Intune · Windows Server
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <div class="experience-company">
+                            CBNK
+                        </div>
+
+                        <div class="experience-tech">
+                            Entra ID · Microsoft 365 · Exchange Online
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <div class="experience-company">
+                            Decathlon
+                        </div>
+
+                        <div class="experience-tech">
+                            Windows Server · Linux · Automation
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <div class="experience-company">
+                            BNP Paribas
+                        </div>
+
+                        <div class="experience-tech">
+                            Windows Server · Linux · VMware
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <div class="experience-company">
+                            Campofrío
+                        </div>
+
+                        <div class="experience-tech">
+                            Windows Server · Linux · VMware
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <div class="experience-company">
+                            MRW
+                        </div>
+
+                        <div class="experience-tech">
+                            Windows Server · Linux · VMware
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <div class="experience-company">
+                            Zurich
+                        </div>
+
+                        <div class="experience-tech">
+                            Windows Server · Linux · VMware
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <div class="experience-company">
+                            Liberbank
+                        </div>
+
+                        <div class="experience-tech">
+                            Windows · Networking · Infrastructure
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <div class="experience-company">
+                            ALSA
+                        </div>
+
+                        <div class="experience-tech">
+                            Windows Server · Active Directory · Infrastructure
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PROJECTS
+        ================================================== -->
+
+        <section id="projects">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div
+                        class="section-label"
+                        data-en="03 · Projects"
+                        data-es="03 · Proyectos"
+                    >
+                        03 · Projects
+                    </div>
+
+                    <h2
+                        data-en="The forge is taking shape"
+                        data-es="La forja empieza a tomar forma"
+                    >
+                        The forge is taking shape
+                    </h2>
+
+                </div>
+
+
+                <article class="project">
+
+                    <div class="project-code">
+                        &lt;/&gt;
+                    </div>
+
+
+                    <h3
+                        data-en="Cloud & DevOps Projects"
+                        data-es="Proyectos Cloud y DevOps"
+                    >
+                        Cloud & DevOps Projects
+                    </h3>
+
+
+                    <p
+                        data-en="I'm currently building my first practical Cloud projects while progressing through my AWS and DevOps training. This section will grow with infrastructure labs, automation experiments and reproducible environments."
+                        data-es="Actualmente estoy construyendo mis primeros proyectos prácticos de Cloud mientras avanzo en mi formación de AWS y DevOps. Esta sección crecerá con laboratorios de infraestructura, experimentos de automatización y entornos reproducibles."
+                    >
+                        I'm currently building my first practical Cloud
+                        projects while progressing through my AWS and
+                        DevOps training. This section will grow with
+                        infrastructure labs, automation experiments and
+                        reproducible environments.
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            AWS
+                        </span>
+
+                        <span class="tag">
+                            Azure
+                        </span>
+
+                        <span class="tag">
+                            DevOps
+                        </span>
+
+                        <span
+                            class="tag"
+                            data-en="Automation"
+                            data-es="Automatización"
+                        >
+                            Automation
+                        </span>
+
+                        <span class="tag">
+                            Infrastructure as Code
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             CERTIFICATIONS
+        ================================================== -->
+
+        <section id="certifications">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div
+                        class="section-label"
+                        data-en="04 · Certifications"
+                        data-es="04 · Certificaciones"
+                    >
+                        04 · Certifications
+                    </div>
+
+                    <h2
+                        data-en="Milestones along the way"
+                        data-es="Hitos en el camino"
+                    >
+                        Milestones along the way
+                    </h2>
+
+                </div>
+
+
+                <div class="certifications">
+
+
+                    <a
+                        href="https://learn.microsoft.com/es-es/users/sommy/credentials/1d127efc53a85682"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="certification"
+                    >
+
+                        <img
+                            class="certification-badge"
+                            src="https://images.credly.com/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png"
+                            alt="Microsoft Certified Azure Fundamentals"
+                        >
+
+                        <div
+                            class="certification-title"
+                            data-en="Microsoft Certified"
+                            data-es="Microsoft Certified"
+                        >
+                            Microsoft Certified
+                        </div>
+
+                        <div
+                            class="certification-name"
+                            data-en="Azure Fundamentals"
+                            data-es="Azure Fundamentals"
+                        >
+                            Azure Fundamentals
+                        </div>
+
+                        <div
+                            class="certification-link"
+                            data-en="View credential ↗"
+                            data-es="Ver credencial ↗"
+                        >
+                            View credential ↗
+                        </div>
+
+                    </a>
+
+
+                    <div class="certification">
+
+                        <img
+                            class="certification-badge"
+                            src="https://images.credly.com/images/2feaf613-be86-4d79-9cf8-c7aef82031c7/twitter_thumb_201604_MTA-Networking_Fundamentals-600x600.png"
+                            alt="Microsoft Technology Associate Networking Fundamentals"
+                        >
+
+                        <div
+                            class="certification-title"
+                            data-en="Microsoft Technology Associate"
+                            data-es="Microsoft Technology Associate"
+                        >
+                            Microsoft Technology Associate
+                        </div>
+
+                        <div
+                            class="certification-name"
+                            data-en="Networking Fundamentals"
+                            data-es="Networking Fundamentals"
+                        >
+                            Networking Fundamentals
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             CLOSING
+        ================================================== -->
+
+        <section class="quote">
+
+            <div class="container">
+
+                <p>
+                    "The best is just to come."
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==================================================
+         FLOATING ACTIONS
+    ================================================== -->
+
+    <div
+        class="floating-actions"
+        id="floatingActions"
+    >
+
+        <a
+            href="mailto:diegosommier@gmail.com"
+            class="floating-button"
+            title="Email"
+            aria-label="Email"
+        >
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+
+
+        <a
+            href="https://www.linkedin.com/in/diegosommier/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="floating-button"
+            title="LinkedIn"
+            aria-label="LinkedIn"
+        >
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+
+        <a
+            href="https://github.com/diegosommier"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="floating-button"
+            title="GitHub"
+            aria-label="GitHub"
+        >
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+
+        <a
+            id="floatingCvDownload"
+            href="cv-diego-sommier-en.pdf"
+            download
+            class="floating-button"
+            title="Download CV"
+            aria-label="Download CV"
+        >
+            <i class="fa-solid fa-download"></i>
+        </a>
+
+    </div>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <span
+                data-en="Crafted by Diego Sommier ·"
+                data-es="Creado por Diego Sommier ·"
+            >
+                Crafted by Diego Sommier ·
+            </span>
+
+
+            <a
+                href="mailto:diegosommier@gmail.com"
+                title="Email"
+                aria-label="Email"
+            >
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/diegosommier/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                aria-label="LinkedIn"
+            >
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+
+            <a
+                href="https://github.com/diegosommier"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+                aria-label="GitHub"
+            >
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+
+            <a
+                href="https://www.instagram.com/diegosommier/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Instagram"
+                aria-label="Instagram"
+            >
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+
+            <a
+                href="https://x.com/diegosommier"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="X"
+                aria-label="X"
+            >
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        const languageButtons =
+            document.querySelectorAll(
+                ".language-button"
+            );
+
+
+        const translatableElements =
+            document.querySelectorAll(
+                "[data-en][data-es]"
+            );
+
+
+        const cvDownload =
+            document.getElementById(
+                "cvDownload"
+            );
+
+
+        const floatingCvDownload =
+            document.getElementById(
+                "floatingCvDownload"
+            );
+
+
+        function setLanguage(language) {
+
+            document.documentElement.lang =
+                language;
+
+
+            translatableElements.forEach(
+                element => {
+
+                    const translation =
+                        element.dataset[language];
+
+                    if (translation) {
+
+                        element.textContent =
+                            translation;
+
+                    }
+
+                }
+            );
+
+
+            languageButtons.forEach(
+                button => {
+
+                    button.classList.toggle(
+                        "active",
+                        button.dataset.lang === language
+                    );
+
+                }
+            );
+
+
+            if (language === "es") {
+
+                document.title =
+                    "Diego Sommier | Administrador de Sistemas";
+
+            } else {
+
+                document.title =
+                    "Diego Sommier | Systems Administrator";
+
+            }
+
+
+            const description =
+                document.querySelector(
+                    'meta[name="description"]'
+                );
+
+
+            if (description) {
+
+                if (language === "es") {
+
+                    description.setAttribute(
+                        "content",
+                        "Diego Sommier — Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura, orientado hacia Cloud, automatización y DevOps."
+                    );
+
+                } else {
+
+                    description.setAttribute(
+                        "content",
+                        "Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud, automation and DevOps."
+                    );
+
+                }
+
+            }
+
+
+            const cvFile =
+                language === "es"
+                    ? "cv-diego-sommier-es.pdf"
+                    : "cv-diego-sommier-en.pdf";
+
+
+            if (cvDownload) {
+
+                cvDownload.href =
+                    cvFile;
+
+            }
+
+
+            if (floatingCvDownload) {
+
+                floatingCvDownload.href =
+                    cvFile;
+
+            }
+
+
+            localStorage.setItem(
+                "preferredLanguage",
+                language
+            );
+
+        }
+
+
+        languageButtons.forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        setLanguage(
+                            button.dataset.lang
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        const savedLanguage =
+            localStorage.getItem(
+                "preferredLanguage"
+            );
+
+
+        if (
+            savedLanguage === "en" ||
+            savedLanguage === "es"
+        ) {
+
+            setLanguage(
+                savedLanguage
+            );
+
+        } else {
+
+            setLanguage("en");
+
+        }
+
+
+        /* ==================================================
+           FLOATING ACTIONS
+        ================================================== */
+
+        const floatingActions =
+            document.getElementById(
+                "floatingActions"
+            );
+
+
+        function updateFloatingActions() {
+
+            if (window.scrollY > 450) {
+
+                floatingActions.classList.add(
+                    "visible"
+                );
+
+            } else {
+
+                floatingActions.classList.remove(
+                    "visible"
+                );
+
+            }
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            updateFloatingActions,
+            {
+                passive: true
+            }
+        );
+
+
+        updateFloatingActions();
+
+    </script>
+
+
 </body>
+
 </html>
