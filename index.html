@@ -34,20 +34,20 @@
     <style>
 
         :root {
-            --background: #111111;
-            --background-soft: #171717;
-            --surface: #1b1b1b;
+            --background: #171714;
+            --background-soft: #1d1c18;
+            --surface: #24221d;
 
-            --text: #e8e3d8;
-            --text-soft: #c0bbb0;
-            --muted: #8d8a84;
-            --dim: #62605b;
+            --text: #e9e3d6;
+            --text-soft: #c8c0b2;
+            --muted: #969086;
+            --dim: #6f6a60;
 
-            --gold: #c7a76c;
-            --gold-soft: #a78d5b;
+            --gold: #b69a72;
+            --gold-soft: #9e8968;
 
-            --border: #292929;
-            --border-strong: #3b3935;
+            --border: #302e28;
+            --border-strong: #49453c;
         }
 
 
@@ -66,7 +66,10 @@
 
         body {
             margin: 0;
-            background: var(--background);
+            background:
+                radial-gradient(circle at 15% 10%, rgba(182, 154, 114, 0.035), transparent 30%),
+                radial-gradient(circle at 85% 85%, rgba(150, 140, 120, 0.025), transparent 28%),
+                var(--background);
             color: var(--text);
             font-family: "Inter", Arial, sans-serif;
             line-height: 1.7;
@@ -108,7 +111,7 @@
             right: 0;
             z-index: 100;
 
-            background: rgba(17, 17, 17, 0.92);
+            background: rgba(23, 23, 20, 0.92);
 
             border-bottom: 1px solid var(--border);
 
@@ -251,7 +254,7 @@
 
             object-fit: cover;
 
-            border: 1px solid var(--gold);
+            border: 1px solid var(--border-strong);
         }
 
         .portrait-credit {
@@ -358,7 +361,7 @@
             padding: 10px 17px;
 
             border: 1px solid var(--border-strong);
-            border-radius: 5px;
+            border-radius: 4px;
 
             color: var(--text-soft);
 
