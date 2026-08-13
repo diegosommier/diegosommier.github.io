@@ -212,7 +212,36 @@
         }
 
         .hero-content {
-            max-width: 900px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .hero-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 70px;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .hero-portrait {
+            flex: 0 0 320px;
+        }
+
+        .hero-portrait img {
+            display: block;
+
+            width: 320px;
+            height: 320px;
+
+            object-fit: cover;
+
+            border: 1px solid var(--border-strong);
         }
 
         .hero-kicker {
@@ -240,14 +269,6 @@
             background: var(--gold);
         }
 
-        .hero-name {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 40px;
-        }
-
         h1 {
             margin: 0;
 
@@ -262,26 +283,6 @@
             font-weight: 500;
 
             color: var(--text);
-        }
-
-        .hero-portrait {
-            flex: 0 0 auto;
-
-            width: 150px;
-            height: 150px;
-
-            border: 1px solid var(--border-strong);
-
-            overflow: hidden;
-        }
-
-        .hero-portrait img {
-            display: block;
-
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
         }
 
         .hero-role {
@@ -425,7 +426,7 @@
 
             grid-template-columns: minmax(0, 1fr) 280px;
 
-            gap: 75px;
+            gap: 70px;
 
             align-items: start;
         }
@@ -443,9 +444,7 @@
         }
 
         .about-aside {
-            padding-left: 28px;
-
-            border-left: 1px solid var(--border-strong);
+            padding-top: 4px;
         }
 
         .aside-title {
@@ -819,6 +818,22 @@
             color: var(--gold);
         }
 
+        .image-credit {
+            margin-top: 12px;
+
+            color: var(--dim);
+
+            font-size: 0.68rem;
+        }
+
+        .image-credit a {
+            margin: 0;
+
+            color: var(--muted);
+
+            font-size: inherit;
+        }
+
 
         /* ==============================
            RESPONSIVE
@@ -826,15 +841,24 @@
 
         @media (max-width: 900px) {
 
-            .about-grid {
-                grid-template-columns: minmax(0, 1fr) 230px;
-
+            .hero-main {
                 gap: 45px;
             }
 
             .hero-portrait {
-                width: 125px;
-                height: 125px;
+                flex-basis: 250px;
+            }
+
+            .hero-portrait img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .about-grid {
+                grid-template-columns:
+                    minmax(0, 1fr) 240px;
+
+                gap: 40px;
             }
 
             .experience-list {
@@ -867,15 +891,21 @@
                 font-size: 0.74rem;
             }
 
-            .hero-name {
+            .hero-main {
+                flex-direction: column;
+
                 align-items: flex-start;
 
-                gap: 25px;
+                gap: 35px;
             }
 
             .hero-portrait {
-                width: 105px;
-                height: 105px;
+                flex-basis: auto;
+            }
+
+            .hero-portrait img {
+                width: 190px;
+                height: 190px;
             }
 
             .about-grid {
@@ -885,13 +915,7 @@
             }
 
             .about-aside {
-                padding-left: 0;
-
-                padding-top: 30px;
-
-                border-left: none;
-
-                border-top: 1px solid var(--border-strong);
+                padding-top: 0;
             }
 
             .experience-list {
@@ -925,15 +949,6 @@
 
             .hero {
                 padding-top: 120px;
-            }
-
-            .hero-name {
-                gap: 18px;
-            }
-
-            .hero-portrait {
-                width: 82px;
-                height: 82px;
             }
 
             .hero-role {
@@ -1075,16 +1090,124 @@
 
             <div class="hero-content">
 
-                <div class="hero-kicker">
-                    IT · Infrastructure
-                </div>
+                <div class="hero-main">
+
+                    <div class="hero-text">
+
+                        <div class="hero-kicker">
+                            IT · Infrastructure
+                        </div>
 
 
-                <div class="hero-name">
+                        <h1>
+                            Diego Sommier
+                        </h1>
 
-                    <h1>
-                        Diego Sommier
-                    </h1>
+
+                        <div class="hero-role">
+
+                            <span
+                                data-en="Systems Administrator"
+                                data-es="Administrador de Sistemas"
+                            >
+                                Systems Administrator
+                            </span>
+
+                            <span>
+                                ·
+                            </span>
+
+                            <span
+                                class="direction"
+                                data-en="Building towards Cloud & DevOps"
+                                data-es="Rumbo a Cloud & DevOps"
+                            >
+                                Building towards Cloud & DevOps
+                            </span>
+
+                        </div>
+
+
+                        <p
+                            class="hero-description"
+                            data-en="IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure."
+                            data-es="Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura empresarial, ampliando ahora esa base hacia Cloud, automatización e infraestructuras modernas."
+                        >
+                            IT professional with more than 9 years of experience
+                            in systems administration and enterprise infrastructure,
+                            now expanding that foundation into Cloud, automation
+                            and modern infrastructure.
+                        </p>
+
+
+                        <div class="hero-actions">
+
+                            <a
+                                href="mailto:diegosommier@gmail.com"
+                                class="button primary"
+                            >
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                                <span
+                                    data-en="Email Me"
+                                    data-es="Contactar"
+                                >
+                                    Email Me
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="https://www.linkedin.com/in/diegosommier/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button"
+                            >
+
+                                <i class="fa-brands fa-linkedin"></i>
+
+                                LinkedIn
+
+                            </a>
+
+
+                            <a
+                                href="https://github.com/diegosommier"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button"
+                            >
+
+                                <i class="fa-brands fa-github"></i>
+
+                                GitHub
+
+                            </a>
+
+
+                            <a
+                                id="cvDownload"
+                                href="cv-diego-sommier-en.pdf"
+                                download
+                                class="button"
+                            >
+
+                                <i class="fa-solid fa-download"></i>
+
+                                <span
+                                    data-en="Download CV"
+                                    data-es="Descargar CV"
+                                >
+                                    Download CV
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
 
 
                     <div class="hero-portrait">
@@ -1095,110 +1218,6 @@
                         >
 
                     </div>
-
-                </div>
-
-
-                <div class="hero-role">
-
-                    <span
-                        data-en="Systems Administrator"
-                        data-es="Administrador de Sistemas"
-                    >
-                        Systems Administrator
-                    </span>
-
-                    <span>
-                        ·
-                    </span>
-
-                    <span
-                        class="direction"
-                        data-en="Building towards Cloud & DevOps"
-                        data-es="Rumbo a Cloud & DevOps"
-                    >
-                        Building towards Cloud & DevOps
-                    </span>
-
-                </div>
-
-
-                <p
-                    class="hero-description"
-                    data-en="IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure."
-                    data-es="Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura empresarial, ampliando ahora esa base hacia Cloud, automatización e infraestructuras modernas."
-                >
-                    IT professional with more than 9 years of experience
-                    in systems administration and enterprise infrastructure,
-                    now expanding that foundation into Cloud, automation
-                    and modern infrastructure.
-                </p>
-
-
-                <div class="hero-actions">
-
-                    <a
-                        href="mailto:diegosommier@gmail.com"
-                        class="button primary"
-                    >
-
-                        <i class="fa-solid fa-envelope"></i>
-
-                        <span
-                            data-en="Email Me"
-                            data-es="Contactar"
-                        >
-                            Email Me
-                        </span>
-
-                    </a>
-
-
-                    <a
-                        href="https://www.linkedin.com/in/diegosommier/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button"
-                    >
-
-                        <i class="fa-brands fa-linkedin"></i>
-
-                        LinkedIn
-
-                    </a>
-
-
-                    <a
-                        href="https://github.com/diegosommier"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button"
-                    >
-
-                        <i class="fa-brands fa-github"></i>
-
-                        GitHub
-
-                    </a>
-
-
-                    <a
-                        id="cvDownload"
-                        href="cv-diego-sommier-en.pdf"
-                        download
-                        class="button"
-                    >
-
-                        <i class="fa-solid fa-download"></i>
-
-                        <span
-                            data-en="Download CV"
-                            data-es="Descargar CV"
-                        >
-                            Download CV
-                        </span>
-
-                    </a>
 
                 </div>
 
@@ -1824,6 +1843,22 @@
                 <i class="fa-brands fa-x-twitter"></i>
             </a>
 
+
+            <div
+                class="image-credit"
+                data-en='Portrait illustration by <a href="https://github.com/roquec" target="_blank" rel="noopener noreferrer">@roquec</a>.'
+                data-es='Retrato ilustrado por <a href="https://github.com/roquec" target="_blank" rel="noopener noreferrer">@roquec</a>.'
+            >
+                Portrait illustration by
+                <a
+                    href="https://github.com/roquec"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    @roquec
+                </a>.
+            </div>
+
         </div>
 
     </footer>
@@ -1872,8 +1907,23 @@
                         element.dataset[language];
 
                     if (translation) {
-                        element.textContent =
-                            translation;
+
+                        if (
+                            element.classList.contains(
+                                "image-credit"
+                            )
+                        ) {
+
+                            element.innerHTML =
+                                translation;
+
+                        } else {
+
+                            element.textContent =
+                                translation;
+
+                        }
+
                     }
 
                 }
