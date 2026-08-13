@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
@@ -57,6 +59,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 68px;
         }
 
         body {
@@ -145,10 +148,16 @@
 
             font-size: 0.82rem;
 
-            transition: color 0.25s ease;
+            transition:
+                color 0.25s ease,
+                opacity 0.25s ease;
         }
 
         .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a.active {
             color: var(--gold);
         }
 
@@ -240,20 +249,20 @@
 
             object-fit: cover;
 
-            border: 1px solid var(--border-strong);
+            border: 1px solid var(--gold);
         }
 
-        .image-credit {
-            margin-top: 10px;
+        .portrait-credit {
+            margin-top: 9px;
 
             color: var(--dim);
 
-            font-size: 0.66rem;
+            font-size: 0.62rem;
 
-            text-align: center;
+            text-align: right;
         }
 
-        .image-credit a {
+        .portrait-credit a {
             color: var(--muted);
 
             text-decoration: none;
@@ -261,7 +270,7 @@
             transition: color 0.25s ease;
         }
 
-        .image-credit a:hover {
+        .portrait-credit a:hover {
             color: var(--gold);
         }
 
@@ -1151,6 +1160,7 @@
                                 href="mailto:diegosommier@gmail.com"
                                 class="button primary"
                             >
+
                                 <i class="fa-solid fa-envelope"></i>
 
                                 <span
@@ -1159,6 +1169,7 @@
                                 >
                                     Email Me
                                 </span>
+
                             </a>
 
 
@@ -1168,9 +1179,11 @@
                                 rel="noopener noreferrer"
                                 class="button"
                             >
+
                                 <i class="fa-brands fa-linkedin"></i>
 
                                 LinkedIn
+
                             </a>
 
 
@@ -1180,9 +1193,11 @@
                                 rel="noopener noreferrer"
                                 class="button"
                             >
+
                                 <i class="fa-brands fa-github"></i>
 
                                 GitHub
+
                             </a>
 
 
@@ -1192,6 +1207,7 @@
                                 download
                                 class="button"
                             >
+
                                 <i class="fa-solid fa-download"></i>
 
                                 <span
@@ -1200,6 +1216,7 @@
                                 >
                                     Download CV
                                 </span>
+
                             </a>
 
                         </div>
@@ -1215,7 +1232,7 @@
                         >
 
                         <div
-                            class="image-credit"
+                            class="portrait-credit"
                             data-en='Portrait illustration by <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
                             data-es='Retrato ilustrado por <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
                         >
@@ -1272,6 +1289,7 @@
 
 
                 <div class="about-grid">
+
 
                     <div class="about-text">
 
@@ -1355,6 +1373,7 @@
 
                     </aside>
 
+
                 </div>
 
             </div>
@@ -1404,7 +1423,9 @@
 
                 <div class="experience-list">
 
+
                     <article class="experience-item">
+
                         <div class="experience-company">
                             Santander Digital Services
                         </div>
@@ -1412,10 +1433,12 @@
                         <div class="experience-tech">
                             SCCM · Intune · Windows Server
                         </div>
+
                     </article>
 
 
                     <article class="experience-item">
+
                         <div class="experience-company">
                             CBNK
                         </div>
@@ -1423,10 +1446,12 @@
                         <div class="experience-tech">
                             Entra ID · Microsoft 365 · Exchange Online
                         </div>
+
                     </article>
 
 
                     <article class="experience-item">
+
                         <div class="experience-company">
                             Decathlon
                         </div>
@@ -1434,10 +1459,12 @@
                         <div class="experience-tech">
                             Windows Server · Linux · Automation
                         </div>
+
                     </article>
 
 
                     <article class="experience-item">
+
                         <div class="experience-company">
                             BNP Paribas
                         </div>
@@ -1445,10 +1472,12 @@
                         <div class="experience-tech">
                             Windows Server · Linux · VMware
                         </div>
+
                     </article>
 
 
                     <article class="experience-item">
+
                         <div class="experience-company">
                             Campofrío
                         </div>
@@ -1456,10 +1485,12 @@
                         <div class="experience-tech">
                             Windows Server · Linux · VMware
                         </div>
+
                     </article>
 
 
                     <article class="experience-item">
+
                         <div class="experience-company">
                             MRW
                         </div>
@@ -1467,10 +1498,12 @@
                         <div class="experience-tech">
                             Windows Server · Linux · VMware
                         </div>
+
                     </article>
 
 
                     <article class="experience-item">
+
                         <div class="experience-company">
                             Zurich
                         </div>
@@ -1478,10 +1511,12 @@
                         <div class="experience-tech">
                             Windows Server · Linux · VMware
                         </div>
+
                     </article>
 
 
                     <article class="experience-item">
+
                         <div class="experience-company">
                             Liberbank
                         </div>
@@ -1489,10 +1524,12 @@
                         <div class="experience-tech">
                             Windows · Networking · Infrastructure
                         </div>
+
                     </article>
 
 
                     <article class="experience-item">
+
                         <div class="experience-company">
                             ALSA
                         </div>
@@ -1500,7 +1537,9 @@
                         <div class="experience-tech">
                             Windows Server · Active Directory · Infrastructure
                         </div>
+
                     </article>
+
 
                 </div>
 
@@ -1629,6 +1668,7 @@
 
                 <div class="certifications">
 
+
                     <a
                         href="https://learn.microsoft.com/es-es/users/sommy/credentials/1d127efc53a85682"
                         target="_blank"
@@ -1678,6 +1718,7 @@
                         </div>
 
                     </div>
+
 
                 </div>
 
@@ -1842,6 +1883,10 @@
 
     <script>
 
+        /* ==============================
+           LANGUAGE
+        ============================== */
+
         const languageButtons =
             document.querySelectorAll(
                 ".language-button"
@@ -1878,11 +1923,12 @@
                     const translation =
                         element.dataset[language];
 
+
                     if (translation) {
 
                         if (
                             element.classList.contains(
-                                "image-credit"
+                                "portrait-credit"
                             )
                         ) {
 
@@ -2058,9 +2104,77 @@
 
         updateFloatingActions();
 
+
+        /* ==============================
+           ACTIVE NAVIGATION
+        ============================== */
+
+        const sections =
+            document.querySelectorAll(
+                "main section[id]"
+            );
+
+
+        const navLinks =
+            document.querySelectorAll(
+                ".nav-links a"
+            );
+
+
+        const sectionObserver =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (entry.isIntersecting) {
+
+                                const sectionId =
+                                    entry.target.id;
+
+
+                                navLinks.forEach(
+                                    link => {
+
+                                        link.classList.toggle(
+                                            "active",
+                                            link.getAttribute("href") ===
+                                            `#${sectionId}`
+                                        );
+
+                                    }
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    rootMargin:
+                        "-35% 0px -55% 0px",
+
+                    threshold: 0
+                }
+            );
+
+
+        sections.forEach(
+            section => {
+
+                sectionObserver.observe(
+                    section
+                );
+
+            }
+        );
+
     </script>
 
 
 </body>
 
 </html>
+```
