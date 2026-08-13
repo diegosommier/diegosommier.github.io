@@ -211,37 +211,18 @@
             padding: 140px 0 100px;
         }
 
-        .hero-content {
-            width: 100%;
-            max-width: 1100px;
-        }
+        .hero-layout {
+            display: grid;
 
-        .hero-main {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            grid-template-columns: 1fr 330px;
 
             gap: 70px;
+
+            align-items: center;
         }
 
-        .hero-text {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .hero-portrait {
-            flex: 0 0 320px;
-        }
-
-        .hero-portrait img {
-            display: block;
-
-            width: 320px;
-            height: 320px;
-
-            object-fit: cover;
-
-            border: 1px solid var(--border-strong);
+        .hero-content {
+            max-width: 900px;
         }
 
         .hero-kicker {
@@ -355,6 +336,33 @@
 
 
         /* ==============================
+           HERO PORTRAIT
+        ============================== */
+
+        .hero-portrait {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 6px;
+
+            border: 1px solid var(--border-strong);
+        }
+
+        .hero-portrait img {
+            display: block;
+
+            width: 100%;
+            height: 330px;
+
+            object-fit: contain;
+
+            border: 1px solid var(--gold);
+        }
+
+
+        /* ==============================
            SECTION HEADERS
         ============================== */
 
@@ -424,7 +432,7 @@
         .about-grid {
             display: grid;
 
-            grid-template-columns: minmax(0, 1fr) 280px;
+            grid-template-columns: 1fr 300px;
 
             gap: 70px;
 
@@ -441,10 +449,6 @@
 
         .about-text p:last-child {
             margin-bottom: 0;
-        }
-
-        .about-aside {
-            padding-top: 4px;
         }
 
         .aside-title {
@@ -481,6 +485,26 @@
 
         .aside-list li:first-child {
             border-top: 1px solid var(--border);
+        }
+
+        .portrait-credit {
+            margin-top: 20px;
+
+            color: var(--dim);
+
+            font-size: 0.7rem;
+        }
+
+        .portrait-credit a {
+            color: var(--muted);
+
+            text-decoration: none;
+
+            transition: color 0.25s ease;
+        }
+
+        .portrait-credit a:hover {
+            color: var(--gold);
         }
 
 
@@ -818,22 +842,6 @@
             color: var(--gold);
         }
 
-        .image-credit {
-            margin-top: 12px;
-
-            color: var(--dim);
-
-            font-size: 0.68rem;
-        }
-
-        .image-credit a {
-            margin: 0;
-
-            color: var(--muted);
-
-            font-size: inherit;
-        }
-
 
         /* ==============================
            RESPONSIVE
@@ -841,24 +849,20 @@
 
         @media (max-width: 900px) {
 
-            .hero-main {
-                gap: 45px;
-            }
+            .hero-layout {
+                grid-template-columns: 1fr 250px;
 
-            .hero-portrait {
-                flex-basis: 250px;
+                gap: 40px;
             }
 
             .hero-portrait img {
-                width: 250px;
                 height: 250px;
             }
 
             .about-grid {
-                grid-template-columns:
-                    minmax(0, 1fr) 240px;
+                grid-template-columns: 1fr 260px;
 
-                gap: 40px;
+                gap: 45px;
             }
 
             .experience-list {
@@ -891,21 +895,22 @@
                 font-size: 0.74rem;
             }
 
-            .hero-main {
-                flex-direction: column;
+            .hero-layout {
+                grid-template-columns: 1fr;
 
-                align-items: flex-start;
-
-                gap: 35px;
+                gap: 40px;
             }
 
             .hero-portrait {
-                flex-basis: auto;
+                width: 240px;
+
+                justify-self: start;
+
+                order: -1;
             }
 
             .hero-portrait img {
-                width: 190px;
-                height: 190px;
+                height: 240px;
             }
 
             .about-grid {
@@ -915,7 +920,7 @@
             }
 
             .about-aside {
-                padding-top: 0;
+                margin-top: 5px;
             }
 
             .experience-list {
@@ -953,6 +958,14 @@
 
             .hero-role {
                 font-size: 1.15rem;
+            }
+
+            .hero-portrait {
+                width: 200px;
+            }
+
+            .hero-portrait img {
+                height: 200px;
             }
 
             .hero-actions {
@@ -1088,138 +1101,138 @@
 
         <div class="container">
 
-            <div class="hero-content">
-
-                <div class="hero-main">
-
-                    <div class="hero-text">
-
-                        <div class="hero-kicker">
-                            IT · Infrastructure
-                        </div>
+            <div class="hero-layout">
 
 
-                        <h1>
-                            Diego Sommier
-                        </h1>
+                <div class="hero-content">
+
+                    <div class="hero-kicker">
+                        IT · Infrastructure
+                    </div>
 
 
-                        <div class="hero-role">
-
-                            <span
-                                data-en="Systems Administrator"
-                                data-es="Administrador de Sistemas"
-                            >
-                                Systems Administrator
-                            </span>
-
-                            <span>
-                                ·
-                            </span>
-
-                            <span
-                                class="direction"
-                                data-en="Building towards Cloud & DevOps"
-                                data-es="Rumbo a Cloud & DevOps"
-                            >
-                                Building towards Cloud & DevOps
-                            </span>
-
-                        </div>
+                    <h1>
+                        Diego Sommier
+                    </h1>
 
 
-                        <p
-                            class="hero-description"
-                            data-en="IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure."
-                            data-es="Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura empresarial, ampliando ahora esa base hacia Cloud, automatización e infraestructuras modernas."
+                    <div class="hero-role">
+
+                        <span
+                            data-en="Systems Administrator"
+                            data-es="Administrador de Sistemas"
                         >
-                            IT professional with more than 9 years of experience
-                            in systems administration and enterprise infrastructure,
-                            now expanding that foundation into Cloud, automation
-                            and modern infrastructure.
-                        </p>
+                            Systems Administrator
+                        </span>
 
+                        <span>
+                            ·
+                        </span>
 
-                        <div class="hero-actions">
-
-                            <a
-                                href="mailto:diegosommier@gmail.com"
-                                class="button primary"
-                            >
-
-                                <i class="fa-solid fa-envelope"></i>
-
-                                <span
-                                    data-en="Email Me"
-                                    data-es="Contactar"
-                                >
-                                    Email Me
-                                </span>
-
-                            </a>
-
-
-                            <a
-                                href="https://www.linkedin.com/in/diegosommier/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="button"
-                            >
-
-                                <i class="fa-brands fa-linkedin"></i>
-
-                                LinkedIn
-
-                            </a>
-
-
-                            <a
-                                href="https://github.com/diegosommier"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="button"
-                            >
-
-                                <i class="fa-brands fa-github"></i>
-
-                                GitHub
-
-                            </a>
-
-
-                            <a
-                                id="cvDownload"
-                                href="cv-diego-sommier-en.pdf"
-                                download
-                                class="button"
-                            >
-
-                                <i class="fa-solid fa-download"></i>
-
-                                <span
-                                    data-en="Download CV"
-                                    data-es="Descargar CV"
-                                >
-                                    Download CV
-                                </span>
-
-                            </a>
-
-                        </div>
+                        <span
+                            class="direction"
+                            data-en="Building towards Cloud & DevOps"
+                            data-es="Rumbo a Cloud & DevOps"
+                        >
+                            Building towards Cloud & DevOps
+                        </span>
 
                     </div>
 
 
-                    <div class="hero-portrait">
+                    <p
+                        class="hero-description"
+                        data-en="IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure."
+                        data-es="Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura empresarial, ampliando ahora esa base hacia Cloud, automatización e infraestructuras modernas."
+                    >
+                        IT professional with more than 9 years of experience
+                        in systems administration and enterprise infrastructure,
+                        now expanding that foundation into Cloud, automation
+                        and modern infrastructure.
+                    </p>
 
-                        <img
-                            src="profile.jpeg"
-                            alt="Diego Sommier"
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="mailto:diegosommier@gmail.com"
+                            class="button primary"
                         >
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <span
+                                data-en="Email Me"
+                                data-es="Contactar"
+                            >
+                                Email Me
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/in/diegosommier/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button"
+                        >
+
+                            <i class="fa-brands fa-linkedin"></i>
+
+                            LinkedIn
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/diegosommier"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button"
+                        >
+
+                            <i class="fa-brands fa-github"></i>
+
+                            GitHub
+
+                        </a>
+
+
+                        <a
+                            id="cvDownload"
+                            href="cv-diego-sommier-en.pdf"
+                            download
+                            class="button"
+                        >
+
+                            <i class="fa-solid fa-download"></i>
+
+                            <span
+                                data-en="Download CV"
+                                data-es="Descargar CV"
+                            >
+                                Download CV
+                            </span>
+
+                        </a>
 
                     </div>
 
                 </div>
+
+
+                <!-- PORTRAIT -->
+
+                <div class="hero-portrait">
+
+                    <img
+                        src="profile.jpeg"
+                        alt="Diego Sommier"
+                    >
+
+                </div>
+
 
             </div>
 
@@ -1262,47 +1275,73 @@
                 <div class="about-grid">
 
 
-                    <div class="about-text">
+                    <div>
 
-                        <p
-                            data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure."
-                            data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft."
-                        >
-                            I'm an IT professional with more than 9 years
-                            of experience in systems administration and
-                            enterprise infrastructure. My background spans
-                            Windows and Linux environments, virtualization,
-                            endpoint management and hybrid Microsoft
-                            infrastructure.
-                        </p>
+                        <div class="about-text">
 
-
-                        <p
-                            data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
-                            data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
-                        >
-                            Throughout my career I've worked across
-                            different enterprise environments, supporting
-                            infrastructure and large-scale IT operations
-                            for organisations in banking, insurance,
-                            retail and logistics.
-                        </p>
+                            <p
+                                data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure."
+                                data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft."
+                            >
+                                I'm an IT professional with more than 9 years
+                                of experience in systems administration and
+                                enterprise infrastructure. My background spans
+                                Windows and Linux environments, virtualization,
+                                endpoint management and hybrid Microsoft
+                                infrastructure.
+                            </p>
 
 
-                        <p
-                            data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects."
-                            data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales."
-                        >
-                            I'm now building on that foundation to transition
-                            into Cloud Administration, expanding my knowledge
-                            across Azure, AWS, automation and DevOps through
-                            hands-on learning and personal projects.
-                        </p>
+                            <p
+                                data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
+                                data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
+                            >
+                                Throughout my career I've worked across
+                                different enterprise environments, supporting
+                                infrastructure and large-scale IT operations
+                                for organisations in banking, insurance,
+                                retail and logistics.
+                            </p>
+
+
+                            <p
+                                data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects."
+                                data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales."
+                            >
+                                I'm now building on that foundation to transition
+                                into Cloud Administration, expanding my knowledge
+                                across Azure, AWS, automation and DevOps through
+                                hands-on learning and personal projects.
+                            </p>
+
+                        </div>
+
+
+                        <div class="portrait-credit">
+
+                            <span
+                                data-en="Portrait artwork by "
+                                data-es="Retrato realizado por "
+                            >
+                                Portrait artwork by
+                            </span>
+
+                            <a
+                                href="https://github.com/roquec"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                @roquec
+                            </a>
+
+                        </div>
 
                     </div>
 
 
-                    <aside class="about-aside">
+                    <!-- TECHNOLOGIES -->
+
+                    <aside>
 
                         <div
                             class="aside-title"
@@ -1843,22 +1882,6 @@
                 <i class="fa-brands fa-x-twitter"></i>
             </a>
 
-
-            <div
-                class="image-credit"
-                data-en='Portrait illustration by <a href="https://github.com/roquec" target="_blank" rel="noopener noreferrer">@roquec</a>.'
-                data-es='Retrato ilustrado por <a href="https://github.com/roquec" target="_blank" rel="noopener noreferrer">@roquec</a>.'
-            >
-                Portrait illustration by
-                <a
-                    href="https://github.com/roquec"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    @roquec
-                </a>.
-            </div>
-
         </div>
 
     </footer>
@@ -1907,23 +1930,8 @@
                         element.dataset[language];
 
                     if (translation) {
-
-                        if (
-                            element.classList.contains(
-                                "image-credit"
-                            )
-                        ) {
-
-                            element.innerHTML =
-                                translation;
-
-                        } else {
-
-                            element.textContent =
-                                translation;
-
-                        }
-
+                        element.textContent =
+                            translation;
                     }
 
                 }
