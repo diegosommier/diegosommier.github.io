@@ -1447,123 +1447,86 @@
 
                 <div class="experience-list">
 
-
                     <article class="experience-item">
-
                         <div class="experience-company">
                             Santander Digital Services
                         </div>
-
                         <div class="experience-tech">
                             SCCM · Intune · Windows Server
                         </div>
-
                     </article>
 
-
                     <article class="experience-item">
-
                         <div class="experience-company">
                             CBNK
                         </div>
-
                         <div class="experience-tech">
                             Entra ID · Microsoft 365 · Exchange Online
                         </div>
-
                     </article>
 
-
                     <article class="experience-item">
-
                         <div class="experience-company">
                             Decathlon
                         </div>
-
                         <div class="experience-tech">
                             Windows Server · Linux · Automation
                         </div>
-
                     </article>
 
-
                     <article class="experience-item">
-
                         <div class="experience-company">
                             BNP Paribas
                         </div>
-
                         <div class="experience-tech">
                             Windows Server · Linux · VMware
                         </div>
-
                     </article>
 
-
                     <article class="experience-item">
-
                         <div class="experience-company">
                             Campofrío
                         </div>
-
                         <div class="experience-tech">
                             Windows Server · Linux · VMware
                         </div>
-
                     </article>
 
-
                     <article class="experience-item">
-
                         <div class="experience-company">
                             MRW
                         </div>
-
                         <div class="experience-tech">
                             Windows Server · Linux · VMware
                         </div>
-
                     </article>
 
-
                     <article class="experience-item">
-
                         <div class="experience-company">
                             Zurich
                         </div>
-
                         <div class="experience-tech">
                             Windows Server · Linux · VMware
                         </div>
-
                     </article>
 
-
                     <article class="experience-item">
-
                         <div class="experience-company">
                             Liberbank
                         </div>
-
                         <div class="experience-tech">
                             Windows · Networking · Infrastructure
                         </div>
-
                     </article>
 
-
                     <article class="experience-item">
-
                         <div class="experience-company">
                             ALSA
                         </div>
-
                         <div class="experience-tech">
                             Windows Server · Active Directory · Infrastructure
                         </div>
-
                     </article>
-
 
                 </div>
 
@@ -1606,14 +1569,12 @@
                         &lt;/&gt;
                     </div>
 
-
                     <h3
                         data-en="Cloud & DevOps Projects"
                         data-es="Proyectos Cloud y DevOps"
                     >
                         Cloud & DevOps Projects
                     </h3>
-
 
                     <p
                         data-en="I'm currently building my first practical Cloud projects while progressing through my AWS and DevOps training. This section will grow with infrastructure labs, automation experiments and reproducible environments."
@@ -1625,7 +1586,6 @@
                         infrastructure labs, automation experiments and
                         reproducible environments.
                     </p>
-
 
                     <div class="tags">
 
@@ -1693,8 +1653,11 @@
                 <div class="certifications">
 
 
+                    <!-- Azure Fundamentals -->
+
                     <a
-                        href="https://learn.microsoft.com/es-es/users/sommy/credentials/1d127efc53a85682"
+                        id="azureCertification"
+                        href="https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="certification"
@@ -1710,7 +1673,11 @@
                             Microsoft Certified
                         </div>
 
-                        <div class="certification-name">
+                        <div
+                            class="certification-name"
+                            data-en="Azure Fundamentals"
+                            data-es="Aspectos básicos de Azure"
+                        >
                             Azure Fundamentals
                         </div>
 
@@ -1724,6 +1691,8 @@
 
                     </a>
 
+
+                    <!-- MTA Networking Fundamentals -->
 
                     <div class="certification">
 
@@ -1761,7 +1730,9 @@
 
                 <p>
                     "The best is yet to come."<br>
-                    <span class="quote-source">— Metal Gear Solid, 1998</span>
+                    <span class="quote-source">
+                        — Metal Gear Solid, 1998
+                    </span>
                 </p>
 
             </div>
@@ -1936,6 +1907,12 @@
             );
 
 
+        const azureCertification =
+            document.getElementById(
+                "azureCertification"
+            );
+
+
         function setLanguage(language) {
 
             document.documentElement.lang =
@@ -2038,6 +2015,16 @@
 
             if (floatingCvDownload) {
                 floatingCvDownload.href = cvFile;
+            }
+
+
+            if (azureCertification) {
+
+                azureCertification.href =
+                    language === "es"
+                        ? "https://learn.microsoft.com/es-es/users/sommy/credentials/1d127efc53a85682"
+                        : "https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682";
+
             }
 
 
