@@ -467,20 +467,24 @@ h1{
     font-weight:500
 }
 
-.project h3 a{
-    color:var(--text);
-    text-decoration:none;
-    transition:color .25s ease
-}
-
-.project h3 a:hover{
-    color:var(--gold)
-}
-
 .project p{
     margin:0;
     max-width:700px;
     color:var(--muted)
+}
+
+.project-link{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    margin-top:24px;
+    color:var(--gold);
+    text-decoration:none;
+    font-size:.82rem
+}
+
+.project-link:hover{
+    color:var(--text)
 }
 
 .tags{
@@ -498,63 +502,16 @@ h1{
     font-size:.68rem
 }
 
-.project-link{
-    margin-top:26px
-}
-
 .projects-note{
     max-width:760px;
-    margin:42px 0 0;
+    margin:35px 0 0;
     color:var(--muted);
     font-size:.94rem
 }
 
-/* ==============================
-   W3C VALIDATION
-============================== */
-
-.w3c-validation{
-    margin-top:38px;
-    display:flex;
-    align-items:center
-}
-
-.w3c-validation a{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:5px 9px;
-    border:1px solid var(--border);
-    border-radius:3px;
-    color:var(--dim);
-    text-decoration:none;
-    font-family:"Space Grotesk",sans-serif;
-    font-size:.62rem;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    transition:
-        border-color .25s ease,
-        color .25s ease,
-        background .25s ease
-}
-
-.w3c-validation a:hover{
-    border-color:var(--gold);
-    color:var(--gold);
-    background:rgba(199,167,108,.04)
-}
-
-.w3c-mark{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:20px;
-    height:20px;
-    border:1px solid currentColor;
-    border-radius:2px;
-    font-family:"Courier New",monospace;
-    font-size:.58rem;
-    font-weight:600
+.projects-note strong{
+    color:var(--text-soft);
+    font-weight:500
 }
 
 /* ==============================
@@ -686,6 +643,27 @@ footer a{
 
 footer a:hover{
     color:var(--gold)
+}
+
+.w3c-badge{
+    margin-top:18px
+}
+
+.w3c-badge a{
+    display:inline-block;
+    margin:0
+}
+
+.w3c-badge img{
+    display:block;
+    width:auto;
+    height:32px;
+    opacity:.7;
+    transition:opacity .25s ease
+}
+
+.w3c-badge img:hover{
+    opacity:1
 }
 
 /* ==============================
@@ -859,26 +837,15 @@ footer a:hover{
             </div>
 
             <div class="language-switcher">
-                <button
-                    class="language-button active"
-                    data-lang="en"
-                    type="button">
-                    EN
-                </button>
-
+                <button class="language-button active" data-lang="en" type="button">EN</button>
                 <span class="language-separator">·</span>
-
-                <button
-                    class="language-button"
-                    data-lang="es"
-                    type="button">
-                    ES
-                </button>
+                <button class="language-button" data-lang="es" type="button">ES</button>
             </div>
 
         </div>
     </div>
 </nav>
+
 
 <header class="hero">
 
@@ -894,9 +861,7 @@ footer a:hover{
                         IT · Infrastructure
                     </div>
 
-                    <h1>
-                        Diego Sommier
-                    </h1>
+                    <h1>Diego Sommier</h1>
 
                     <div class="hero-role">
                         <span
@@ -928,10 +893,7 @@ footer a:hover{
                             href="mailto:diegosommier@gmail.com"
                             class="button primary">
                             <i class="fa-solid fa-envelope"></i>
-
-                            <span
-                                data-en="Email Me"
-                                data-es="Contactar">
+                            <span data-en="Email Me" data-es="Contactar">
                                 Email Me
                             </span>
                         </a>
@@ -960,10 +922,7 @@ footer a:hover{
                             download
                             class="button">
                             <i class="fa-solid fa-download"></i>
-
-                            <span
-                                data-en="Download CV"
-                                data-es="Descargar CV">
+                            <span data-en="Download CV" data-es="Descargar CV">
                                 Download CV
                             </span>
                         </a>
@@ -971,6 +930,7 @@ footer a:hover{
                     </div>
 
                 </div>
+
 
                 <div class="hero-portrait">
 
@@ -1001,6 +961,7 @@ footer a:hover{
 
 </header>
 
+
 <main>
 
 <!-- ==============================
@@ -1028,6 +989,7 @@ footer a:hover{
 
         </div>
 
+
         <div class="about-grid">
 
             <div class="about-text">
@@ -1052,6 +1014,7 @@ footer a:hover{
 
             </div>
 
+
             <aside class="about-aside">
 
                 <div class="about-certifications">
@@ -1075,6 +1038,7 @@ footer a:hover{
 
                     </a>
 
+
                     <div
                         class="about-certification"
                         title="Microsoft Technology Associate: Networking Fundamentals">
@@ -1094,6 +1058,7 @@ footer a:hover{
     </div>
 
 </section>
+
 
 <!-- ==============================
      JOURNEY
@@ -1120,12 +1085,14 @@ footer a:hover{
 
         </div>
 
+
         <p
             class="journey-intro"
             data-en="My career has taken me through different enterprise environments and industries. The organisations below represent some of the environments where I've worked and the technologies I've used along the way."
             data-es="Mi trayectoria me ha llevado por distintos entornos empresariales y sectores. Las organizaciones que aparecen a continuación representan algunos de los entornos en los que he trabajado y las tecnologías utilizadas a lo largo del camino.">
             My career has taken me through different enterprise environments and industries. The organisations below represent some of the environments where I've worked and the technologies I've used along the way.
         </p>
+
 
         <div class="experience-list">
 
@@ -1216,6 +1183,7 @@ footer a:hover{
 
 </section>
 
+
 <!-- ==============================
      PROJECTS
 ============================== -->
@@ -1241,6 +1209,7 @@ footer a:hover{
 
         </div>
 
+
         <article class="project">
 
             <div class="project-code">
@@ -1248,89 +1217,67 @@ footer a:hover{
             </div>
 
             <h3>
-                <a
-                    href="https://github.com/diegosommier/systems-infrastructure-lab"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Systems &amp; Infrastructure Lab
-                </a>
+                Systems &amp; Infrastructure Lab
             </h3>
 
             <p
-                data-en="A hands-on systems administration lab covering Linux and Windows environments, storage, networking, security, monitoring, backups, Samba and Active Directory integration."
-                data-es="Un laboratorio práctico de administración de sistemas que cubre entornos Linux y Windows, almacenamiento, redes, seguridad, monitorización, copias de seguridad, Samba e integración con Active Directory.">
-                A hands-on systems administration lab covering Linux and Windows environments, storage, networking, security, monitoring, backups, Samba and Active Directory integration.
+                data-en="A systems administration lab built as a final project during my systems administration training. It covers Linux and Windows environments, storage, networking, security, monitoring, backups, scripting and Active Directory integration."
+                data-es="Un laboratorio de administración de sistemas desarrollado como proyecto final durante mi formación en administración de sistemas. Incluye entornos Linux y Windows, almacenamiento, redes, seguridad, monitorización, copias de seguridad, scripting e integración con Active Directory.">
+                A systems administration lab built as a final project during my systems administration training. It covers Linux and Windows environments, storage, networking, security, monitoring, backups, scripting and Active Directory integration.
             </p>
+
 
             <div class="tags">
 
-                <span class="tag">Linux</span>
+                <span class="tag">CentOS</span>
                 <span class="tag">Windows Server</span>
                 <span class="tag">Samba</span>
                 <span class="tag">Active Directory</span>
-                <span class="tag">RAID</span>
+                <span class="tag">RAID 1</span>
                 <span class="tag">LVM</span>
-                <span class="tag">Bash</span>
+                <span class="tag">SSH</span>
+                <span class="tag">Fail2ban</span>
+                <span class="tag">WordPress</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Scripting</span>
                 <span class="tag">Monitoring</span>
-                <span class="tag">Backup</span>
+                <span class="tag">Backups</span>
 
             </div>
 
-            <div class="project-link">
-
-                <a
-                    href="https://github.com/diegosommier/systems-infrastructure-lab"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button">
-
-                    <i class="fa-brands fa-github"></i>
-
-                    <span
-                        data-en="View repository"
-                        data-es="Ver repositorio">
-                        View repository
-                    </span>
-
-                </a>
-
-            </div>
-
-        </article>
-
-        <p
-            class="projects-note"
-            data-en="I'm preparing a few Cloud and DevOps projects to add here soon. Come back later and see what I'm building next."
-            data-es="Estoy preparando algunos proyectos de Cloud y DevOps para añadirlos aquí próximamente. Vuelve más adelante y descubre qué estoy construyendo.">
-            I'm preparing a few Cloud and DevOps projects to add here soon.
-            Come back later and see what I'm building next.
-        </p>
-
-        <div class="w3c-validation">
 
             <a
-                href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdiegosommier.github.io%2F"
+                href="https://github.com/diegosommier/systems-infrastructure-lab"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Check this website with the W3C Nu HTML Checker">
+                class="project-link">
 
-                <span class="w3c-mark">
-                    ✓
-                </span>
+                <i class="fa-brands fa-github"></i>
 
                 <span
-                    data-en="HTML validated by W3C"
-                    data-es="HTML validado por W3C">
-                    HTML validated by W3C
+                    data-en="View project on GitHub"
+                    data-es="Ver proyecto en GitHub">
+                    View project on GitHub
                 </span>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
             </a>
 
-        </div>
+        </article>
+
+
+        <p
+            class="projects-note"
+            data-en="I'm preparing the next projects around Cloud, automation and DevOps. Come back later to find them here — the next chapter is still being built."
+            data-es="Estoy preparando los próximos proyectos alrededor de Cloud, automatización y DevOps. Vuelve más adelante para encontrarlos aquí — el siguiente capítulo todavía se está construyendo.">
+            I'm preparing the next projects around Cloud, automation and DevOps. Come back later to find them here — the next chapter is still being built.
+        </p>
 
     </div>
 
 </section>
+
 
 <!-- ==============================
      QUOTE
@@ -1343,7 +1290,6 @@ footer a:hover{
         <p>
             "The best is yet to come."
             <br>
-
             <span class="quote-source">
                 — Metal Gear Solid, 1998
             </span>
@@ -1354,6 +1300,7 @@ footer a:hover{
 </div>
 
 </main>
+
 
 <!-- ==============================
      FLOATING ACTIONS
@@ -1403,6 +1350,7 @@ footer a:hover{
 
 </div>
 
+
 <!-- ==============================
      FOOTER
 ============================== -->
@@ -1416,6 +1364,7 @@ footer a:hover{
             data-es="© 2026 Diego Sommier · Hecho con IA, curiosidad y café. ☕">
             © 2026 Diego Sommier · Made with AI, curiosity and coffee. ☕
         </span>
+
 
         <a
             href="mailto:diegosommier@gmail.com"
@@ -1460,11 +1409,30 @@ footer a:hover{
             <i class="fa-brands fa-x-twitter"></i>
         </a>
 
+
+        <div class="w3c-badge">
+
+            <a
+                href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdiegosommier.github.io%2F"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="W3C Nu HTML Checker">
+
+                <img
+                    src="https://www.w3.org/Icons/HTML5/HTML5_Badge_32.png"
+                    alt="Valid HTML">
+
+            </a>
+
+        </div>
+
     </div>
 
 </footer>
 
+
 <script>
+
 const languageButtons =
     document.querySelectorAll(".language-button");
 
@@ -1477,12 +1445,15 @@ const cvDownload =
 const floatingCvDownload =
     document.getElementById("floatingCvDownload");
 
+
 function setLanguage(language){
 
     document.documentElement.lang = language;
 
+
     const azureCertification =
         document.getElementById("azureCertification");
+
 
     if(azureCertification){
 
@@ -1491,16 +1462,20 @@ function setLanguage(language){
                 ? azureCertification.dataset.titleEs
                 : azureCertification.dataset.titleEn;
 
+
         azureCertification.setAttribute(
             "aria-label",
             azureCertification.title
         );
 
+
         azureCertification.href =
             language === "es"
                 ? azureCertification.dataset.urlEs
                 : azureCertification.dataset.urlEn;
+
     }
+
 
     translatableElements.forEach(element => {
 
@@ -1509,22 +1484,20 @@ function setLanguage(language){
 
         if(translation){
 
-            if(
-                element.classList.contains(
-                    "portrait-credit"
-                )
-            ){
+            if(element.classList.contains("portrait-credit")){
 
-                element.innerHTML =
-                    translation;
+                element.innerHTML = translation;
 
             }else{
 
-                element.textContent =
-                    translation;
+                element.textContent = translation;
+
             }
+
         }
+
     });
+
 
     languageButtons.forEach(button => {
 
@@ -1535,15 +1508,18 @@ function setLanguage(language){
 
     });
 
+
     document.title =
         language === "es"
             ? "Diego Sommier | Administrador de Sistemas"
             : "Diego Sommier | Systems Administrator";
 
+
     const description =
         document.querySelector(
             'meta[name="description"]'
         );
+
 
     if(description){
 
@@ -1553,26 +1529,33 @@ function setLanguage(language){
                 ? "Diego Sommier — Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura, orientado hacia Cloud, automatización y DevOps."
                 : "Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud, automation and DevOps."
         );
+
     }
+
 
     const cvFile =
         language === "es"
             ? "cv-diego-sommier-es.pdf"
             : "cv-diego-sommier-en.pdf";
 
+
     if(cvDownload){
         cvDownload.href = cvFile;
     }
+
 
     if(floatingCvDownload){
         floatingCvDownload.href = cvFile;
     }
 
+
     localStorage.setItem(
         "preferredLanguage",
         language
     );
+
 }
+
 
 languageButtons.forEach(button => {
 
@@ -1583,40 +1566,40 @@ languageButtons.forEach(button => {
 
 });
 
+
 const savedLanguage =
     localStorage.getItem("preferredLanguage");
 
+
 setLanguage(
-    savedLanguage === "en" ||
-    savedLanguage === "es"
+    savedLanguage === "en" || savedLanguage === "es"
         ? savedLanguage
         : "en"
 );
+
 
 /* ==============================
    FLOATING ACTIONS
 ============================== */
 
 const floatingActions =
-    document.getElementById(
-        "floatingActions"
-    );
+    document.getElementById("floatingActions");
+
 
 function updateFloatingActions(){
 
     if(window.scrollY > 450){
 
-        floatingActions.classList.add(
-            "visible"
-        );
+        floatingActions.classList.add("visible");
 
     }else{
 
-        floatingActions.classList.remove(
-            "visible"
-        );
+        floatingActions.classList.remove("visible");
+
     }
+
 }
+
 
 window.addEventListener(
     "scroll",
@@ -1626,84 +1609,76 @@ window.addEventListener(
 
 updateFloatingActions();
 
+
 /* ==============================
    ACTIVE NAVIGATION
 ============================== */
 
-const links = [
-    ...document.querySelectorAll(
-        "nav a[href^='#']"
-    )
-];
+const links =
+    [...document.querySelectorAll("nav a[href^='#']")];
+
 
 const home =
     document.querySelector(".nav-home");
 
+
 const sections =
     links
         .filter(
-            link =>
-                !link.classList.contains(
-                    "nav-home"
+            link => !link.classList.contains("nav-home")
+        )
+        .map(link => ({
+            link,
+            section:
+                document.getElementById(
+                    link.getAttribute("href").slice(1)
                 )
-        )
-        .map(
-            link => ({
-                link,
-                section:
-                    document.getElementById(
-                        link
-                            .getAttribute("href")
-                            .slice(1)
-                    )
-            })
-        )
-        .filter(
-            item => item.section
-        );
+        }))
+        .filter(item => item.section);
+
 
 function updateActiveNav(){
 
     const top =
         window.scrollY < 120;
 
+
     links.forEach(
-        link =>
-            link.classList.remove(
-                "active"
-            )
+        link => link.classList.remove("active")
     );
+
 
     if(top){
 
-        home?.classList.add(
-            "active"
-        );
+        home?.classList.add("active");
 
         return;
+
     }
+
 
     let current =
         sections[0];
 
-    for(
-        const item of sections
-    ){
+
+    for(const item of sections){
 
         if(
-            item.section
-                .getBoundingClientRect()
-                .top <= 180
+            item.section.getBoundingClientRect().top
+            <= 180
         ){
 
             current = item;
+
         }
+
     }
 
-    current?.link.classList.add(
-        "active"
-    );
+
+    current?.link.classList.add("active");
+
 }
+
 
 window.addEventListener(
     "scroll",
@@ -1712,6 +1687,7 @@ window.addEventListener(
 );
 
 updateActiveNav();
+
 </script>
 
 </body>
