@@ -466,11 +466,20 @@ h1{
 }
 
 .project h3{
-    margin:0 0 12px;
-    color:var(--text-soft);
+    margin:0 0 25px;
+    color:var(--gold);
     font-family:"Space Grotesk",sans-serif;
     font-size:1.45rem;
     font-weight:500
+}
+
+.project-image{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0 0 28px;
+    border:1px solid var(--border);
+    background:var(--background)
 }
 
 .project p{
@@ -812,6 +821,10 @@ footer a:hover{
     .certifications{
         justify-content:center
     }
+
+    .project{
+        padding:25px
+    }
 }
 </style>
 </head>
@@ -828,6 +841,7 @@ footer a:hover{
         <div class="nav-right">
 
             <div class="nav-links">
+
                 <a href="#about">
                     <span data-en="About" data-es="Sobre mí">About</span>
                 </a>
@@ -839,9 +853,11 @@ footer a:hover{
                 <a href="#projects">
                     <span data-en="Projects" data-es="Proyectos">Projects</span>
                 </a>
+
             </div>
 
             <div class="language-switcher">
+
                 <button
                     class="language-button active"
                     data-lang="en"
@@ -859,6 +875,7 @@ footer a:hover{
                 >
                     ES
                 </button>
+
             </div>
 
         </div>
@@ -882,6 +899,7 @@ footer a:hover{
                     <h1>Diego Sommier</h1>
 
                     <div class="hero-role">
+
                         <span
                             data-en="Systems Administrator"
                             data-es="Administrador de Sistemas"
@@ -898,6 +916,7 @@ footer a:hover{
                         >
                             Building towards Cloud &amp; DevOps
                         </span>
+
                     </div>
 
                     <p
@@ -922,6 +941,7 @@ footer a:hover{
                             >
                                 Email Me
                             </span>
+
                         </a>
 
                         <a
@@ -958,9 +978,11 @@ footer a:hover{
                             >
                                 Download CV
                             </span>
+
                         </a>
 
                     </div>
+
                 </div>
 
                 <div class="hero-portrait">
@@ -976,6 +998,7 @@ footer a:hover{
                         data-es='Retrato ilustrado por <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
                     >
                         Portrait illustration by
+
                         <a
                             href="https://roquec.com/"
                             target="_blank"
@@ -988,7 +1011,9 @@ footer a:hover{
                 </div>
 
             </div>
+
         </div>
+
     </div>
 
 </header>
@@ -1083,6 +1108,7 @@ footer a:hover{
             </aside>
 
         </div>
+
     </div>
 
 </section>
@@ -1124,6 +1150,7 @@ footer a:hover{
                 <h3 class="experience-company">
                     Santander Digital Services
                 </h3>
+
                 <div class="experience-tech">
                     SCCM · Intune · Windows Server
                 </div>
@@ -1133,6 +1160,7 @@ footer a:hover{
                 <h3 class="experience-company">
                     CBNK
                 </h3>
+
                 <div class="experience-tech">
                     Entra ID · Microsoft 365 · Exchange Online
                 </div>
@@ -1142,6 +1170,7 @@ footer a:hover{
                 <h3 class="experience-company">
                     Decathlon
                 </h3>
+
                 <div class="experience-tech">
                     Windows Server · Linux · Automation
                 </div>
@@ -1151,6 +1180,7 @@ footer a:hover{
                 <h3 class="experience-company">
                     BNP Paribas
                 </h3>
+
                 <div class="experience-tech">
                     Windows Server · Linux · VMware
                 </div>
@@ -1160,6 +1190,7 @@ footer a:hover{
                 <h3 class="experience-company">
                     Campofrío
                 </h3>
+
                 <div class="experience-tech">
                     Windows Server · Linux · VMware
                 </div>
@@ -1169,6 +1200,7 @@ footer a:hover{
                 <h3 class="experience-company">
                     MRW
                 </h3>
+
                 <div class="experience-tech">
                     Windows Server · Linux · VMware
                 </div>
@@ -1178,6 +1210,7 @@ footer a:hover{
                 <h3 class="experience-company">
                     Zurich
                 </h3>
+
                 <div class="experience-tech">
                     Windows Server · Linux · VMware
                 </div>
@@ -1187,6 +1220,7 @@ footer a:hover{
                 <h3 class="experience-company">
                     Liberbank
                 </h3>
+
                 <div class="experience-tech">
                     Windows · Networking · Infrastructure
                 </div>
@@ -1196,6 +1230,7 @@ footer a:hover{
                 <h3 class="experience-company">
                     ALSA
                 </h3>
+
                 <div class="experience-tech">
                     Windows Server · Active Directory · Infrastructure
                 </div>
@@ -1232,12 +1267,24 @@ footer a:hover{
 
         <article class="project">
 
+            <!-- Project title -->
+
             <h3
                 data-en="Systems &amp; Infrastructure Lab"
                 data-es="Laboratorio de Sistemas e Infraestructura"
             >
                 Systems &amp; Infrastructure Lab
             </h3>
+
+            <!-- Project cover image -->
+
+            <img
+                class="project-image"
+                src="https://raw.githubusercontent.com/diegosommier/systems-infrastructure-lab/main/assets/inafrastructure.png"
+                alt="Systems and Infrastructure Lab architecture diagram"
+            >
+
+            <!-- Project description -->
 
             <p
                 data-en="A practical systems administration lab built as part of my final Administration of Systems project. It brings together Linux and Windows environments, virtualization, storage, networking, security, monitoring, inventory, Samba, backups and Active Directory integration."
