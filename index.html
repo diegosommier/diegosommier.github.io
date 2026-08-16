@@ -5,14 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud, automation and DevOps.">
 <title>Diego Sommier | Systems Administrator</title>
-
 <link rel="icon" type="image/png" sizes="256x256" href="./profile.png">
 <link rel="shortcut icon" type="image/png" href="./profile.png">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
@@ -30,9 +27,7 @@
     --border-strong:#49453c
 }
 
-*{
-    box-sizing:border-box
-}
+*{box-sizing:border-box}
 
 html{
     scroll-behavior:smooth;
@@ -42,25 +37,15 @@ html{
 body{
     margin:0;
     background:
-        radial-gradient(
-            circle at 15% 10%,
-            rgba(182,154,114,.035),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 85%,
-            rgba(150,140,120,.025),
-            transparent 28%
-        ),
+        radial-gradient(circle at 15% 10%,rgba(182,154,114,.035),transparent 30%),
+        radial-gradient(circle at 85% 85%,rgba(150,140,120,.025),transparent 28%),
         var(--background);
     color:var(--text);
     font-family:"Inter",Arial,sans-serif;
     line-height:1.7
 }
 
-a{
-    color:inherit
-}
+a{color:inherit}
 
 ::selection{
     background:var(--gold);
@@ -76,10 +61,6 @@ section{
     padding:105px 0;
     border-top:1px solid var(--border)
 }
-
-/* ==============================
-   NAVIGATION
-============================== */
 
 nav{
     position:fixed;
@@ -162,10 +143,6 @@ nav{
 .language-separator{
     color:var(--border-strong)
 }
-
-/* ==============================
-   HERO
-============================== */
 
 .hero{
     min-height:100vh;
@@ -282,10 +259,7 @@ h1{
     color:var(--text-soft);
     text-decoration:none;
     font-size:.84rem;
-    transition:
-        border-color .25s ease,
-        background .25s ease,
-        color .25s ease
+    transition:border-color .25s ease,background .25s ease,color .25s ease
 }
 
 .button:hover{
@@ -298,10 +272,6 @@ h1{
     border-color:var(--gold);
     color:var(--gold)
 }
-
-/* ==============================
-   SECTION HEADERS
-============================== */
 
 .section-header{
     margin-bottom:50px
@@ -325,11 +295,7 @@ h1{
     flex:1;
     height:1px;
     max-width:180px;
-    background:linear-gradient(
-        to right,
-        var(--border-strong),
-        transparent
-    )
+    background:linear-gradient(to right,var(--border-strong),transparent)
 }
 
 .section-header h2{
@@ -341,10 +307,6 @@ h1{
     font-weight:500;
     letter-spacing:-.035em
 }
-
-/* ==============================
-   ABOUT
-============================== */
 
 .about-grid{
     display:grid;
@@ -366,36 +328,6 @@ h1{
 .about-aside{
     padding-top:4px
 }
-
-.aside-title{
-    color:var(--gold);
-    font-family:"Space Grotesk",sans-serif;
-    font-size:.72rem;
-    text-transform:uppercase;
-    letter-spacing:.11em;
-    margin:0 0 18px
-}
-
-.aside-list{
-    list-style:none;
-    padding:0;
-    margin:0
-}
-
-.aside-list li{
-    padding:10px 0;
-    border-bottom:1px solid var(--border);
-    color:var(--muted);
-    font-size:.88rem
-}
-
-.aside-list li:first-child{
-    border-top:1px solid var(--border)
-}
-
-/* ==============================
-   ABOUT CERTIFICATIONS
-============================== */
 
 .about-certifications{
     display:flex;
@@ -422,10 +354,6 @@ h1{
     height:100%;
     object-fit:contain
 }
-
-/* ==============================
-   JOURNEY
-============================== */
 
 .journey-intro{
     max-width:760px;
@@ -474,13 +402,6 @@ h1{
 /* ==============================
    PROJECTS
 ============================== */
-
-.project-intro{
-    max-width:760px;
-    margin:0 0 45px;
-    color:var(--text-soft);
-    font-size:1rem
-}
 
 .project{
     max-width:850px;
@@ -531,13 +452,25 @@ h1{
     gap:8px;
     margin-top:25px;
     color:var(--gold);
-    font-size:.78rem;
     text-decoration:none;
+    font-size:.78rem;
     transition:color .25s ease
 }
 
 .project-link:hover{
     color:var(--text)
+}
+
+.project-note{
+    max-width:760px;
+    margin:38px 0 0;
+    color:var(--muted);
+    font-size:.92rem
+}
+
+.project-note strong{
+    color:var(--text-soft);
+    font-weight:500
 }
 
 /* ==============================
@@ -560,9 +493,7 @@ h1{
     border:1px solid var(--border);
     background:var(--background);
     text-decoration:none;
-    transition:
-        border-color .25s ease,
-        transform .25s ease
+    transition:border-color .25s ease,transform .25s ease
 }
 
 .certification:hover{
@@ -576,10 +507,6 @@ h1{
     height:155px;
     object-fit:contain
 }
-
-/* ==============================
-   QUOTE
-============================== */
 
 .quote{
     padding:60px 0;
@@ -604,10 +531,6 @@ h1{
     letter-spacing:.04em
 }
 
-/* ==============================
-   FLOATING ACTIONS
-============================== */
-
 .floating-actions{
     position:fixed;
     top:50%;
@@ -618,9 +541,7 @@ h1{
     gap:9px;
     opacity:0;
     pointer-events:none;
-    transition:
-        opacity .3s ease,
-        transform .3s ease;
+    transition:opacity .3s ease,transform .3s ease;
     z-index:90
 }
 
@@ -648,10 +569,6 @@ h1{
     border-color:var(--gold)
 }
 
-/* ==============================
-   FOOTER
-============================== */
-
 footer{
     padding:30px 0 45px;
     border-top:1px solid var(--border);
@@ -671,34 +588,7 @@ footer a:hover{
     color:var(--gold)
 }
 
-.validator-badge{
-    display:inline-flex;
-    align-items:center;
-    margin-left:10px;
-    padding:3px 7px;
-    border:1px solid var(--border);
-    border-radius:3px;
-    color:var(--dim);
-    text-decoration:none;
-    font-family:"Space Grotesk",sans-serif;
-    font-size:.62rem;
-    letter-spacing:.04em;
-    transition:
-        border-color .25s ease,
-        color .25s ease
-}
-
-.validator-badge:hover{
-    border-color:var(--gold);
-    color:var(--gold)
-}
-
-/* ==============================
-   RESPONSIVE
-============================== */
-
 @media(max-width:900px){
-
     .hero-main{
         gap:45px
     }
@@ -724,7 +614,6 @@ footer a:hover{
 }
 
 @media(max-width:700px){
-
     .container{
         width:min(calc(100% - 32px),1100px)
     }
@@ -789,7 +678,6 @@ footer a:hover{
 }
 
 @media(max-width:520px){
-
     .nav-brand{
         font-size:.84rem
     }
@@ -835,8 +723,8 @@ footer a:hover{
         justify-content:center
     }
 
-    .validator-badge{
-        margin-left:5px
+    .project{
+        padding:28px
     }
 }
 </style>
@@ -845,871 +733,554 @@ footer a:hover{
 <body>
 
 <nav>
-    <div class="container nav-inner">
+<div class="container nav-inner">
+<a href="#" class="nav-brand nav-home">Diego Sommier</a>
 
-        <a href="#" class="nav-brand nav-home">
-            Diego Sommier
-        </a>
+<div class="nav-right">
+<div class="nav-links">
+<a href="#about"><span data-en="About" data-es="Sobre mí">About</span></a>
+<a href="#journey"><span data-en="Journey" data-es="Trayectoria">Journey</span></a>
+<a href="#projects"><span data-en="Projects" data-es="Proyectos">Projects</span></a>
+</div>
 
-        <div class="nav-right">
-
-            <div class="nav-links">
-                <a href="#about">
-                    <span data-en="About" data-es="Sobre mí">About</span>
-                </a>
-
-                <a href="#journey">
-                    <span data-en="Journey" data-es="Trayectoria">Journey</span>
-                </a>
-
-                <a href="#projects">
-                    <span data-en="Projects" data-es="Proyectos">Projects</span>
-                </a>
-            </div>
-
-            <div class="language-switcher">
-                <button
-                    class="language-button active"
-                    data-lang="en"
-                    type="button"
-                >
-                    EN
-                </button>
-
-                <span class="language-separator">·</span>
-
-                <button
-                    class="language-button"
-                    data-lang="es"
-                    type="button"
-                >
-                    ES
-                </button>
-            </div>
-
-        </div>
-    </div>
+<div class="language-switcher">
+<button class="language-button active" data-lang="en" type="button">EN</button>
+<span class="language-separator">·</span>
+<button class="language-button" data-lang="es" type="button">ES</button>
+</div>
+</div>
+</div>
 </nav>
 
 <header class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="hero-main">
 
-    <div class="container">
+<div class="hero-text">
+<div class="hero-kicker">IT · Infrastructure</div>
 
-        <div class="hero-content">
+<h1>Diego Sommier</h1>
 
-            <div class="hero-main">
+<div class="hero-role">
+<span data-en="Systems Administrator" data-es="Administrador de Sistemas">Systems Administrator</span>
+<span> · </span>
+<span class="direction" data-en="Building towards Cloud &amp; DevOps" data-es="Rumbo a Cloud &amp; DevOps">Building towards Cloud &amp; DevOps</span>
+</div>
 
-                <div class="hero-text">
+<p
+class="hero-description"
+data-en="IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure."
+data-es="Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura empresarial, ampliando ahora esa base hacia Cloud, automatización e infraestructuras modernas."
+>
+IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure.
+</p>
 
-                    <div class="hero-kicker">
-                        IT · Infrastructure
-                    </div>
+<div class="hero-actions">
+<a href="mailto:diegosommier@gmail.com" class="button primary">
+<i class="fa-solid fa-envelope"></i>
+<span data-en="Email Me" data-es="Contactar">Email Me</span>
+</a>
 
-                    <h1>
-                        Diego Sommier
-                    </h1>
+<a href="https://www.linkedin.com/in/diegosommier/" target="_blank" rel="noopener noreferrer" class="button">
+<i class="fa-brands fa-linkedin"></i> LinkedIn
+</a>
 
-                    <div class="hero-role">
-                        <span
-                            data-en="Systems Administrator"
-                            data-es="Administrador de Sistemas"
-                        >
-                            Systems Administrator
-                        </span>
+<a href="https://github.com/diegosommier" target="_blank" rel="noopener noreferrer" class="button">
+<i class="fa-brands fa-github"></i> GitHub
+</a>
 
-                        <span> · </span>
+<a id="cvDownload" href="cv-diego-sommier-en.pdf" download class="button">
+<i class="fa-solid fa-download"></i>
+<span data-en="Download CV" data-es="Descargar CV">Download CV</span>
+</a>
+</div>
+</div>
 
-                        <span
-                            class="direction"
-                            data-en="Building towards Cloud &amp; DevOps"
-                            data-es="Rumbo a Cloud &amp; DevOps"
-                        >
-                            Building towards Cloud &amp; DevOps
-                        </span>
-                    </div>
+<div class="hero-portrait">
+<img src="profile.png" alt="Diego Sommier">
 
-                    <p
-                        class="hero-description"
-                        data-en="IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure."
-                        data-es="Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura empresarial, ampliando ahora esa base hacia Cloud, automatización e infraestructuras modernas."
-                    >
-                        IT professional with more than 9 years of experience
-                        in systems administration and enterprise infrastructure,
-                        now expanding that foundation into Cloud, automation
-                        and modern infrastructure.
-                    </p>
+<div
+class="portrait-credit"
+data-en='Portrait illustration by <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
+data-es='Retrato ilustrado por <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
+>
+Portrait illustration by
+<a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.
+</div>
+</div>
 
-                    <div class="hero-actions">
-
-                        <a
-                            href="mailto:diegosommier@gmail.com"
-                            class="button primary"
-                        >
-                            <i class="fa-solid fa-envelope"></i>
-
-                            <span
-                                data-en="Email Me"
-                                data-es="Contactar"
-                            >
-                                Email Me
-                            </span>
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/in/diegosommier/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button"
-                        >
-                            <i class="fa-brands fa-linkedin"></i>
-                            LinkedIn
-                        </a>
-
-                        <a
-                            href="https://github.com/diegosommier"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button"
-                        >
-                            <i class="fa-brands fa-github"></i>
-                            GitHub
-                        </a>
-
-                        <a
-                            id="cvDownload"
-                            href="cv-diego-sommier-en.pdf"
-                            download
-                            class="button"
-                        >
-                            <i class="fa-solid fa-download"></i>
-
-                            <span
-                                data-en="Download CV"
-                                data-es="Descargar CV"
-                            >
-                                Download CV
-                            </span>
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="hero-portrait">
-
-                    <img
-                        src="profile.png"
-                        alt="Diego Sommier"
-                    >
-
-                    <div
-                        class="portrait-credit"
-                        data-en='Portrait illustration by <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
-                        data-es='Retrato ilustrado por <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
-                    >
-                        Portrait illustration by
-                        <a
-                            href="https://roquec.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            @roquec
-                        </a>.
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
 </header>
 
 <main>
 
-<!-- ==============================
-     ABOUT
-============================== -->
-
 <section id="about">
+<div class="container">
 
-    <div class="container">
+<div class="section-header">
+<div class="section-label" data-en="01 · About" data-es="01 · Sobre mí">01 · About</div>
 
-        <div class="section-header">
+<h2
+data-en="Systems, infrastructure and more"
+data-es="Sistemas, infraestructura y más"
+>
+Systems, infrastructure and more
+</h2>
+</div>
 
-            <div
-                class="section-label"
-                data-en="01 · About"
-                data-es="01 · Sobre mí"
-            >
-                01 · About
-            </div>
+<div class="about-grid">
 
-            <h2
-                data-en="Systems, infrastructure and more"
-                data-es="Sistemas, infraestructura y más"
-            >
-                Systems, infrastructure and more
-            </h2>
+<div class="about-text">
 
-        </div>
+<p
+data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure."
+data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft."
+>
+I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure.
+</p>
 
-        <div class="about-grid">
+<p
+data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
+data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
+>
+Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics.
+</p>
 
-            <div class="about-text">
+<p
+data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects."
+data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales."
+>
+I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects.
+</p>
 
-                <p
-                    data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure."
-                    data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft."
-                >
-                    I'm an IT professional with more than 9 years of
-                    experience in systems administration and enterprise
-                    infrastructure. My background spans Windows and Linux
-                    environments, virtualization, endpoint management and
-                    hybrid Microsoft infrastructure.
-                </p>
+</div>
 
-                <p
-                    data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
-                    data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
-                >
-                    Throughout my career I've worked across different
-                    enterprise environments, supporting infrastructure and
-                    large-scale IT operations for organisations in banking,
-                    insurance, retail and logistics.
-                </p>
+<aside class="about-aside">
 
-                <p
-                    data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects."
-                    data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales."
-                >
-                    I'm now building on that foundation to transition into
-                    Cloud Administration, expanding my knowledge across Azure,
-                    AWS, automation and DevOps through hands-on learning and
-                    personal projects.
-                </p>
+<div class="about-certifications">
 
-            </div>
+<a
+id="azureCertification"
+href="https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682"
+target="_blank"
+rel="noopener noreferrer"
+class="about-certification"
+title="Microsoft Certified: Azure Fundamentals"
+aria-label="Microsoft Certified: Azure Fundamentals"
+data-title-en="Microsoft Certified: Azure Fundamentals"
+data-title-es="Microsoft Certified: Aspectos básicos de Azure"
+data-url-en="https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682"
+data-url-es="https://learn.microsoft.com/es-es/users/sommy/credentials/1d127efc53a85682"
+>
+<img
+src="https://images.credly.com/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png"
+alt="Microsoft Certified Azure Fundamentals"
+>
+</a>
 
-            <aside class="about-aside">
+<div
+class="about-certification"
+title="Microsoft Technology Associate: Networking Fundamentals"
+>
+<img
+src="https://images.credly.com/images/2feaf613-be86-4d79-9cf8-c7aef82031c7/twitter_thumb_201604_MTA-Networking_Fundamentals-600x600.png"
+alt="Microsoft Technology Associate Networking Fundamentals"
+>
+</div>
 
-                <div class="about-certifications">
+</div>
 
-                    <a
-                        id="azureCertification"
-                        href="https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="about-certification"
-                        title="Microsoft Certified: Azure Fundamentals"
-                        aria-label="Microsoft Certified: Azure Fundamentals"
-                        data-title-en="Microsoft Certified: Azure Fundamentals"
-                        data-title-es="Microsoft Certified: Aspectos básicos de Azure"
-                        data-url-en="https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682"
-                        data-url-es="https://learn.microsoft.com/es-es/users/sommy/credentials/1d127efc53a85682"
-                    >
-                        <img
-                            src="https://images.credly.com/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png"
-                            alt="Microsoft Certified Azure Fundamentals"
-                        >
-                    </a>
-
-                    <div
-                        class="about-certification"
-                        title="Microsoft Technology Associate: Networking Fundamentals"
-                    >
-                        <img
-                            src="https://images.credly.com/images/2feaf613-be86-4d79-9cf8-c7aef82031c7/twitter_thumb_201604_MTA-Networking_Fundamentals-600x600.png"
-                            alt="Microsoft Technology Associate Networking Fundamentals"
-                        >
-                    </div>
-
-                </div>
-
-            </aside>
-
-        </div>
-
-    </div>
-
+</aside>
+</div>
+</div>
 </section>
-
-<!-- ==============================
-     JOURNEY
-============================== -->
 
 <section id="journey">
+<div class="container">
 
-    <div class="container">
+<div class="section-header">
+<div class="section-label" data-en="02 · Journey" data-es="02 · Trayectoria">02 · Journey</div>
 
-        <div class="section-header">
+<h2
+data-en="Where the experience was built"
+data-es="Donde se construyó la experiencia"
+>
+Where the experience was built
+</h2>
+</div>
 
-            <div
-                class="section-label"
-                data-en="02 · Journey"
-                data-es="02 · Trayectoria"
-            >
-                02 · Journey
-            </div>
+<p
+class="journey-intro"
+data-en="My career has taken me through different enterprise environments and industries. The organisations below represent some of the environments where I've worked and the technologies I've used along the way."
+data-es="Mi trayectoria me ha llevado por distintos entornos empresariales y sectores. Las organizaciones que aparecen a continuación representan algunos de los entornos en los que he trabajado y las tecnologías utilizadas a lo largo del camino."
+>
+My career has taken me through different enterprise environments and industries. The organisations below represent some of the environments where I've worked and the technologies I've used along the way.
+</p>
 
-            <h2
-                data-en="Where the experience was built"
-                data-es="Donde se construyó la experiencia"
-            >
-                Where the experience was built
-            </h2>
+<div class="experience-list">
 
-        </div>
+<article class="experience-item">
+<h3 class="experience-company">Santander Digital Services</h3>
+<div class="experience-tech">SCCM · Intune · Windows Server</div>
+</article>
 
-        <p
-            class="journey-intro"
-            data-en="My career has taken me through different enterprise environments and industries. The organisations below represent some of the environments where I've worked and the technologies I've used along the way."
-            data-es="Mi trayectoria me ha llevado por distintos entornos empresariales y sectores. Las organizaciones que aparecen a continuación representan algunos de los entornos en los que he trabajado y las tecnologías utilizadas a lo largo del camino."
-        >
-            My career has taken me through different enterprise environments
-            and industries. The organisations below represent some of the
-            environments where I've worked and the technologies I've used
-            along the way.
-        </p>
+<article class="experience-item">
+<h3 class="experience-company">CBNK</h3>
+<div class="experience-tech">Entra ID · Microsoft 365 · Exchange Online</div>
+</article>
 
-        <div class="experience-list">
+<article class="experience-item">
+<h3 class="experience-company">Decathlon</h3>
+<div class="experience-tech">Windows Server · Linux · Automation</div>
+</article>
 
-            <article class="experience-item">
-                <h3 class="experience-company">
-                    Santander Digital Services
-                </h3>
-                <div class="experience-tech">
-                    SCCM · Intune · Windows Server
-                </div>
-            </article>
+<article class="experience-item">
+<h3 class="experience-company">BNP Paribas</h3>
+<div class="experience-tech">Windows Server · Linux · VMware</div>
+</article>
 
-            <article class="experience-item">
-                <h3 class="experience-company">
-                    CBNK
-                </h3>
-                <div class="experience-tech">
-                    Entra ID · Microsoft 365 · Exchange Online
-                </div>
-            </article>
+<article class="experience-item">
+<h3 class="experience-company">Campofrío</h3>
+<div class="experience-tech">Windows Server · Linux · VMware</div>
+</article>
 
-            <article class="experience-item">
-                <h3 class="experience-company">
-                    Decathlon
-                </h3>
-                <div class="experience-tech">
-                    Windows Server · Linux · Automation
-                </div>
-            </article>
+<article class="experience-item">
+<h3 class="experience-company">MRW</h3>
+<div class="experience-tech">Windows Server · Linux · VMware</div>
+</article>
 
-            <article class="experience-item">
-                <h3 class="experience-company">
-                    BNP Paribas
-                </h3>
-                <div class="experience-tech">
-                    Windows Server · Linux · VMware
-                </div>
-            </article>
+<article class="experience-item">
+<h3 class="experience-company">Zurich</h3>
+<div class="experience-tech">Windows Server · Linux · VMware</div>
+</article>
 
-            <article class="experience-item">
-                <h3 class="experience-company">
-                    Campofrío
-                </h3>
-                <div class="experience-tech">
-                    Windows Server · Linux · VMware
-                </div>
-            </article>
+<article class="experience-item">
+<h3 class="experience-company">Liberbank</h3>
+<div class="experience-tech">Windows · Networking · Infrastructure</div>
+</article>
 
-            <article class="experience-item">
-                <h3 class="experience-company">
-                    MRW
-                </h3>
-                <div class="experience-tech">
-                    Windows Server · Linux · VMware
-                </div>
-            </article>
+<article class="experience-item">
+<h3 class="experience-company">ALSA</h3>
+<div class="experience-tech">Windows Server · Active Directory · Infrastructure</div>
+</article>
 
-            <article class="experience-item">
-                <h3 class="experience-company">
-                    Zurich
-                </h3>
-                <div class="experience-tech">
-                    Windows Server · Linux · VMware
-                </div>
-            </article>
-
-            <article class="experience-item">
-                <h3 class="experience-company">
-                    Liberbank
-                </h3>
-                <div class="experience-tech">
-                    Windows · Networking · Infrastructure
-                </div>
-            </article>
-
-            <article class="experience-item">
-                <h3 class="experience-company">
-                    ALSA
-                </h3>
-                <div class="experience-tech">
-                    Windows Server · Active Directory · Infrastructure
-                </div>
-            </article>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
-<!-- ==============================
-     PROJECTS
-============================== -->
-
 <section id="projects">
+<div class="container">
 
-    <div class="container">
+<div class="section-header">
+<div class="section-label" data-en="03 · Projects" data-es="03 · Proyectos">03 · Projects</div>
 
-        <div class="section-header">
+<h2
+data-en="The forge is taking shape"
+data-es="La forja empieza a tomar forma"
+>
+The forge is taking shape
+</h2>
+</div>
 
-            <div
-                class="section-label"
-                data-en="03 · Projects"
-                data-es="03 · Proyectos"
-            >
-                03 · Projects
-            </div>
+<article class="project">
 
-            <h2
-                data-en="The forge is taking shape"
-                data-es="La forja empieza a tomar forma"
-            >
-                The forge is taking shape
-            </h2>
+<div class="project-code">&lt;/&gt;</div>
 
-        </div>
+<h3
+data-en="Systems Infrastructure Lab"
+data-es="Laboratorio de Infraestructura de Sistemas"
+>
+Systems Infrastructure Lab
+</h3>
 
-        <p
-            class="project-intro"
-            data-en="I'm preparing a series of Cloud and DevOps projects to build on my systems and infrastructure background, with a focus on practical work, automation and modern infrastructure. Come back later to see them take shape."
-            data-es="Estoy preparando una serie de proyectos de Cloud y DevOps para construir sobre mi experiencia en sistemas e infraestructura, centrados en trabajo práctico, automatización e infraestructura moderna. Vuelve más adelante para ver cómo van tomando forma."
-        >
-            I'm preparing a series of Cloud and DevOps projects to build on
-            my systems and infrastructure background, with a focus on practical
-            work, automation and modern infrastructure. Come back later to see
-            them take shape.
-        </p>
+<p
+data-en="A systems administration lab built around Linux and Windows environments, covering networking, RAID 1, LVM, SSH hardening, Apache, MySQL, WordPress, Samba, backups, monitoring, inventory and Active Directory integration."
+data-es="Un laboratorio de administración de sistemas basado en entornos Linux y Windows, que abarca redes, RAID 1, LVM, securización de SSH, Apache, MySQL, WordPress, Samba, copias de seguridad, monitorización, inventario e integración con Active Directory."
+>
+A systems administration lab built around Linux and Windows environments, covering networking, RAID 1, LVM, SSH hardening, Apache, MySQL, WordPress, Samba, backups, monitoring, inventory and Active Directory integration.
+</p>
 
-        <article class="project">
+<div class="tags">
+<span class="tag">Linux</span>
+<span class="tag">Windows Server</span>
+<span class="tag">Samba</span>
+<span class="tag">Active Directory</span>
+<span class="tag">RAID</span>
+<span class="tag">Bash</span>
+<span class="tag">Networking</span>
+<span class="tag">Infrastructure</span>
+</div>
 
-            <div class="project-code">
-                &lt;/&gt;
-            </div>
+<a
+href="https://github.com/diegosommier/systems-infrastructure-lab"
+target="_blank"
+rel="noopener noreferrer"
+class="project-link"
+>
+<i class="fa-brands fa-github"></i>
 
-            <h3>
-                Systems &amp; Infrastructure Lab
-            </h3>
+<span
+data-en="View project on GitHub"
+data-es="Ver proyecto en GitHub"
+>
+View project on GitHub
+</span>
 
-            <p
-                data-en="A systems administration lab built during my training in 2018, covering Linux and Windows environments, storage, networking, security, monitoring, backup, scripting and Active Directory integration."
-                data-es="Laboratorio de administración de sistemas realizado durante mi formación en 2018, trabajando con entornos Linux y Windows, almacenamiento, redes, seguridad, monitorización, copias de seguridad, scripting e integración con Active Directory."
-            >
-                A systems administration lab built during my training in 2018,
-                covering Linux and Windows environments, storage, networking,
-                security, monitoring, backup, scripting and Active Directory
-                integration.
-            </p>
+</a>
 
-            <div class="tags">
+</article>
 
-                <span class="tag">
-                    CentOS
-                </span>
+<p
+class="project-note"
+data-en="<strong>More projects are on the way.</strong> I'm preparing new projects around Cloud, automation and DevOps. Come back later to see them take shape — one lab at a time."
+data-es="<strong>Más proyectos están en camino.</strong> Estoy preparando nuevos proyectos alrededor de Cloud, automatización y DevOps. Vuelve más adelante para ver cómo van tomando forma — laboratorio a laboratorio."
+>
+<strong>More projects are on the way.</strong>
+I'm preparing new projects around Cloud, automation and DevOps.
+Come back later to see them take shape — one lab at a time.
+</p>
 
-                <span class="tag">
-                    Windows Server
-                </span>
-
-                <span class="tag">
-                    Samba
-                </span>
-
-                <span class="tag">
-                    RAID 1
-                </span>
-
-                <span class="tag">
-                    LVM
-                </span>
-
-                <span class="tag">
-                    SSH
-                </span>
-
-                <span class="tag">
-                    Fail2ban
-                </span>
-
-                <span class="tag">
-                    Apache
-                </span>
-
-                <span class="tag">
-                    MySQL
-                </span>
-
-                <span class="tag">
-                    WordPress
-                </span>
-
-                <span class="tag">
-                    rsnapshot
-                </span>
-
-                <span class="tag">
-                    Bash
-                </span>
-
-                <span class="tag">
-                    Pandora FMS
-                </span>
-
-                <span class="tag">
-                    OCS Inventory
-                </span>
-
-                <span class="tag">
-                    Active Directory
-                </span>
-
-            </div>
-
-            <a
-                class="project-link"
-                href="https://github.com/diegosommier/systems-infrastructure-lab"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <i class="fa-brands fa-github"></i>
-
-                <span
-                    data-en="View project on GitHub"
-                    data-es="Ver proyecto en GitHub"
-                >
-                    View project on GitHub
-                </span>
-
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-
-        </article>
-
-    </div>
-
+</div>
 </section>
 
 <div class="quote">
+<div class="container">
 
-    <div class="container">
+<p>
+"The best is yet to come."
+<br>
+<span class="quote-source">— Metal Gear Solid, 1998</span>
+</p>
 
-        <p>
-            "The best is yet to come."
-            <br>
-
-            <span class="quote-source">
-                — Metal Gear Solid, 1998
-            </span>
-        </p>
-
-    </div>
-
+</div>
 </div>
 
 </main>
 
-<!-- ==============================
-     FLOATING ACTIONS
-============================== -->
-
 <div class="floating-actions" id="floatingActions">
 
-    <a
-        href="mailto:diegosommier@gmail.com"
-        class="floating-button"
-        title="Email"
-        aria-label="Email"
-    >
-        <i class="fa-solid fa-envelope"></i>
-    </a>
+<a
+href="mailto:diegosommier@gmail.com"
+class="floating-button"
+title="Email"
+aria-label="Email"
+>
+<i class="fa-solid fa-envelope"></i>
+</a>
 
-    <a
-        href="https://www.linkedin.com/in/diegosommier/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="floating-button"
-        title="LinkedIn"
-        aria-label="LinkedIn"
-    >
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
+<a
+href="https://www.linkedin.com/in/diegosommier/"
+target="_blank"
+rel="noopener noreferrer"
+class="floating-button"
+title="LinkedIn"
+aria-label="LinkedIn"
+>
+<i class="fa-brands fa-linkedin"></i>
+</a>
 
-    <a
-        href="https://github.com/diegosommier"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="floating-button"
-        title="GitHub"
-        aria-label="GitHub"
-    >
-        <i class="fa-brands fa-github"></i>
-    </a>
+<a
+href="https://github.com/diegosommier"
+target="_blank"
+rel="noopener noreferrer"
+class="floating-button"
+title="GitHub"
+aria-label="GitHub"
+>
+<i class="fa-brands fa-github"></i>
+</a>
 
-    <a
-        id="floatingCvDownload"
-        href="cv-diego-sommier-en.pdf"
-        download
-        class="floating-button"
-        title="Download CV"
-        aria-label="Download CV"
-    >
-        <i class="fa-solid fa-download"></i>
-    </a>
+<a
+id="floatingCvDownload"
+href="cv-diego-sommier-en.pdf"
+download
+class="floating-button"
+title="Download CV"
+aria-label="Download CV"
+>
+<i class="fa-solid fa-download"></i>
+</a>
 
 </div>
 
-<!-- ==============================
-     FOOTER
-============================== -->
-
 <footer>
+<div class="container">
 
-    <div class="container">
+<span
+data-en="© 2026 Diego Sommier · Made with AI, curiosity and coffee. ☕"
+data-es="© 2026 Diego Sommier · Hecho con IA, curiosidad y café. ☕"
+>
+© 2026 Diego Sommier · Made with AI, curiosity and coffee. ☕
+</span>
 
-        <span
-            data-en="© 2026 Diego Sommier · Made with AI, curiosity and coffee. ☕"
-            data-es="© 2026 Diego Sommier · Hecho con IA, curiosidad y café. ☕"
-        >
-            © 2026 Diego Sommier · Made with AI, curiosity and coffee. ☕
-        </span>
+<a
+href="mailto:diegosommier@gmail.com"
+title="Email"
+aria-label="Email"
+>
+<i class="fa-solid fa-envelope"></i>
+</a>
 
-        <a
-            href="mailto:diegosommier@gmail.com"
-            title="Email"
-            aria-label="Email"
-        >
-            <i class="fa-solid fa-envelope"></i>
-        </a>
+<a
+href="https://www.linkedin.com/in/diegosommier/"
+target="_blank"
+rel="noopener noreferrer"
+title="LinkedIn"
+aria-label="LinkedIn"
+>
+<i class="fa-brands fa-linkedin"></i>
+</a>
 
-        <a
-            href="https://www.linkedin.com/in/diegosommier/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn"
-            aria-label="LinkedIn"
-        >
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
+<a
+href="https://github.com/diegosommier"
+target="_blank"
+rel="noopener noreferrer"
+title="GitHub"
+aria-label="GitHub"
+>
+<i class="fa-brands fa-github"></i>
+</a>
 
-        <a
-            href="https://github.com/diegosommier"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub"
-            aria-label="GitHub"
-        >
-            <i class="fa-brands fa-github"></i>
-        </a>
+<a
+href="https://www.instagram.com/diegosommier/"
+target="_blank"
+rel="noopener noreferrer"
+title="Instagram"
+aria-label="Instagram"
+>
+<i class="fa-brands fa-instagram"></i>
+</a>
 
-        <a
-            href="https://www.instagram.com/diegosommier/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Instagram"
-            aria-label="Instagram"
-        >
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+<a
+href="https://x.com/diegosommier"
+target="_blank"
+rel="noopener noreferrer"
+title="X"
+aria-label="X"
+>
+<i class="fa-brands fa-x-twitter"></i>
+</a>
 
-        <a
-            href="https://x.com/diegosommier"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="X"
-            aria-label="X"
-        >
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
-
-        <a
-            class="validator-badge"
-            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdiegosommier.github.io%2F"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="HTML checked by W3C Nu HTML Checker"
-            aria-label="HTML checked by W3C Nu HTML Checker"
-        >
-            ✓ W3C HTML checked
-        </a>
-
-    </div>
-
+</div>
 </footer>
 
 <script>
-const languageButtons =
-    document.querySelectorAll(".language-button");
-
-const translatableElements =
-    document.querySelectorAll("[data-en][data-es]");
-
-const cvDownload =
-    document.getElementById("cvDownload");
-
-const floatingCvDownload =
-    document.getElementById("floatingCvDownload");
-
+const languageButtons=document.querySelectorAll(".language-button");
+const translatableElements=document.querySelectorAll("[data-en][data-es]");
+const cvDownload=document.getElementById("cvDownload");
+const floatingCvDownload=document.getElementById("floatingCvDownload");
 
 function setLanguage(language){
 
-    document.documentElement.lang = language;
+    document.documentElement.lang=language;
 
-    const azureCertification =
-        document.getElementById("azureCertification");
+    const azureCertification=document.getElementById("azureCertification");
 
     if(azureCertification){
 
-        azureCertification.title =
-            language === "es"
-                ? azureCertification.dataset.titleEs
-                : azureCertification.dataset.titleEn;
+        azureCertification.title=
+            language==="es"
+            ?azureCertification.dataset.titleEs
+            :azureCertification.dataset.titleEn;
 
         azureCertification.setAttribute(
             "aria-label",
             azureCertification.title
         );
 
-        azureCertification.href =
-            language === "es"
-                ? azureCertification.dataset.urlEs
-                : azureCertification.dataset.urlEn;
+        azureCertification.href=
+            language==="es"
+            ?azureCertification.dataset.urlEs
+            :azureCertification.dataset.urlEn;
     }
 
-    translatableElements.forEach(element => {
+    translatableElements.forEach(element=>{
 
-        const translation =
-            element.dataset[language];
+        const translation=element.dataset[language];
 
         if(translation){
 
             if(
-                element.classList.contains("portrait-credit")
+                element.classList.contains("portrait-credit") ||
+                element.classList.contains("project-note")
             ){
-                element.innerHTML = translation;
-            }
-            else{
-                element.textContent = translation;
+                element.innerHTML=translation;
+            }else{
+                element.textContent=translation;
             }
         }
-
     });
 
-    languageButtons.forEach(button => {
-
+    languageButtons.forEach(button=>{
         button.classList.toggle(
             "active",
-            button.dataset.lang === language
+            button.dataset.lang===language
         );
-
     });
 
-    document.title =
-        language === "es"
-            ? "Diego Sommier | Administrador de Sistemas"
-            : "Diego Sommier | Systems Administrator";
+    document.title=
+        language==="es"
+        ?"Diego Sommier | Administrador de Sistemas"
+        :"Diego Sommier | Systems Administrator";
 
-    const description =
-        document.querySelector(
-            'meta[name="description"]'
-        );
+    const description=document.querySelector(
+        'meta[name="description"]'
+    );
 
     if(description){
 
         description.setAttribute(
             "content",
-            language === "es"
-                ? "Diego Sommier — Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura, orientado hacia Cloud, automatización y DevOps."
-                : "Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud, automation and DevOps."
+            language==="es"
+            ?"Diego Sommier — Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura, orientado hacia Cloud, automatización y DevOps."
+            :"Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud, automation and DevOps."
         );
     }
 
-    const cvFile =
-        language === "es"
-            ? "cv-diego-sommier-es.pdf"
-            : "cv-diego-sommier-en.pdf";
+    const cvFile=
+        language==="es"
+        ?"cv-diego-sommier-es.pdf"
+        :"cv-diego-sommier-en.pdf";
 
     if(cvDownload){
-        cvDownload.href = cvFile;
+        cvDownload.href=cvFile;
     }
 
     if(floatingCvDownload){
-        floatingCvDownload.href = cvFile;
+        floatingCvDownload.href=cvFile;
     }
 
-    localStorage.setItem(
-        "preferredLanguage",
-        language
-    );
+    localStorage.setItem("preferredLanguage",language);
 }
 
-
-languageButtons.forEach(button => {
-
+languageButtons.forEach(button=>{
     button.addEventListener(
         "click",
-        () => setLanguage(button.dataset.lang)
+        ()=>setLanguage(button.dataset.lang)
     );
-
 });
 
-
-const savedLanguage =
-    localStorage.getItem("preferredLanguage");
+const savedLanguage=localStorage.getItem("preferredLanguage");
 
 setLanguage(
-    savedLanguage === "en" || savedLanguage === "es"
-        ? savedLanguage
-        : "en"
+    savedLanguage==="en" || savedLanguage==="es"
+    ?savedLanguage
+    :"en"
 );
 
-
-/* ==============================
-   FLOATING ACTIONS
-============================== */
-
-const floatingActions =
-    document.getElementById("floatingActions");
-
+const floatingActions=document.getElementById("floatingActions");
 
 function updateFloatingActions(){
 
-    if(window.scrollY > 450){
-
-        floatingActions.classList.add(
-            "visible"
-        );
-
+    if(window.scrollY>450){
+        floatingActions.classList.add("visible");
+    }else{
+        floatingActions.classList.remove("visible");
     }
-    else{
-
-        floatingActions.classList.remove(
-            "visible"
-        );
-
-    }
-
 }
-
 
 window.addEventListener(
     "scroll",
@@ -1719,86 +1290,49 @@ window.addEventListener(
 
 updateFloatingActions();
 
+const links=[
+    ...document.querySelectorAll("nav a[href^='#']")
+];
 
-/* ==============================
-   ACTIVE NAVIGATION
-============================== */
+const home=document.querySelector(".nav-home");
 
-const links =
-    [...document.querySelectorAll(
-        "nav a[href^='#']"
-    )];
-
-const home =
-    document.querySelector(".nav-home");
-
-const sections =
+const sections=
     links
-        .filter(
-            link =>
-                !link.classList.contains(
-                    "nav-home"
-                )
+    .filter(link=>!link.classList.contains("nav-home"))
+    .map(link=>({
+        link,
+        section:document.getElementById(
+            link.getAttribute("href").slice(1)
         )
-        .map(
-            link => ({
-                link,
-                section:
-                    document.getElementById(
-                        link
-                            .getAttribute("href")
-                            .slice(1)
-                    )
-            })
-        )
-        .filter(
-            item => item.section
-        );
-
+    }))
+    .filter(item=>item.section);
 
 function updateActiveNav(){
 
-    const top =
-        window.scrollY < 120;
+    const top=window.scrollY<120;
 
-    links.forEach(
-        link =>
-            link.classList.remove(
-                "active"
-            )
-    );
+    links.forEach(link=>{
+        link.classList.remove("active");
+    });
 
     if(top){
-
-        home?.classList.add(
-            "active"
-        );
-
+        home?.classList.add("active");
         return;
     }
 
-    let current =
-        sections[0];
+    let current=sections[0];
 
-    for(
-        const item of sections
-    ){
+    for(const item of sections){
 
         if(
-            item.section
-                .getBoundingClientRect()
-                .top <= 180
+            item.section.getBoundingClientRect().top<=180
         ){
-            current = item;
+            current=item;
         }
-
     }
 
-    current?.link.classList.add(
-        "active"
-    );
+    current?.link.classList.add("active");
 }
-
 
 window.addEventListener(
     "scroll",
@@ -1807,7 +1341,6 @@ window.addEventListener(
 );
 
 updateActiveNav();
-
 </script>
 
 </body>
