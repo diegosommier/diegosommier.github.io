@@ -3,101 +3,464 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud, automation and DevOps.">
+
 <title>Diego Sommier | Systems Administrator</title>
+
 <link rel="icon" type="image/png" sizes="256x256" href="./profile.png">
 <link rel="shortcut icon" type="image/png" href="./profile.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
 
 <style>
-:root{--background:#171714;--background-soft:#1d1c18;--surface:#24221d;--text:#e9e3d6;--text-soft:#c8c0b2;--muted:#969086;--dim:#6f6a60;--gold:#b69a72;--gold-soft:#9e8968;--border:#302e28;--border-strong:#49453c}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:68px}
-body{margin:0;background:radial-gradient(circle at 15% 10%,rgba(182,154,114,.035),transparent 30%),radial-gradient(circle at 85% 85%,rgba(150,140,120,.025),transparent 28%),var(--background);color:var(--text);font-family:"Inter",Arial,sans-serif;line-height:1.7}
-a{color:inherit}
-::selection{background:var(--gold);color:#111}
-.container{width:min(calc(100% - 48px),1100px);margin:0 auto}
-section{padding:105px 0;border-top:1px solid var(--border)}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(23,23,20,.92);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
-.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between}
-.nav-brand{color:var(--text);text-decoration:none;font-family:"Space Grotesk",sans-serif;font-weight:500;letter-spacing:.02em}
-.nav-right{display:flex;align-items:center;gap:30px}
-.nav-links{display:flex;gap:28px}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:.82rem;transition:color .25s ease}
-.nav-links a:hover,.nav-links a.active,.nav-home.active{color:var(--gold)}
-.language-switcher{display:flex;align-items:center;gap:7px;font-size:.72rem;letter-spacing:.05em}
-.language-button{border:none;padding:0;background:transparent;color:var(--dim);font-family:inherit;font-size:.72rem;letter-spacing:.05em;cursor:pointer;transition:color .25s ease}
-.language-button:hover{color:var(--text-soft)}
-.language-button.active{color:var(--gold)}
-.language-separator{color:var(--border-strong)}
+:root{
+    --background:#171714;
+    --background-soft:#1d1c18;
+    --surface:#24221d;
+    --text:#e9e3d6;
+    --text-soft:#c8c0b2;
+    --muted:#969086;
+    --dim:#6f6a60;
+    --gold:#b69a72;
+    --gold-soft:#9e8968;
+    --border:#302e28;
+    --border-strong:#49453c
+}
 
-.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 100px}
-.hero-content{width:100%;max-width:1100px}
-.hero-main{display:flex;align-items:center;justify-content:space-between;gap:70px}
-.hero-text{flex:1;min-width:0}
-.hero-portrait{flex:0 0 320px}
-.hero-portrait img{display:block;width:320px;height:320px;object-fit:cover;border:1px solid var(--border-strong)}
-.portrait-credit{margin-top:9px;color:var(--dim);font-size:.62rem;text-align:right}
-.portrait-credit a{color:var(--muted);text-decoration:none}
-.portrait-credit a:hover{color:var(--gold)}
-.hero-kicker{display:flex;align-items:center;gap:12px;color:var(--gold);font-family:"Space Grotesk",sans-serif;font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;margin-bottom:18px}
-.hero-kicker::before{content:"";width:34px;height:1px;background:var(--gold)}
-h1{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(3.2rem,7vw,5.8rem);line-height:1;letter-spacing:-.055em;font-weight:500}
-.hero-role{margin-top:24px;color:var(--text-soft);font-size:clamp(1.2rem,3vw,1.6rem);line-height:1.35}
-.hero-role .direction{color:var(--gold)}
-.hero-description{max-width:730px;margin:28px 0 0;color:var(--text-soft);font-size:1.04rem}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.button{display:inline-flex;align-items:center;gap:9px;padding:10px 17px;border:1px solid var(--border-strong);border-radius:4px;color:var(--text-soft);text-decoration:none;font-size:.84rem;transition:border-color .25s ease,background .25s ease,color .25s ease}
-.button:hover{border-color:var(--gold);background:rgba(199,167,108,.07);color:var(--gold)}
-.button.primary{border-color:var(--gold);color:var(--gold)}
+*{
+    box-sizing:border-box
+}
 
-.section-header{margin-bottom:50px}
-.section-label{display:flex;align-items:center;gap:15px;margin-bottom:15px;color:var(--gold);font-family:"Space Grotesk",sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase}
-.section-label::after{content:"";flex:1;height:1px;max-width:180px;background:linear-gradient(to right,var(--border-strong),transparent)}
-.section-header h2{margin:0;color:var(--text);font-family:"Space Grotesk",sans-serif;font-size:clamp(2rem,4vw,2.8rem);line-height:1.2;font-weight:500;letter-spacing:-.035em}
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:68px
+}
 
-.about-grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:50px;align-items:start}
-.about-text p{margin:0 0 25px;color:var(--text-soft);font-size:1rem}
-.about-text p:last-child{margin-bottom:0}
-.about-aside{padding-top:4px}
-.aside-title{color:var(--gold);font-family:"Space Grotesk",sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.11em;margin:0 0 18px}
-.aside-list{list-style:none;padding:0;margin:0}
-.aside-list li{padding:10px 0;border-bottom:1px solid var(--border);color:var(--muted);font-size:.88rem}
-.aside-list li:first-child{border-top:1px solid var(--border)}
+body{
+    margin:0;
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(182,154,114,.035),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(150,140,120,.025),
+            transparent 28%
+        ),
+        var(--background);
+    color:var(--text);
+    font-family:"Inter",Arial,sans-serif;
+    line-height:1.7
+}
+
+a{
+    color:inherit
+}
+
+::selection{
+    background:var(--gold);
+    color:#111
+}
+
+.container{
+    width:min(calc(100% - 48px),1100px);
+    margin:0 auto
+}
+
+section{
+    padding:105px 0;
+    border-top:1px solid var(--border)
+}
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:100;
+    background:rgba(23,23,20,.92);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(12px)
+}
+
+.nav-inner{
+    min-height:68px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+}
+
+.nav-brand{
+    color:var(--text);
+    text-decoration:none;
+    font-family:"Space Grotesk",sans-serif;
+    font-weight:500;
+    letter-spacing:.02em
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:30px
+}
+
+.nav-links{
+    display:flex;
+    gap:28px
+}
+
+.nav-links a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:.82rem;
+    transition:color .25s ease
+}
+
+.nav-links a:hover,
+.nav-links a.active,
+.nav-home.active{
+    color:var(--gold)
+}
+
+.language-switcher{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:.72rem;
+    letter-spacing:.05em
+}
+
+.language-button{
+    border:none;
+    padding:0;
+    background:transparent;
+    color:var(--dim);
+    font-family:inherit;
+    font-size:.72rem;
+    letter-spacing:.05em;
+    cursor:pointer;
+    transition:color .25s ease
+}
+
+.language-button:hover{
+    color:var(--text-soft)
+}
+
+.language-button.active{
+    color:var(--gold)
+}
+
+.language-separator{
+    color:var(--border-strong)
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:140px 0 100px
+}
+
+.hero-content{
+    width:100%;
+    max-width:1100px
+}
+
+.hero-main{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px
+}
+
+.hero-text{
+    flex:1;
+    min-width:0
+}
+
+.hero-portrait{
+    flex:0 0 320px
+}
+
+.hero-portrait img{
+    display:block;
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border:1px solid var(--border-strong)
+}
+
+.portrait-credit{
+    margin-top:9px;
+    color:var(--dim);
+    font-size:.62rem;
+    text-align:right
+}
+
+.portrait-credit a{
+    color:var(--muted);
+    text-decoration:none
+}
+
+.portrait-credit a:hover{
+    color:var(--gold)
+}
+
+.hero-kicker{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--gold);
+    font-family:"Space Grotesk",sans-serif;
+    font-size:.76rem;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    margin-bottom:18px
+}
+
+.hero-kicker::before{
+    content:"";
+    width:34px;
+    height:1px;
+    background:var(--gold)
+}
+
+h1{
+    margin:0;
+    font-family:"Space Grotesk",sans-serif;
+    font-size:clamp(3.2rem,7vw,5.8rem);
+    line-height:1;
+    letter-spacing:-.055em;
+    font-weight:500
+}
+
+.hero-role{
+    margin-top:24px;
+    color:var(--text-soft);
+    font-size:clamp(1.2rem,3vw,1.6rem);
+    line-height:1.35
+}
+
+.hero-role .direction{
+    color:var(--gold)
+}
+
+.hero-description{
+    max-width:730px;
+    margin:28px 0 0;
+    color:var(--text-soft);
+    font-size:1.04rem
+}
+
+.hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:34px
+}
+
+.button{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:10px 17px;
+    border:1px solid var(--border-strong);
+    border-radius:4px;
+    color:var(--text-soft);
+    text-decoration:none;
+    font-size:.84rem;
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        color .25s ease
+}
+
+.button:hover{
+    border-color:var(--gold);
+    background:rgba(199,167,108,.07);
+    color:var(--gold)
+}
+
+.button.primary{
+    border-color:var(--gold);
+    color:var(--gold)
+}
+
+
+/* ==============================
+   SECTION HEADERS
+============================== */
+
+.section-header{
+    margin-bottom:50px
+}
+
+.section-label{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+    color:var(--gold);
+    font-family:"Space Grotesk",sans-serif;
+    font-size:.72rem;
+    font-weight:500;
+    letter-spacing:.13em;
+    text-transform:uppercase
+}
+
+.section-label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    max-width:180px;
+    background:
+        linear-gradient(
+            to right,
+            var(--border-strong),
+            transparent
+        )
+}
+
+.section-header h2{
+    margin:0;
+    color:var(--text);
+    font-family:"Space Grotesk",sans-serif;
+    font-size:clamp(2rem,4vw,2.8rem);
+    line-height:1.2;
+    font-weight:500;
+    letter-spacing:-.035em
+}
+
+
+/* ==============================
+   ABOUT
+============================== */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 330px;
+    gap:50px;
+    align-items:start
+}
+
+.about-text p{
+    margin:0 0 25px;
+    color:var(--text-soft);
+    font-size:1rem
+}
+
+.about-text p:last-child{
+    margin-bottom:0
+}
+
+.about-aside{
+    padding-top:4px
+}
 
 .about-certifications{
     display:flex;
     flex-direction:row;
     align-items:center;
-    gap:18px;
+    gap:18px
 }
+
 .about-certification{
     display:block;
     width:150px;
     height:150px;
     text-decoration:none;
-    transition:transform .25s ease;
+    transition:transform .25s ease
 }
+
 .about-certification:hover{
-    transform:translateY(-4px);
+    transform:translateY(-4px)
 }
+
 .about-certification img{
     display:block;
     width:100%;
     height:100%;
-    object-fit:contain;
+    object-fit:contain
 }
 
-.journey-intro{max-width:760px;margin:0 0 45px;color:var(--text-soft);font-size:1rem}
-.experience-list{display:grid;grid-template-columns:repeat(3,1fr);column-gap:45px;border-top:1px solid var(--border-strong)}
-.experience-item{position:relative;padding:25px 0;border-bottom:1px solid var(--border)}
-.experience-item::before{content:"";position:absolute;top:-1px;left:0;width:28px;height:1px;background:var(--gold)}
-.experience-company{color:var(--text);font-family:"Space Grotesk",sans-serif;font-size:.96rem;font-weight:500;margin-bottom:7px}
-.experience-tech{color:var(--gold-soft);font-size:.7rem;line-height:1.5}
+
+/* ==============================
+   JOURNEY
+============================== */
+
+.journey-intro{
+    max-width:760px;
+    margin:0 0 45px;
+    color:var(--text-soft);
+    font-size:1rem
+}
+
+.experience-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    column-gap:45px;
+    border-top:1px solid var(--border-strong)
+}
+
+.experience-item{
+    position:relative;
+    padding:25px 0;
+    border-bottom:1px solid var(--border)
+}
+
+.experience-item::before{
+    content:"";
+    position:absolute;
+    top:-1px;
+    left:0;
+    width:28px;
+    height:1px;
+    background:var(--gold)
+}
+
+.experience-company{
+    color:var(--text);
+    font-family:"Space Grotesk",sans-serif;
+    font-size:.96rem;
+    font-weight:500;
+    margin-bottom:7px
+}
+
+.experience-tech{
+    color:var(--gold-soft);
+    font-size:.7rem;
+    line-height:1.5
+}
+
+
+/* ==============================
+   PROJECTS
+============================== */
 
 .project{
     max-width:850px;
@@ -105,6 +468,7 @@ h1{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(3.2rem,7vw,5.
     border:1px dashed var(--border-strong);
     background:var(--background-soft)
 }
+
 .project-code{
     display:inline-block;
     margin-bottom:18px;
@@ -112,23 +476,35 @@ h1{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(3.2rem,7vw,5.
     font-family:"Courier New",monospace;
     font-size:1.25rem
 }
+
 .project h3{
     margin:0 0 12px;
     font-family:"Space Grotesk",sans-serif;
     font-size:1.45rem;
     font-weight:500
 }
+
 .project p{
     margin:0;
     max-width:700px;
     color:var(--muted)
 }
-.project-image{
-    display:block;
-    width:100%;
-    margin:28px 0 0;
-    border:1px solid var(--border-strong);
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:22px
 }
+
+.tag{
+    padding:3px 9px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    color:var(--gold-soft);
+    font-size:.68rem
+}
+
 .project-link{
     display:inline-flex;
     align-items:center;
@@ -136,549 +512,1264 @@ h1{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(3.2rem,7vw,5.
     margin-top:25px;
     color:var(--gold);
     text-decoration:none;
-    font-size:.82rem;
-    transition:color .25s ease;
+    font-size:.8rem;
+    transition:color .25s ease
 }
+
 .project-link:hover{
     color:var(--text)
 }
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.tag{padding:3px 9px;border:1px solid var(--border);border-radius:20px;color:var(--gold-soft);font-size:.68rem}
-.projects-note{
-    max-width:850px;
-    margin:28px 0 0;
-    color:var(--muted);
-    font-size:.92rem;
+
+
+/* ==============================
+   CERTIFICATIONS
+============================== */
+
+.certifications{
+    display:flex;
+    align-items:center;
+    gap:55px;
+    flex-wrap:wrap
 }
 
-.certifications{display:flex;align-items:center;gap:55px;flex-wrap:wrap}
-.certification{display:flex;align-items:center;justify-content:center;width:190px;height:190px;border:1px solid var(--border);background:var(--background);text-decoration:none;transition:border-color .25s ease,transform .25s ease}
-.certification:hover{border-color:var(--gold);transform:translateY(-4px)}
-.certification-badge{display:block;width:155px;height:155px;object-fit:contain}
+.certification{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:190px;
+    height:190px;
+    border:1px solid var(--border);
+    background:var(--background);
+    text-decoration:none;
+    transition:
+        border-color .25s ease,
+        transform .25s ease
+}
 
-.quote{padding:60px 0;text-align:center}
-.quote p{margin:0;color:var(--gold-soft);font-family:Georgia,"Times New Roman",serif;font-size:1.25rem;font-style:italic}
-.quote-source{display:inline-block;margin-top:10px;color:var(--dim);font-family:"Inter",Arial,sans-serif;font-size:.68rem;font-style:normal;letter-spacing:.04em}
+.certification:hover{
+    border-color:var(--gold);
+    transform:translateY(-4px)
+}
 
-.floating-actions{position:fixed;top:50%;right:28px;transform:translate(70px,-50%);display:flex;flex-direction:column;gap:9px;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease;z-index:90}
-.floating-actions.visible{opacity:1;pointer-events:auto;transform:translate(0,-50%)}
-.floating-button{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:50%;background:var(--background);color:var(--muted);text-decoration:none}
-.floating-button:hover{color:var(--gold);border-color:var(--gold)}
+.certification-badge{
+    display:block;
+    width:155px;
+    height:155px;
+    object-fit:contain
+}
 
-footer{padding:30px 0 45px;border-top:1px solid var(--border);color:var(--dim);text-align:center;font-size:.78rem}
-footer a{color:var(--muted);text-decoration:none;margin:0 7px;font-size:1rem}
-footer a:hover{color:var(--gold)}
+
+/* ==============================
+   QUOTE
+============================== */
+
+.quote{
+    padding:60px 0;
+    text-align:center
+}
+
+.quote p{
+    margin:0;
+    color:var(--gold-soft);
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:1.25rem;
+    font-style:italic
+}
+
+.quote-source{
+    display:inline-block;
+    margin-top:10px;
+    color:var(--dim);
+    font-family:"Inter",Arial,sans-serif;
+    font-size:.68rem;
+    font-style:normal;
+    letter-spacing:.04em
+}
+
+
+/* ==============================
+   FLOATING ACTIONS
+============================== */
+
+.floating-actions{
+    position:fixed;
+    top:50%;
+    right:28px;
+    transform:translate(70px,-50%);
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+    opacity:0;
+    pointer-events:none;
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+    z-index:90
+}
+
+.floating-actions.visible{
+    opacity:1;
+    pointer-events:auto;
+    transform:translate(0,-50%)
+}
+
+.floating-button{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid var(--border);
+    border-radius:50%;
+    background:var(--background);
+    color:var(--muted);
+    text-decoration:none
+}
+
+.floating-button:hover{
+    color:var(--gold);
+    border-color:var(--gold)
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer{
+    padding:30px 0 45px;
+    border-top:1px solid var(--border);
+    color:var(--dim);
+    text-align:center;
+    font-size:.78rem
+}
+
+footer a{
+    color:var(--muted);
+    text-decoration:none;
+    margin:0 7px;
+    font-size:1rem
+}
+
+footer a:hover{
+    color:var(--gold)
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
 
 @media(max-width:900px){
-    .hero-main{gap:45px}
-    .hero-portrait{flex-basis:250px}
-    .hero-portrait img{width:250px;height:250px}
-    .about-grid{grid-template-columns:minmax(0,1fr) 240px;gap:40px}
-    .experience-list{grid-template-columns:repeat(2,1fr);column-gap:35px}
+
+    .hero-main{
+        gap:45px
+    }
+
+    .hero-portrait{
+        flex-basis:250px
+    }
+
+    .hero-portrait img{
+        width:250px;
+        height:250px
+    }
+
+    .about-grid{
+        grid-template-columns:minmax(0,1fr) 240px;
+        gap:40px
+    }
+
+    .experience-list{
+        grid-template-columns:repeat(2,1fr);
+        column-gap:35px
+    }
 }
 
 @media(max-width:700px){
-    .container{width:min(calc(100% - 32px),1100px)}
-    .nav-right{gap:15px}
-    .nav-links{gap:14px}
-    .nav-links a{font-size:.74rem}
-    .hero-main{flex-direction:column;align-items:flex-start;gap:35px}
-    .hero-portrait{flex-basis:auto}
-    .hero-portrait img{width:190px;height:190px}
-    .about-grid{grid-template-columns:1fr;gap:40px}
-    .about-aside{padding-top:0}
-    .experience-list{grid-template-columns:1fr}
-    .certifications{gap:25px}
-    .certification{width:155px;height:155px}
-    .certification-badge{width:125px;height:125px}
-    section{padding:80px 0}
+
+    .container{
+        width:min(calc(100% - 32px),1100px)
+    }
+
+    .nav-right{
+        gap:15px
+    }
+
+    .nav-links{
+        gap:14px
+    }
+
+    .nav-links a{
+        font-size:.74rem
+    }
+
+    .hero-main{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:35px
+    }
+
+    .hero-portrait{
+        flex-basis:auto
+    }
+
+    .hero-portrait img{
+        width:190px;
+        height:190px
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:40px
+    }
+
+    .about-aside{
+        padding-top:0
+    }
+
+    .experience-list{
+        grid-template-columns:1fr
+    }
+
+    .certifications{
+        gap:25px
+    }
+
+    .certification{
+        width:155px;
+        height:155px
+    }
+
+    .certification-badge{
+        width:125px;
+        height:125px
+    }
+
+    section{
+        padding:80px 0
+    }
 }
 
 @media(max-width:520px){
-    .nav-brand{font-size:.84rem}
-    .nav-links{display:none}
-    .nav-right{gap:12px}
-    .hero{padding-top:120px}
-    .hero-role{font-size:1.15rem}
-    .hero-actions{flex-direction:column;align-items:stretch}
-    .button{justify-content:center}
-    .floating-actions{top:auto;bottom:15px;right:14px;transform:translateY(70px);flex-direction:row}
-    .floating-actions.visible{transform:translateY(0)}
-    .certifications{justify-content:center}
+
+    .nav-brand{
+        font-size:.84rem
+    }
+
+    .nav-links{
+        display:none
+    }
+
+    .nav-right{
+        gap:12px
+    }
+
+    .hero{
+        padding-top:120px
+    }
+
+    .hero-role{
+        font-size:1.15rem
+    }
+
+    .hero-actions{
+        flex-direction:column;
+        align-items:stretch
+    }
+
+    .button{
+        justify-content:center
+    }
+
+    .floating-actions{
+        top:auto;
+        bottom:15px;
+        right:14px;
+        transform:translateY(70px);
+        flex-direction:row
+    }
+
+    .floating-actions.visible{
+        transform:translateY(0)
+    }
+
+    .certifications{
+        justify-content:center
+    }
 }
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- ==============================
+     NAVIGATION
+============================== -->
+
 <nav>
+
 <div class="container nav-inner">
-<a href="#" class="nav-brand nav-home">Diego Sommier</a>
+
+<a href="#" class="nav-brand nav-home">
+Diego Sommier
+</a>
 
 <div class="nav-right">
+
 <div class="nav-links">
-<a href="#about"><span data-en="About" data-es="Sobre mí">About</span></a>
-<a href="#journey"><span data-en="Journey" data-es="Trayectoria">Journey</span></a>
-<a href="#projects"><span data-en="Projects" data-es="Proyectos">Projects</span></a>
+
+<a href="#about">
+<span data-en="About" data-es="Sobre mí">About</span>
+</a>
+
+<a href="#journey">
+<span data-en="Journey" data-es="Trayectoria">Journey</span>
+</a>
+
+<a href="#projects">
+<span data-en="Projects" data-es="Proyectos">Projects</span>
+</a>
+
 </div>
 
 <div class="language-switcher">
-<button class="language-button active" data-lang="en" type="button">EN</button>
+
+<button
+    class="language-button active"
+    data-lang="en"
+    type="button"
+>
+EN
+</button>
+
 <span class="language-separator">·</span>
-<button class="language-button" data-lang="es" type="button">ES</button>
+
+<button
+    class="language-button"
+    data-lang="es"
+    type="button"
+>
+ES
+</button>
+
 </div>
+
 </div>
+
 </div>
+
 </nav>
 
+
+<!-- ==============================
+     HERO
+============================== -->
+
 <header class="hero">
+
 <div class="container">
+
 <div class="hero-content">
+
 <div class="hero-main">
 
+
 <div class="hero-text">
-<div class="hero-kicker">IT · Infrastructure</div>
 
-<h1>Diego Sommier</h1>
-
-<div class="hero-role">
-<span data-en="Systems Administrator" data-es="Administrador de Sistemas">Systems Administrator</span>
-<span> · </span>
-<span class="direction" data-en="Building towards Cloud &amp; DevOps" data-es="Rumbo a Cloud &amp; DevOps">Building towards Cloud &amp; DevOps</span>
+<div class="hero-kicker">
+IT · Infrastructure
 </div>
 
-<p class="hero-description"
-data-en="IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure."
-data-es="Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura empresarial, ampliando ahora esa base hacia Cloud, automatización e infraestructuras modernas.">
+<h1>
+Diego Sommier
+</h1>
+
+<div class="hero-role">
+
+<span
+    data-en="Systems Administrator"
+    data-es="Administrador de Sistemas"
+>
+Systems Administrator
+</span>
+
+<span> · </span>
+
+<span
+    class="direction"
+    data-en="Building towards Cloud &amp; DevOps"
+    data-es="Rumbo a Cloud &amp; DevOps"
+>
+Building towards Cloud &amp; DevOps
+</span>
+
+</div>
+
+<p
+    class="hero-description"
+    data-en="IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure."
+    data-es="Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura empresarial, ampliando ahora esa base hacia Cloud, automatización e infraestructuras modernas."
+>
 IT professional with more than 9 years of experience in systems administration and enterprise infrastructure, now expanding that foundation into Cloud, automation and modern infrastructure.
 </p>
 
+
 <div class="hero-actions">
-<a href="mailto:diegosommier@gmail.com" class="button primary">
+
+<a
+    href="mailto:diegosommier@gmail.com"
+    class="button primary"
+>
 <i class="fa-solid fa-envelope"></i>
-<span data-en="Email Me" data-es="Contactar">Email Me</span>
+
+<span
+    data-en="Email Me"
+    data-es="Contactar"
+>
+Email Me
+</span>
+
 </a>
 
-<a href="https://www.linkedin.com/in/diegosommier/" target="_blank" rel="noopener noreferrer" class="button">
-<i class="fa-brands fa-linkedin"></i> LinkedIn
+
+<a
+    href="https://www.linkedin.com/in/diegosommier/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="button"
+>
+<i class="fa-brands fa-linkedin"></i>
+LinkedIn
 </a>
 
-<a href="https://github.com/diegosommier" target="_blank" rel="noopener noreferrer" class="button">
-<i class="fa-brands fa-github"></i> GitHub
+
+<a
+    href="https://github.com/diegosommier"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="button"
+>
+<i class="fa-brands fa-github"></i>
+GitHub
 </a>
 
-<a id="cvDownload" href="cv-diego-sommier-en.pdf" download class="button">
+
+<a
+    id="cvDownload"
+    href="cv-diego-sommier-en.pdf"
+    download
+    class="button"
+>
+
 <i class="fa-solid fa-download"></i>
-<span data-en="Download CV" data-es="Descargar CV">Download CV</span>
+
+<span
+    data-en="Download CV"
+    data-es="Descargar CV"
+>
+Download CV
+</span>
+
 </a>
+
 </div>
+
 </div>
+
 
 <div class="hero-portrait">
-<img src="profile.png" alt="Diego Sommier">
 
-<div class="portrait-credit"
-data-en='Portrait illustration by <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
-data-es='Retrato ilustrado por <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'>
-Portrait illustration by <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.
-</div>
+<img
+    src="profile.png"
+    alt="Diego Sommier"
+>
+
+<div
+    class="portrait-credit"
+    data-en='Portrait illustration by <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
+    data-es='Retrato ilustrado por <a href="https://roquec.com/" target="_blank" rel="noopener noreferrer">@roquec</a>.'
+>
+Portrait illustration by
+<a
+    href="https://roquec.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+@roquec
+</a>.
 </div>
 
 </div>
+
 </div>
+
 </div>
+
+</div>
+
 </header>
+
 
 <main>
 
+
+<!-- ==============================
+     ABOUT
+============================== -->
+
 <section id="about">
+
 <div class="container">
 
 <div class="section-header">
-<div class="section-label" data-en="01 · About" data-es="01 · Sobre mí">01 · About</div>
-<h2 data-en="Systems, infrastructure and more" data-es="Sistemas, infraestructura y más">Systems, infrastructure and more</h2>
+
+<div
+    class="section-label"
+    data-en="01 · About"
+    data-es="01 · Sobre mí"
+>
+01 · About
 </div>
+
+<h2
+    data-en="Systems, infrastructure and more"
+    data-es="Sistemas, infraestructura y más"
+>
+Systems, infrastructure and more
+</h2>
+
+</div>
+
 
 <div class="about-grid">
 
+
 <div class="about-text">
 
-<p data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure."
-data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft.">
+<p
+    data-en="I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure."
+    data-es="Soy un profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructuras empresariales. Mi trayectoria abarca entornos Windows y Linux, virtualización, gestión de endpoints e infraestructura híbrida de Microsoft."
+>
 I'm an IT professional with more than 9 years of experience in systems administration and enterprise infrastructure. My background spans Windows and Linux environments, virtualization, endpoint management and hybrid Microsoft infrastructure.
 </p>
 
-<p data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
-data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística.">
+
+<p
+    data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
+    data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
+>
 Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics.
 </p>
 
-<p data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects."
-data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales.">
+
+<p
+    data-en="I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects."
+    data-es="Ahora estoy construyendo sobre esa base para dar el salto hacia la Administración Cloud, ampliando mis conocimientos en Azure, AWS, automatización y DevOps mediante aprendizaje práctico y proyectos personales."
+>
 I'm now building on that foundation to transition into Cloud Administration, expanding my knowledge across Azure, AWS, automation and DevOps through hands-on learning and personal projects.
 </p>
 
 </div>
 
+
 <aside class="about-aside">
 
 <div class="about-certifications">
 
+
 <a
-id="azureCertification"
-href="https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682"
-target="_blank"
-rel="noopener noreferrer"
-class="about-certification"
-title="Microsoft Certified: Azure Fundamentals"
-aria-label="Microsoft Certified: Azure Fundamentals"
-data-title-en="Microsoft Certified: Azure Fundamentals"
-data-title-es="Microsoft Certified: Aspectos básicos de Azure"
-data-url-en="https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682"
-data-url-es="https://learn.microsoft.com/es-es/users/sommy/credentials/1d127efc53a85682">
+    id="azureCertification"
+    href="https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="about-certification"
+    title="Microsoft Certified: Azure Fundamentals"
+    aria-label="Microsoft Certified: Azure Fundamentals"
+
+    data-title-en="Microsoft Certified: Azure Fundamentals"
+    data-title-es="Microsoft Certified: Aspectos básicos de Azure"
+
+    data-url-en="https://learn.microsoft.com/en-gb/users/sommy/credentials/1d127efc53a85682"
+    data-url-es="https://learn.microsoft.com/es-es/users/sommy/credentials/1d127efc53a85682"
+>
 
 <img
-src="https://images.credly.com/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png"
-alt="Microsoft Certified Azure Fundamentals">
+    src="https://images.credly.com/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png"
+    alt="Microsoft Certified Azure Fundamentals"
+>
 
 </a>
 
+
 <div
-class="about-certification"
-title="Microsoft Technology Associate: Networking Fundamentals">
+    class="about-certification"
+    title="Microsoft Technology Associate: Networking Fundamentals"
+>
 
 <img
-src="https://images.credly.com/images/2feaf613-be86-4d79-9cf8-c7aef82031c7/twitter_thumb_201604_MTA-Networking_Fundamentals-600x600.png"
-alt="Microsoft Technology Associate Networking Fundamentals">
+    src="https://images.credly.com/images/2feaf613-be86-4d79-9cf8-c7aef82031c7/twitter_thumb_201604_MTA-Networking_Fundamentals-600x600.png"
+    alt="Microsoft Technology Associate Networking Fundamentals"
+>
 
 </div>
+
 
 </div>
 
 </aside>
+
 </div>
+
 </div>
+
 </section>
 
+
+<!-- ==============================
+     JOURNEY
+============================== -->
+
 <section id="journey">
+
 <div class="container">
 
 <div class="section-header">
-<div class="section-label" data-en="02 · Journey" data-es="02 · Trayectoria">02 · Journey</div>
-<h2 data-en="Where the experience was built" data-es="Donde se construyó la experiencia">Where the experience was built</h2>
+
+<div
+    class="section-label"
+    data-en="02 · Journey"
+    data-es="02 · Trayectoria"
+>
+02 · Journey
 </div>
 
-<p class="journey-intro"
-data-en="My career has taken me through different enterprise environments and industries. The organisations below represent some of the environments where I've worked and the technologies I've used along the way."
-data-es="Mi trayectoria me ha llevado por distintos entornos empresariales y sectores. Las organizaciones que aparecen a continuación representan algunos de los entornos en los que he trabajado y las tecnologías utilizadas a lo largo del camino.">
+<h2
+    data-en="Where the experience was built"
+    data-es="Donde se construyó la experiencia"
+>
+Where the experience was built
+</h2>
+
+</div>
+
+
+<p
+    class="journey-intro"
+    data-en="My career has taken me through different enterprise environments and industries. The organisations below represent some of the environments where I've worked and the technologies I've used along the way."
+    data-es="Mi trayectoria me ha llevado por distintos entornos empresariales y sectores. Las organizaciones que aparecen a continuación representan algunos de los entornos en los que he trabajado y las tecnologías utilizadas a lo largo del camino."
+>
 My career has taken me through different enterprise environments and industries. The organisations below represent some of the environments where I've worked and the technologies I've used along the way.
 </p>
 
+
 <div class="experience-list">
 
-<article class="experience-item">
-<h3 class="experience-company">Santander Digital Services</h3>
-<div class="experience-tech">SCCM · Intune · Windows Server</div>
-</article>
 
 <article class="experience-item">
-<h3 class="experience-company">CBNK</h3>
-<div class="experience-tech">Entra ID · Microsoft 365 · Exchange Online</div>
+
+<h3 class="experience-company">
+Santander Digital Services
+</h3>
+
+<div class="experience-tech">
+SCCM · Intune · Windows Server
+</div>
+
 </article>
 
-<article class="experience-item">
-<h3 class="experience-company">Decathlon</h3>
-<div class="experience-tech">Windows Server · Linux · Automation</div>
-</article>
 
 <article class="experience-item">
-<h3 class="experience-company">BNP Paribas</h3>
-<div class="experience-tech">Windows Server · Linux · VMware</div>
+
+<h3 class="experience-company">
+CBNK
+</h3>
+
+<div class="experience-tech">
+Entra ID · Microsoft 365 · Exchange Online
+</div>
+
 </article>
 
-<article class="experience-item">
-<h3 class="experience-company">Campofrío</h3>
-<div class="experience-tech">Windows Server · Linux · VMware</div>
-</article>
 
 <article class="experience-item">
-<h3 class="experience-company">MRW</h3>
-<div class="experience-tech">Windows Server · Linux · VMware</div>
+
+<h3 class="experience-company">
+Decathlon
+</h3>
+
+<div class="experience-tech">
+Windows Server · Linux · Automation
+</div>
+
 </article>
 
-<article class="experience-item">
-<h3 class="experience-company">Zurich</h3>
-<div class="experience-tech">Windows Server · Linux · VMware</div>
-</article>
 
 <article class="experience-item">
-<h3 class="experience-company">Liberbank</h3>
-<div class="experience-tech">Windows · Networking · Infrastructure</div>
+
+<h3 class="experience-company">
+BNP Paribas
+</h3>
+
+<div class="experience-tech">
+Windows Server · Linux · VMware
+</div>
+
 </article>
 
+
 <article class="experience-item">
-<h3 class="experience-company">ALSA</h3>
-<div class="experience-tech">Windows Server · Active Directory · Infrastructure</div>
+
+<h3 class="experience-company">
+Campofrío
+</h3>
+
+<div class="experience-tech">
+Windows Server · Linux · VMware
+</div>
+
 </article>
+
+
+<article class="experience-item">
+
+<h3 class="experience-company">
+MRW
+</h3>
+
+<div class="experience-tech">
+Windows Server · Linux · VMware
+</div>
+
+</article>
+
+
+<article class="experience-item">
+
+<h3 class="experience-company">
+Zurich
+</h3>
+
+<div class="experience-tech">
+Windows Server · Linux · VMware
+</div>
+
+</article>
+
+
+<article class="experience-item">
+
+<h3 class="experience-company">
+Liberbank
+</h3>
+
+<div class="experience-tech">
+Windows · Networking · Infrastructure
+</div>
+
+</article>
+
+
+<article class="experience-item">
+
+<h3 class="experience-company">
+ALSA
+</h3>
+
+<div class="experience-tech">
+Windows Server · Active Directory · Infrastructure
+</div>
+
+</article>
+
 
 </div>
+
 </div>
+
 </section>
 
+
+<!-- ==============================
+     PROJECTS
+============================== -->
+
 <section id="projects">
+
 <div class="container">
 
 <div class="section-header">
-<div class="section-label" data-en="03 · Projects" data-es="03 · Proyectos">03 · Projects</div>
-<h2 data-en="The forge is taking shape" data-es="La forja empieza a tomar forma">The forge is taking shape</h2>
+
+<div
+    class="section-label"
+    data-en="03 · Projects"
+    data-es="03 · Proyectos"
+>
+03 · Projects
 </div>
+
+<h2
+    data-en="The forge is taking shape"
+    data-es="La forja empieza a tomar forma"
+>
+The forge is taking shape
+</h2>
+
+</div>
+
 
 <article class="project">
 
-<div class="project-code">&lt;/&gt;</div>
+<div class="project-code">
+&lt;/&gt;
+</div>
+
 
 <h3
-data-en="Systems &amp; Infrastructure Lab"
-data-es="Laboratorio de Sistemas e Infraestructura">
+    data-en="Systems &amp; Infrastructure Lab"
+    data-es="Laboratorio de Sistemas e Infraestructura"
+>
 Systems &amp; Infrastructure Lab
 </h3>
 
+
 <p
-data-en="A systems administration final project built as a virtualised enterprise lab, combining Linux and Windows environments with storage, networking, security, monitoring, inventory, backup and domain integration."
-data-es="Proyecto final de administración de sistemas construido como un laboratorio empresarial virtualizado, combinando entornos Linux y Windows con almacenamiento, redes, seguridad, monitorización, inventario, copias de seguridad e integración con dominio.">
-A systems administration final project built as a virtualised enterprise lab, combining Linux and Windows environments with storage, networking, security, monitoring, inventory, backup and domain integration.
+    data-en="A systems administration lab originally developed as a final project in 2018. It brings together Linux and Windows environments, storage, networking, security, monitoring, inventory, backups and Active Directory integration."
+    data-es="Un laboratorio de administración de sistemas desarrollado originalmente como proyecto final en 2018. Reúne entornos Linux y Windows, almacenamiento, redes, seguridad, monitorización, inventario, copias de seguridad e integración con Active Directory."
+>
+A systems administration lab originally developed as a final project in 2018. It brings together Linux and Windows environments, storage, networking, security, monitoring, inventory, backups and Active Directory integration.
 </p>
 
-<img
-class="project-image"
-src="systems-infrastructure-lab-architecture.png"
-alt="Systems and infrastructure lab architecture showing the CentOS and Windows 10 machines connected to the Windows Server domain, Pandora FMS, OCS Inventory and network infrastructure."
-data-en-alt="Systems and infrastructure lab architecture showing the CentOS and Windows 10 machines connected to the Windows Server domain, Pandora FMS, OCS Inventory and network infrastructure."
-data-es-alt="Arquitectura del laboratorio de sistemas e infraestructura mostrando las máquinas CentOS y Windows 10 conectadas al dominio Windows Server, Pandora FMS, OCS Inventory y la infraestructura de red."
->
 
 <div class="tags">
-<span class="tag">CentOS</span>
-<span class="tag">Windows Server</span>
-<span class="tag">Samba</span>
-<span class="tag">Active Directory</span>
-<span class="tag">RAID 1</span>
-<span class="tag">LVM</span>
-<span class="tag">SSH</span>
-<span class="tag">Fail2ban</span>
-<span class="tag">WordPress</span>
-<span class="tag">Samba</span>
-<span class="tag">rsnapshot</span>
-<span class="tag">Pandora FMS</span>
-<span class="tag">OCS Inventory</span>
-<span class="tag">Bash</span>
+
+<span class="tag">
+CentOS
+</span>
+
+<span class="tag">
+Windows Server
+</span>
+
+<span class="tag">
+Linux
+</span>
+
+<span class="tag">
+Samba
+</span>
+
+<span class="tag">
+Active Directory
+</span>
+
+<span class="tag">
+RAID 1
+</span>
+
+<span class="tag">
+LVM
+</span>
+
+<span class="tag">
+Fail2ban
+</span>
+
+<span class="tag">
+WordPress
+</span>
+
+<span class="tag">
+rsnapshot
+</span>
+
+<span class="tag">
+Pandora FMS
+</span>
+
+<span class="tag">
+OCS Inventory
+</span>
+
+<span class="tag">
+Bash
+</span>
+
 </div>
 
+
 <a
-href="https://github.com/diegosommier/systems-infrastructure-lab"
-target="_blank"
-rel="noopener noreferrer"
-class="project-link">
+    href="https://github.com/diegosommier/systems-infrastructure-lab"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="project-link"
+>
+
 <i class="fa-brands fa-github"></i>
-<span data-en="View project on GitHub" data-es="Ver proyecto en GitHub">View project on GitHub</span>
+
+<span
+    data-en="View project on GitHub"
+    data-es="Ver proyecto en GitHub"
+>
+View project on GitHub
+</span>
+
 </a>
 
 </article>
 
+
 <p
-class="projects-note"
-data-en="I'm currently building a series of hands-on Cloud and DevOps projects to complement my systems administration background. The next chapter is already in progress."
-data-es="Estoy preparando una serie de proyectos prácticos de Cloud y DevOps para complementar mi experiencia en administración de sistemas. El siguiente capítulo ya está en marcha.">
-I'm currently building a series of hands-on Cloud and DevOps projects to complement my systems administration background. The next chapter is already in progress.
+    style="max-width:850px; margin:38px 0 0; color:var(--muted); font-size:.92rem;"
+    data-en="I'm preparing a new set of Cloud and DevOps projects. Come back later to see what I'm building."
+    data-es="Estoy preparando una nueva serie de proyectos de Cloud y DevOps. Vuelve más adelante para ver lo que estoy construyendo."
+>
+I'm preparing a new set of Cloud and DevOps projects. Come back later to see what I'm building.
 </p>
 
 </div>
+
 </section>
 
+
+<!-- ==============================
+     QUOTE
+============================== -->
+
 <div class="quote">
+
 <div class="container">
-<p>"The best is yet to come."<br>
-<span class="quote-source">— Metal Gear Solid, 1998</span>
+
+<p>
+"The best is yet to come."
+<br>
+
+<span class="quote-source">
+— Metal Gear Solid, 1998
+</span>
+
 </p>
+
 </div>
+
 </div>
+
 
 </main>
 
-<div class="floating-actions" id="floatingActions">
 
-<a href="mailto:diegosommier@gmail.com" class="floating-button" title="Email" aria-label="Email">
+<!-- ==============================
+     FLOATING ACTIONS
+============================== -->
+
+<div
+    class="floating-actions"
+    id="floatingActions"
+>
+
+<a
+    href="mailto:diegosommier@gmail.com"
+    class="floating-button"
+    title="Email"
+    aria-label="Email"
+>
 <i class="fa-solid fa-envelope"></i>
 </a>
 
-<a href="https://www.linkedin.com/in/diegosommier/" target="_blank" rel="noopener noreferrer" class="floating-button" title="LinkedIn" aria-label="LinkedIn">
+
+<a
+    href="https://www.linkedin.com/in/diegosommier/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-button"
+    title="LinkedIn"
+    aria-label="LinkedIn"
+>
 <i class="fa-brands fa-linkedin"></i>
 </a>
 
-<a href="https://github.com/diegosommier" target="_blank" rel="noopener noreferrer" class="floating-button" title="GitHub" aria-label="GitHub">
+
+<a
+    href="https://github.com/diegosommier"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-button"
+    title="GitHub"
+    aria-label="GitHub"
+>
 <i class="fa-brands fa-github"></i>
 </a>
 
-<a id="floatingCvDownload" href="cv-diego-sommier-en.pdf" download class="floating-button" title="Download CV" aria-label="Download CV">
+
+<a
+    id="floatingCvDownload"
+    href="cv-diego-sommier-en.pdf"
+    download
+    class="floating-button"
+    title="Download CV"
+    aria-label="Download CV"
+>
 <i class="fa-solid fa-download"></i>
 </a>
 
 </div>
 
+
+<!-- ==============================
+     FOOTER
+============================== -->
+
 <footer>
+
 <div class="container">
 
 <span
-data-en="© 2026 Diego Sommier · Made with AI, curiosity and coffee. ☕"
-data-es="© 2026 Diego Sommier · Hecho con IA, curiosidad y café. ☕">
+    data-en="© 2026 Diego Sommier · Made with AI, curiosity and coffee. ☕"
+    data-es="© 2026 Diego Sommier · Hecho con IA, curiosidad y café. ☕"
+>
 © 2026 Diego Sommier · Made with AI, curiosity and coffee. ☕
 </span>
 
-<a href="mailto:diegosommier@gmail.com" title="Email" aria-label="Email">
+
+<a
+    href="mailto:diegosommier@gmail.com"
+    title="Email"
+    aria-label="Email"
+>
 <i class="fa-solid fa-envelope"></i>
 </a>
 
-<a href="https://www.linkedin.com/in/diegosommier/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+
+<a
+    href="https://www.linkedin.com/in/diegosommier/"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="LinkedIn"
+    aria-label="LinkedIn"
+>
 <i class="fa-brands fa-linkedin"></i>
 </a>
 
-<a href="https://github.com/diegosommier" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+
+<a
+    href="https://github.com/diegosommier"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="GitHub"
+    aria-label="GitHub"
+>
 <i class="fa-brands fa-github"></i>
 </a>
 
-<a href="https://www.instagram.com/diegosommier/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+
+<a
+    href="https://www.instagram.com/diegosommier/"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Instagram"
+    aria-label="Instagram"
+>
 <i class="fa-brands fa-instagram"></i>
 </a>
 
-<a href="https://x.com/diegosommier" target="_blank" rel="noopener noreferrer" title="X" aria-label="X">
+
+<a
+    href="https://x.com/diegosommier"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="X"
+    aria-label="X"
+>
 <i class="fa-brands fa-x-twitter"></i>
 </a>
 
 </div>
+
 </footer>
 
+
 <script>
-const languageButtons=document.querySelectorAll(".language-button");
-const translatableElements=document.querySelectorAll("[data-en][data-es]");
-const cvDownload=document.getElementById("cvDownload");
-const floatingCvDownload=document.getElementById("floatingCvDownload");
+
+const languageButtons =
+    document.querySelectorAll(".language-button");
+
+const translatableElements =
+    document.querySelectorAll("[data-en][data-es]");
+
+const cvDownload =
+    document.getElementById("cvDownload");
+
+const floatingCvDownload =
+    document.getElementById("floatingCvDownload");
+
 
 function setLanguage(language){
 
-    document.documentElement.lang=language;
+    document.documentElement.lang = language;
 
-    const azureCertification=document.getElementById("azureCertification");
+
+    const azureCertification =
+        document.getElementById("azureCertification");
+
 
     if(azureCertification){
 
-        azureCertification.title=
-            language==="es"
+        azureCertification.title =
+            language === "es"
                 ? azureCertification.dataset.titleEs
                 : azureCertification.dataset.titleEn;
+
 
         azureCertification.setAttribute(
             "aria-label",
             azureCertification.title
         );
 
-        azureCertification.href=
-            language==="es"
+
+        azureCertification.href =
+            language === "es"
                 ? azureCertification.dataset.urlEs
                 : azureCertification.dataset.urlEn;
+
     }
 
-    translatableElements.forEach(element=>{
 
-        const translation=element.dataset[language];
+    translatableElements.forEach(element => {
+
+        const translation =
+            element.dataset[language];
 
         if(translation){
 
-            if(element.classList.contains("portrait-credit")){
-                element.innerHTML=translation;
+            if(
+                element.classList.contains(
+                    "portrait-credit"
+                )
+            ){
+
+                element.innerHTML = translation;
+
             }else{
-                element.textContent=translation;
+
+                element.textContent = translation;
+
             }
+
         }
+
     });
 
-    document.querySelectorAll(".project-image").forEach(image=>{
-        const altTranslation=
-            language==="es"
-                ? image.dataset.esAlt
-                : image.dataset.enAlt;
 
-        if(altTranslation){
-            image.alt=altTranslation;
-        }
-    });
+    languageButtons.forEach(button => {
 
-    languageButtons.forEach(button=>
         button.classList.toggle(
             "active",
-            button.dataset.lang===language
-        )
-    );
+            button.dataset.lang === language
+        );
 
-    document.title=
-        language==="es"
+    });
+
+
+    document.title =
+        language === "es"
             ? "Diego Sommier | Administrador de Sistemas"
             : "Diego Sommier | Systems Administrator";
 
-    const description=document.querySelector(
-        'meta[name="description"]'
-    );
+
+    const description =
+        document.querySelector(
+            'meta[name="description"]'
+        );
+
 
     if(description){
 
         description.setAttribute(
             "content",
-            language==="es"
+            language === "es"
                 ? "Diego Sommier — Profesional de TI con más de 9 años de experiencia en administración de sistemas e infraestructura, orientado hacia Cloud, automatización y DevOps."
                 : "Diego Sommier — IT professional with 9+ years of experience in systems administration and infrastructure, building a path into Cloud, automation and DevOps."
         );
+
     }
 
-    const cvFile=
-        language==="es"
+
+    const cvFile =
+        language === "es"
             ? "cv-diego-sommier-es.pdf"
             : "cv-diego-sommier-en.pdf";
 
-    if(cvDownload) cvDownload.href=cvFile;
-    if(floatingCvDownload) floatingCvDownload.href=cvFile;
+
+    if(cvDownload){
+        cvDownload.href = cvFile;
+    }
+
+
+    if(floatingCvDownload){
+        floatingCvDownload.href = cvFile;
+    }
+
 
     localStorage.setItem(
         "preferredLanguage",
         language
     );
+
 }
 
-languageButtons.forEach(button=>
+
+languageButtons.forEach(button => {
+
     button.addEventListener(
         "click",
-        ()=>setLanguage(button.dataset.lang)
-    )
-);
+        () => setLanguage(button.dataset.lang)
+    );
 
-const savedLanguage=
+});
+
+
+const savedLanguage =
     localStorage.getItem("preferredLanguage");
 
+
 setLanguage(
-    savedLanguage==="en"||savedLanguage==="es"
+    savedLanguage === "en" || savedLanguage === "es"
         ? savedLanguage
         : "en"
 );
 
-const floatingActions=
-    document.getElementById("floatingActions");
+
+/* ==============================
+   FLOATING ACTIONS
+============================== */
+
+const floatingActions =
+    document.getElementById(
+        "floatingActions"
+    );
+
 
 function updateFloatingActions(){
 
-    if(window.scrollY>450){
-        floatingActions.classList.add("visible");
+    if(window.scrollY > 450){
+
+        floatingActions.classList.add(
+            "visible"
+        );
+
     }else{
-        floatingActions.classList.remove("visible");
+
+        floatingActions.classList.remove(
+            "visible"
+        );
+
     }
+
 }
+
 
 window.addEventListener(
     "scroll",
@@ -688,51 +1779,97 @@ window.addEventListener(
 
 updateFloatingActions();
 
-const links=[
-    ...document.querySelectorAll("nav a[href^='#']")
-];
 
-const home=
+/* ==============================
+   ACTIVE NAVIGATION
+============================== */
+
+const links =
+    [
+        ...document.querySelectorAll(
+            "nav a[href^='#']"
+        )
+    ];
+
+
+const home =
     document.querySelector(".nav-home");
 
-const sections=
+
+const sections =
     links
-        .filter(link=>!link.classList.contains("nav-home"))
-        .map(link=>({
-            link,
-            section:document.getElementById(
-                link.getAttribute("href").slice(1)
-            )
-        }))
-        .filter(item=>item.section);
+        .filter(
+            link =>
+                !link.classList.contains(
+                    "nav-home"
+                )
+        )
+        .map(
+            link => ({
+                link,
+                section:
+                    document.getElementById(
+                        link
+                            .getAttribute("href")
+                            .slice(1)
+                    )
+            })
+        )
+        .filter(
+            item => item.section
+        );
+
 
 function updateActiveNav(){
 
-    const top=window.scrollY<120;
+    const top =
+        window.scrollY < 120;
 
-    links.forEach(link=>
-        link.classList.remove("active")
+
+    links.forEach(
+        link =>
+            link.classList.remove(
+                "active"
+            )
     );
+
 
     if(top){
 
-        home?.classList.add("active");
+        home?.classList.add(
+            "active"
+        );
+
         return;
+
     }
 
-    let current=sections[0];
+
+    let current =
+        sections[0];
+
 
     for(const item of sections){
 
         if(
-            item.section.getBoundingClientRect().top<=180
+            item.section
+                .getBoundingClientRect()
+                .top <= 180
         ){
-            current=item;
+
+            current = item;
+
         }
+
     }
 
-    current?.link.classList.add("active");
+
+    current?.link.classList.add(
+        "active"
+    );
+
 }
+
 
 window.addEventListener(
     "scroll",
@@ -740,7 +1877,9 @@ window.addEventListener(
     {passive:true}
 );
 
+
 updateActiveNav();
+
 </script>
 
 </body>
