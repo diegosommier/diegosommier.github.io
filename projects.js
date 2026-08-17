@@ -44,8 +44,8 @@ const projects = [
         },
 
         description: {
-            en: "An enterprise workstation deployment project focused on standardisation, operating system deployment, configuration and centralised management of Windows workstations.",
-            es: "Un proyecto de despliegue de puestos de trabajo empresariales centrado en la estandarización, instalación, configuración y gestión centralizada de equipos Windows."
+            en: "A practical workstation deployment project covering planning, Windows installation, software configuration, disk partitioning, system imaging, recovery and the rollout of multiple networked workstations.",
+            es: "Un proyecto práctico de despliegue de puestos de trabajo que abarca la planificación, instalación de Windows, configuración de software, particionado, creación de imágenes, recuperación del sistema y despliegue de múltiples equipos conectados a una red."
         },
 
         image: null,
@@ -56,11 +56,14 @@ const projects = [
         },
 
         tags: [
-            "Windows",
-            "Deployment",
-            "SCCM",
-            "Active Directory",
-            "Enterprise IT"
+            "Clonezilla",
+            "Windows XP",
+            "DiskPart",
+            "Hiren's BootCD",
+            "EaseUS",
+            "Plop Boot Manager",
+            "Ninite",
+            "Networking"
         ],
 
         github: "https://github.com/diegosommier/enterprise-workstation-deployment"
