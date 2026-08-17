@@ -450,18 +450,26 @@ h1{
    PROJECTS
 ============================== */
 
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:24px
+}
+
 .project{
-    max-width:850px;
-    padding:38px;
+    min-width:0;
+    padding:26px;
     border:1px dashed var(--border-strong);
-    background:var(--background-soft)
+    background:var(--background-soft);
+    display:flex;
+    flex-direction:column
 }
 
 .project h3{
-    margin:0 0 28px;
+    margin:0 0 20px;
     color:var(--gold-soft);
     font-family:"Space Grotesk",sans-serif;
-    font-size:1.45rem;
+    font-size:1.25rem;
     font-weight:500;
     line-height:1.3
 }
@@ -469,26 +477,26 @@ h1{
 .project-image{
     display:block;
     width:100%;
-    max-width:850px;
     height:auto;
-    margin:0 0 28px;
-    border:1px solid var(--border);
+    margin:0 0 20px;
+    border:1px solid var(--border)
 }
 
 .project p{
     margin:0;
-    max-width:700px;
-    color:var(--muted)
+    color:var(--muted);
+    font-size:.88rem;
+    line-height:1.65
 }
 
 .project-link{
     display:inline-flex;
     align-items:center;
     gap:8px;
-    margin-top:24px;
+    margin-top:20px;
     color:var(--gold);
     text-decoration:none;
-    font-size:.82rem;
+    font-size:.78rem;
     transition:color .25s ease
 }
 
@@ -499,23 +507,23 @@ h1{
 .tags{
     display:flex;
     flex-wrap:wrap;
-    gap:8px;
-    margin-top:22px
+    gap:7px;
+    margin-top:18px
 }
 
 .tag{
-    padding:3px 9px;
+    padding:3px 8px;
     border:1px solid var(--border);
     border-radius:20px;
     color:var(--gold-soft);
-    font-size:.68rem
+    font-size:.64rem
 }
 
 .projects-note{
     max-width:850px;
-    margin:42px 0 0;
+    margin:36px 0 0;
     color:var(--muted);
-    font-size:.92rem
+    font-size:.88rem
 }
 
 .projects-note strong{
@@ -701,6 +709,10 @@ footer a:hover{
         grid-template-columns:repeat(2,1fr);
         column-gap:35px
     }
+
+    .projects-grid{
+        grid-template-columns:1fr
+    }
 }
 
 @media(max-width:700px){
@@ -768,7 +780,7 @@ footer a:hover{
     }
 
     .project{
-        padding:28px
+        padding:24px
     }
 }
 
@@ -1068,7 +1080,7 @@ footer a:hover{
 
                 <p
                     data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
-                    data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
+                    data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales y sectores, dando soporte a infraestructuras y operaciones de TI a gran escala en organizaciones de banca, seguros, retail y logística."
                 >
                     Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics.
                 </p>
@@ -1268,65 +1280,119 @@ footer a:hover{
 
         </div>
 
-        <article class="project">
+        <div class="projects-grid">
 
-            <h3
-                data-en="Systems &amp; Infrastructure Lab"
-                data-es="Laboratorio de Sistemas e Infraestructura"
-            >
-                Systems &amp; Infrastructure Lab
-            </h3>
+            <!-- SYSTEMS & INFRASTRUCTURE LAB -->
 
-            <img
-                class="project-image"
-                src="https://raw.githubusercontent.com/diegosommier/systems-infrastructure-lab/main/assets/architecture.png"
-                alt="Systems and Infrastructure Lab network architecture"
-            >
+            <article class="project">
 
-            <p
-                data-en="A practical systems administration lab built as part of my final Administration of Systems project. It brings together Linux and Windows environments, virtualization, storage, networking, security, monitoring, inventory, Samba, backups and Active Directory integration."
-                data-es="Un laboratorio práctico de administración de sistemas desarrollado como parte de mi proyecto final de Administración de Sistemas. Reúne entornos Linux y Windows, virtualización, almacenamiento, redes, seguridad, monitorización, inventario, Samba, copias de seguridad e integración con Active Directory."
-            >
-                A practical systems administration lab built as part of my final Administration of Systems project. It brings together Linux and Windows environments, virtualization, storage, networking, security, monitoring, inventory, Samba, backups and Active Directory integration.
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Linux</span>
-                <span class="tag">CentOS</span>
-                <span class="tag">Windows Server</span>
-                <span class="tag">Samba</span>
-                <span class="tag">Active Directory</span>
-                <span class="tag">RAID 1</span>
-                <span class="tag">LVM</span>
-                <span class="tag">SSH</span>
-                <span class="tag">Fail2ban</span>
-                <span class="tag">Backups</span>
-                <span class="tag">Bash</span>
-                <span class="tag">Pandora FMS</span>
-                <span class="tag">OCS Inventory</span>
-
-            </div>
-
-            <a
-                href="https://github.com/diegosommier/systems-infrastructure-lab"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link"
-            >
-                <i class="fa-brands fa-github"></i>
-
-                <span
-                    data-en="View the project on GitHub"
-                    data-es="Ver el proyecto en GitHub"
+                <h3
+                    data-en="Systems &amp; Infrastructure Lab"
+                    data-es="Laboratorio de Sistemas e Infraestructura"
                 >
-                    View the project on GitHub
-                </span>
+                    Systems &amp; Infrastructure Lab
+                </h3>
 
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+                <img
+                    class="project-image"
+                    src="https://raw.githubusercontent.com/diegosommier/systems-infrastructure-lab/main/assets/architecture.png"
+                    alt="Systems and Infrastructure Lab network architecture"
+                >
 
-        </article>
+                <p
+                    data-en="A practical systems administration lab that brings together Linux and Windows environments, virtualization, storage, networking, security, monitoring, inventory, Samba, backups and Active Directory integration. The project documents the design and implementation of a complete enterprise-style infrastructure."
+                    data-es="Un laboratorio práctico de administración de sistemas que reúne entornos Linux y Windows, virtualización, almacenamiento, redes, seguridad, monitorización, inventario, Samba, copias de seguridad e integración con Active Directory. El proyecto documenta el diseño y la implementación de una infraestructura completa con un enfoque empresarial."
+                >
+                    A practical systems administration lab that brings together Linux and Windows environments, virtualization, storage, networking, security, monitoring, inventory, Samba, backups and Active Directory integration. The project documents the design and implementation of a complete enterprise-style infrastructure.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Linux</span>
+                    <span class="tag">CentOS</span>
+                    <span class="tag">Windows Server</span>
+                    <span class="tag">Samba</span>
+                    <span class="tag">Active Directory</span>
+                    <span class="tag">RAID 1</span>
+                    <span class="tag">LVM</span>
+                    <span class="tag">SSH</span>
+                    <span class="tag">Fail2ban</span>
+                    <span class="tag">Backups</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">Pandora FMS</span>
+                    <span class="tag">OCS Inventory</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/diegosommier/systems-infrastructure-lab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    <i class="fa-brands fa-github"></i>
+
+                    <span
+                        data-en="View the project on GitHub"
+                        data-es="Ver el proyecto en GitHub"
+                    >
+                        View the project on GitHub
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+            <!-- ENTERPRISE WORKSTATION DEPLOYMENT -->
+
+            <article class="project">
+
+                <h3
+                    data-en="Enterprise Workstation Deployment"
+                    data-es="Despliegue de Puestos de Trabajo Empresariales"
+                >
+                    Enterprise Workstation Deployment
+                </h3>
+
+                <p
+                    data-en="A project focused on enterprise workstation deployment and management, documenting the technologies, processes and infrastructure involved in delivering and maintaining Windows-based endpoints in a corporate environment."
+                    data-es="Un proyecto centrado en el despliegue y la gestión de puestos de trabajo empresariales, documentando las tecnologías, procesos e infraestructura necesarios para proporcionar y mantener equipos Windows en un entorno corporativo."
+                >
+                    A project focused on enterprise workstation deployment and management, documenting the technologies, processes and infrastructure involved in delivering and maintaining Windows-based endpoints in a corporate environment.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Windows</span>
+                    <span class="tag">Enterprise</span>
+                    <span class="tag">Deployment</span>
+                    <span class="tag">Endpoint Management</span>
+                    <span class="tag">Infrastructure</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/diegosommier/enterprise-workstation-deployment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    <i class="fa-brands fa-github"></i>
+
+                    <span
+                        data-en="View the project on GitHub"
+                        data-es="Ver el proyecto en GitHub"
+                    >
+                        View the project on GitHub
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+        </div>
 
         <p
             class="projects-note"
@@ -1489,6 +1555,7 @@ footer a:hover{
 </footer>
 
 <script>
+
 const languageButtons =
     document.querySelectorAll(".language-button");
 
@@ -1538,9 +1605,13 @@ function setLanguage(language){
                     "portrait-credit"
                 )
             ){
+
                 element.innerHTML = translation;
+
             }else{
+
                 element.textContent = translation;
+
             }
         }
     });
@@ -1722,6 +1793,7 @@ window.addEventListener(
 );
 
 updateActiveNav();
+
 </script>
 
 </body>
