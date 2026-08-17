@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -450,26 +450,26 @@ h1{
    PROJECTS
 ============================== */
 
-.projects-grid{
+.projects-list{
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:24px
+    gap:24px;
+    align-items:start
 }
 
 .project{
-    min-width:0;
-    padding:26px;
-    border:1px dashed var(--border-strong);
-    background:var(--background-soft);
     display:flex;
-    flex-direction:column
+    flex-direction:column;
+    padding:28px;
+    border:1px dashed var(--border-strong);
+    background:var(--background-soft)
 }
 
 .project h3{
     margin:0 0 20px;
     color:var(--gold-soft);
     font-family:"Space Grotesk",sans-serif;
-    font-size:1.25rem;
+    font-size:1.28rem;
     font-weight:500;
     line-height:1.3
 }
@@ -485,7 +485,7 @@ h1{
 .project p{
     margin:0;
     color:var(--muted);
-    font-size:.88rem;
+    font-size:.9rem;
     line-height:1.65
 }
 
@@ -493,6 +493,7 @@ h1{
     display:inline-flex;
     align-items:center;
     gap:8px;
+    align-self:flex-start;
     margin-top:20px;
     color:var(--gold);
     text-decoration:none;
@@ -521,9 +522,9 @@ h1{
 
 .projects-note{
     max-width:850px;
-    margin:36px 0 0;
+    margin:38px 0 0;
     color:var(--muted);
-    font-size:.88rem
+    font-size:.9rem
 }
 
 .projects-note strong{
@@ -710,7 +711,7 @@ footer a:hover{
         column-gap:35px
     }
 
-    .projects-grid{
+    .projects-list{
         grid-template-columns:1fr
     }
 }
@@ -1080,7 +1081,7 @@ footer a:hover{
 
                 <p
                     data-en="Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics."
-                    data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales y sectores, dando soporte a infraestructuras y operaciones de TI a gran escala en organizaciones de banca, seguros, retail y logística."
+                    data-es="A lo largo de mi carrera he trabajado en distintos entornos empresariales, dando soporte a infraestructuras y operaciones de TI a gran escala en sectores como banca, seguros, retail y logística."
                 >
                     Throughout my career I've worked across different enterprise environments, supporting infrastructure and large-scale IT operations for organisations in banking, insurance, retail and logistics.
                 </p>
@@ -1272,17 +1273,17 @@ footer a:hover{
             </div>
 
             <h2
-                data-en="The forge is taking shape"
-                data-es="La forja empieza a tomar forma"
+                data-en="Built, documented and shared"
+                data-es="Construido, documentado y compartido"
             >
-                The forge is taking shape
+                Built, documented and shared
             </h2>
 
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-list">
 
-            <!-- SYSTEMS & INFRASTRUCTURE LAB -->
+            <!-- PROJECT 1 -->
 
             <article class="project">
 
@@ -1300,10 +1301,10 @@ footer a:hover{
                 >
 
                 <p
-                    data-en="A practical systems administration lab that brings together Linux and Windows environments, virtualization, storage, networking, security, monitoring, inventory, Samba, backups and Active Directory integration. The project documents the design and implementation of a complete enterprise-style infrastructure."
-                    data-es="Un laboratorio práctico de administración de sistemas que reúne entornos Linux y Windows, virtualización, almacenamiento, redes, seguridad, monitorización, inventario, Samba, copias de seguridad e integración con Active Directory. El proyecto documenta el diseño y la implementación de una infraestructura completa con un enfoque empresarial."
+                    data-en="A practical systems administration lab developed as my final project for the Higher Technician in Networked Computer Systems Administration (ASIR) at IES Número 1 Gijón. The project brings together Linux and Windows environments, virtualization, storage, networking, security, monitoring, inventory, Samba, backups and Active Directory integration."
+                    data-es="Un laboratorio práctico de administración de sistemas desarrollado como proyecto final del ciclo formativo de Grado Superior en Administración de Sistemas Informáticos en Red (ASIR) del IES Número 1 de Gijón. El proyecto reúne entornos Linux y Windows, virtualización, almacenamiento, redes, seguridad, monitorización, inventario, Samba, copias de seguridad e integración con Active Directory."
                 >
-                    A practical systems administration lab that brings together Linux and Windows environments, virtualization, storage, networking, security, monitoring, inventory, Samba, backups and Active Directory integration. The project documents the design and implementation of a complete enterprise-style infrastructure.
+                    A practical systems administration lab developed as my final project for the Higher Technician in Networked Computer Systems Administration (ASIR) at IES Número 1 Gijón. The project brings together Linux and Windows environments, virtualization, storage, networking, security, monitoring, inventory, Samba, backups and Active Directory integration.
                 </p>
 
                 <div class="tags">
@@ -1344,7 +1345,8 @@ footer a:hover{
 
             </article>
 
-            <!-- ENTERPRISE WORKSTATION DEPLOYMENT -->
+
+            <!-- PROJECT 2 -->
 
             <article class="project">
 
@@ -1356,19 +1358,19 @@ footer a:hover{
                 </h3>
 
                 <p
-                    data-en="A project focused on enterprise workstation deployment and management, documenting the technologies, processes and infrastructure involved in delivering and maintaining Windows-based endpoints in a corporate environment."
-                    data-es="Un proyecto centrado en el despliegue y la gestión de puestos de trabajo empresariales, documentando las tecnologías, procesos e infraestructura necesarios para proporcionar y mantener equipos Windows en un entorno corporativo."
+                    data-en="A practical enterprise workstation deployment project focused on standardisation, operating system deployment, software distribution, configuration and endpoint management in a Windows environment."
+                    data-es="Un proyecto práctico de despliegue de puestos de trabajo empresariales centrado en la estandarización, despliegue del sistema operativo, distribución de software, configuración y gestión de endpoints en un entorno Windows."
                 >
-                    A project focused on enterprise workstation deployment and management, documenting the technologies, processes and infrastructure involved in delivering and maintaining Windows-based endpoints in a corporate environment.
+                    A practical enterprise workstation deployment project focused on standardisation, operating system deployment, software distribution, configuration and endpoint management in a Windows environment.
                 </p>
 
                 <div class="tags">
 
                     <span class="tag">Windows</span>
-                    <span class="tag">Enterprise</span>
                     <span class="tag">Deployment</span>
+                    <span class="tag">SCCM</span>
                     <span class="tag">Endpoint Management</span>
-                    <span class="tag">Infrastructure</span>
+                    <span class="tag">Automation</span>
 
                 </div>
 
@@ -1611,7 +1613,6 @@ function setLanguage(language){
             }else{
 
                 element.textContent = translation;
-
             }
         }
     });
@@ -1682,6 +1683,7 @@ setLanguage(
         : "en"
 );
 
+
 /* ==============================
    FLOATING ACTIONS
 ============================== */
@@ -1712,6 +1714,7 @@ window.addEventListener(
 );
 
 updateFloatingActions();
+
 
 /* ==============================
    ACTIVE NAVIGATION
