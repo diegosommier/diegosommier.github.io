@@ -48,11 +48,11 @@ const projects = [
             es: "Un proyecto práctico de despliegue de puestos de trabajo que abarca la planificación, instalación de Windows, configuración de software, particionado, creación de imágenes, recuperación del sistema y despliegue de múltiples equipos conectados a una red."
         },
 
-        image: null,
+        image: "https://raw.githubusercontent.com/diegosommier/enterprise-workstation-deployment/main/assets/deployment-overview.png",
 
         imageAlt: {
-            en: "Enterprise Workstation Deployment",
-            es: "Despliegue de Puestos de Trabajo Empresariales"
+            en: "Enterprise Workstation Deployment overview",
+            es: "Esquema del despliegue de puestos de trabajo empresariales"
         },
 
         tags: [
