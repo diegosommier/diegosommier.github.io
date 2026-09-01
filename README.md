@@ -16,8 +16,8 @@ The website includes:
 
 The repository also contains the current versions of my CV:
 
-- 🇬🇧 [CV — English](cv-diego-sommier-en.pdf)
-- 🇪🇸 [CV — Spanish](cv-diego-sommier-es.pdf)
+- 🇬🇧 [CV — English](cv-diego-sommier_en.pdf)
+- 🇪🇸 [CV — Spanish](cv-diego-sommier_es.pdf)
 
 ## ⚙️ Built with
 
