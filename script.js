@@ -243,8 +243,8 @@ function setLanguage(language){
 
     const cvFile =
         language === "es"
-            ? "cv-diego-sommier-es.pdf"
-            : "cv-diego-sommier-en.pdf";
+            ? "cv_diego_sommier_es.pdf"
+            : "cv_diego_sommier_en.pdf";
 
     if(cvDownload){
 
