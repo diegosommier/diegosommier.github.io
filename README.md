@@ -24,7 +24,3 @@ The repository also contains the current versions of my CV:
 HTML5 · CSS3 · JavaScript · Font Awesome · Google Fonts
 
 The website is hosted using **GitHub Pages**.
-
-## 🎨 Credits
-
-Portrait artwork by [@roquec](https://roquec.com).
